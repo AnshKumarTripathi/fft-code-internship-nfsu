@@ -1,0 +1,12 @@
+{"time":"2024-01-15T10:00:01.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app1","category":"AppServiceHTTPLogs","resultDescription":"GET / 200"}
+{"time":"2024-01-15T10:00:02.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app1","category":"AppServiceHTTPLogs","resultDescription":"GET /health 200"}
+{"time":"2024-01-15T10:00:03.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app1","category":"AppServiceConsoleLogs","resultDescription":"started"}
+{"time":"2024-01-15T10:00:04.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Insights/components/appi1","category":"AppTraces","resultDescription":"trace"}
+{"time":"2024-01-15T10:00:05.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app2","category":"AppServiceHTTPLogs","resultDescription":"POST /login 401"}
+{"time":"2024-01-15T10:00:06.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app1","category":"AppServiceAuditLogs","resultDescription":"user alice"}
+{"time":"2024-01-15T10:00:07.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Sql/servers/sql1","category":"SQLSecurityAuditEvents","resultDescription":"SELECT 1"}
+{"time":"2024-01-15T10:00:08.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app1","category":"AppServiceHTTPLogs","resultDescription":"GET /api 500"}
+{"time":"2024-01-15T10:00:09.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app1","category":"AppServicePlatformLogs","resultDescription":"recycle"}
+{"time":"2024-01-15T10:00:10.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app3","category":"AppServiceHTTPLogs","resultDescription":"GET / 200"}
+{"time":"2024-01-15T10:00:11.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app1","category":"AppServiceHTTPLogs","resultDescription":"GET /favicon.ico 200"}
+{"time":"2024-01-15T10:00:12.000Z","resourceId":"/subscriptions/0000/resourceGroups/rg1/providers/Microsoft.Web/sites/app1","category":"AppServiceHTTPLogs","resultDescription":"GET /v2 200"}

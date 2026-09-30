@@ -1,0 +1,11 @@
+Jan 15 10:00:01 master kube-apiserver[1]: I0115 10:00:01.123456       1 httplog.go:102] GET /api/v1/namespaces/default/pods: (1.234ms) 200
+Jan 15 10:00:02 master kube-apiserver[1]: I0115 10:00:02.123456       1 httplog.go:102] GET /healthz: (0.200ms) 200
+Jan 15 10:00:03 master kube-apiserver[1]: I0115 10:00:03.123456       1 httplog.go:102] POST /api/v1/namespaces/default/pods: (12.000ms) 201
+Jan 15 10:00:04 master kube-apiserver[1]: W0115 10:00:04.123456       1 authentication.go:70] Authentication failed
+Jan 15 10:00:05 master kube-apiserver[1]: I0115 10:00:05.123456       1 httplog.go:102] DELETE /api/v1/namespaces/default/pods/web: (3.100ms) 200
+Jan 15 10:00:06 master kube-apiserver[1]: I0115 10:00:06.123456       1 httplog.go:102] GET /apis/apps/v1/namespaces/default/deployments: (2.000ms) 200
+Jan 15 10:00:07 master kube-apiserver[1]: E0115 10:00:07.123456       1 available_controller.go:50] Failed to update status
+Jan 15 10:00:08 master kube-apiserver[1]: I0115 10:00:08.123456       1 httplog.go:102] PATCH /api/v1/namespaces/kube-system/configmaps/coredns: (4.400ms) 200
+Jan 15 10:00:09 master kube-apiserver[1]: I0115 10:00:09.123456       1 httplog.go:102] GET /api/v1/nodes: (0.800ms) 200
+Jan 15 10:00:10 master kube-apiserver[1]: I0115 10:00:10.123456       1 httplog.go:102] PUT /api/v1/namespaces/default/secrets/tls: (5.000ms) 200
+Jan 15 10:00:11 master kube-apiserver[1]: I0115 10:00:11.123456       1 httplog.go:102] GET /readyz: (0.100ms) 200

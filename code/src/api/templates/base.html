@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Log Anomaly Dashboard{% endblock %}</title>
+  <link rel="stylesheet" href="{{ request.url_for('static', path='css/dashboard.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="/"><span class="brand-mark">FFT</span> Log Anomaly</a>
+      <nav class="header-nav">
+        <a href="/">Incidents</a>
+        <a href="/entities">Entities</a>
+        <a href="/reports">Reports</a>
+        <a href="/runs">Runs</a>
+      </nav>
+      <div class="header-meta">local trusted network · read-only</div>
+    </div>
+  </header>
+  <main class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      local trusted network · read-only
+    </div>
+  </footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

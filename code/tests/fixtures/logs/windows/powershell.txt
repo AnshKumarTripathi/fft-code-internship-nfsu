@@ -1,0 +1,12 @@
+TimeCreated=2024-01-15T13:00:01.000Z EventID=4104 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS01 User=alice ScriptBlockText=Get-Process
+TimeCreated=2024-01-15T13:00:02.000Z EventID=4103 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS01 User=alice HostApplication=powershell.exe
+TimeCreated=2024-01-15T13:00:03.000Z EventID=4104 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS02 User=bob ScriptBlockText=Invoke-WebRequest
+TimeCreated=2024-01-15T13:00:04.000Z EventID=4103 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS02 User=bob HostApplication=pwsh.exe
+TimeCreated=2024-01-15T13:00:05.000Z EventID=4104 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS01 User=carol ScriptBlockText=Get-LocalUser
+TimeCreated=2024-01-15T13:00:06.000Z EventID=4104 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS03 User=dave ScriptBlockText=whoami
+TimeCreated=2024-01-15T13:00:07.000Z EventID=4103 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS03 User=dave HostApplication=powershell.exe
+TimeCreated=2024-01-15T13:00:08.000Z EventID=4104 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS01 User=alice ScriptBlockText=Get-EventLog
+TimeCreated=2024-01-15T13:00:09.000Z EventID=4103 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS04 User=eve HostApplication=powershell.exe
+TimeCreated=2024-01-15T13:00:10.000Z EventID=4104 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS04 User=eve ScriptBlockText=Get-Service
+TimeCreated=2024-01-15T13:00:11.000Z EventID=4104 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS01 User=admin ScriptBlockText=Set-ExecutionPolicy
+TimeCreated=2024-01-15T13:00:12.000Z EventID=4103 LogName=Microsoft-Windows-PowerShell/Operational Provider=Microsoft-Windows-PowerShell Computer=WIN-WS01 User=admin HostApplication=powershell.exe

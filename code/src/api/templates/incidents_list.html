@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}Incidents · Log Anomaly{% endblock %}
+{% block content %}
+<p class="crumb">Incidents</p>
+<h1 class="page-title">Incidents</h1>
+<p class="page-lede">
+  Correlated anomalies from the warehouse. Filter, then open a row to inspect timeline, edges, and the entity window.
+</p>
+
+<div class="kpi-strip" aria-label="Incident counts">
+  <div class="kpi">
+    <span class="kpi-label">Incidents</span>
+    <span class="kpi-value">{{ kpis.total }}</span>
+  </div>
+  <div class="kpi">
+    <span class="kpi-label">Critical</span>
+    <span class="kpi-value">{{ kpis.critical }}</span>
+  </div>
+  <div class="kpi">
+    <span class="kpi-label">High</span>
+    <span class="kpi-value">{{ kpis.high }}</span>
+  </div>
+  <div class="kpi">
+    <span class="kpi-label">Medium</span>
+    <span class="kpi-value">{{ kpis.medium }}</span>
+  </div>
+  <div class="kpi">
+    <span class="kpi-label">Low</span>
+    <span class="kpi-value">{{ kpis.low }}</span>
+  </div>
+  <div class="kpi kpi-wide">
+    <span class="kpi-label">Last correlate</span>
+    <span class="kpi-value mono">{% if kpis.last_correlate_at %}{{ kpis.last_correlate_at }}{% else %}never{% endif %}</span>
+  </div>
+</div>
+
+<form class="filters" method="get" action="/">
+  <div class="filter-field">
+    <label for="severity">Severity</label>
+    <select id="severity" name="severity">
+      <option value="">Any</option>
+      {% for s in severities %}
+      <option value="{{ s }}" {% if severity == s %}selected{% endif %}>{{ s }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="filter-field">
+    <label for="entity_id">Entity ID</label>
+    <input id="entity_id" type="text" name="entity_id" value="{{ entity_id or '' }}" placeholder="root or 192.0.2.1">
+  </div>
+  <div class="filter-field">
+    <label for="q">Summary</label>
+    <input id="q" type="text" name="q" value="{{ q or '' }}" placeholder="search summary_text">
+  </div>
+  <button class="btn" type="submit">Apply</button>
+  <a class="btn btn-ghost" href="/">Clear</a>
+</form>
+
+{% if incidents %}
+<p class="muted pagination-meta">
+  Showing {{ showing_from }}–{{ showing_to }} of {{ total }}
+</p>
+<div class="table-wrap">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Incident</th>
+        <th>Severity</th>
+        <th>Entity</th>
+        <th>Start (UTC)</th>
+        <th>End (UTC)</th>
+        <th>Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for inc in incidents %}
+      <tr class="row-link">
+        <td><a class="mono" href="/incidents/{{ inc.incident_id }}">{{ inc.incident_id }}</a></td>
+        <td><span class="severity severity-{{ inc.severity }}">{{ inc.severity }}</span></td>
+        <td><a class="mono" href="{{ inc.entity_id | entity_href }}">{{ inc.entity_id }}</a></td>
+        <td class="mono">{{ inc.start_time or "—" }}</td>
+        <td class="mono">{{ inc.end_time or "—" }}</td>
+        <td class="excerpt" title="{{ inc.summary_text or '' }}">{{ inc.summary_text or "—" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% if total_pages > 1 %}
+<nav class="pagination" aria-label="Incident pages">
+  {% if page > 1 %}
+  <a href="/?page={{ page - 1 }}{% if filter_qs %}&amp;{{ filter_qs }}{% endif %}">Previous</a>
+  {% endif %}
+  <span>Page {{ page }} of {{ total_pages }}</span>
+  {% if page < total_pages %}
+  <a href="/?page={{ page + 1 }}{% if filter_qs %}&amp;{{ filter_qs }}{% endif %}">Next</a>
+  {% endif %}
+</nav>
+{% endif %}
+{% else %}
+<div class="empty-state">
+  No incidents in warehouse
+  {% if severity or entity_id or q %} for the current filters{% endif %}.
+  Run <span class="mono">python -m src.pipeline run-all</span> (through correlate) then refresh.
+</div>
+{% endif %}
+{% endblock %}

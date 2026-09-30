@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Detector cases on activity chart</title>
+  <desc id="desc">Four small activity sketches for rate spike, level shift, seasonal offset, and rhythm-context volume.</desc>
+  <rect width="720" height="420" fill="#f7f6f2"/>
+  <text x="24" y="28" fill="#1c1b19" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">Cases on the activity chart</text>
+
+  <rect x="24" y="48" width="330" height="160" fill="#fffefb" stroke="#d8d4cc"/>
+  <text x="36" y="70" fill="#1c1b19" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Rate / statistical</text>
+  <rect x="200" y="88" width="50" height="90" fill="#d9775733"/>
+  <polyline fill="none" stroke="#148282" stroke-width="2" points="48,160 90,155 130,150 170,148 210,100 240,105 280,148 330,150"/>
+  <text x="36" y="196" fill="#5c5954" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Short volume spike inside a rate band.</text>
+
+  <rect x="366" y="48" width="330" height="160" fill="#fffefb" stroke="#d8d4cc"/>
+  <text x="378" y="70" fill="#1c1b19" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Level-shift / changepoint</text>
+  <polyline fill="none" stroke="#148282" stroke-width="2" points="390,160 450,158 510,155 540,155 560,110 620,108 670,106"/>
+  <text x="378" y="196" fill="#5c5954" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Sustained step up/down - not a one-bucket blip.</text>
+
+  <rect x="24" y="228" width="330" height="160" fill="#fffefb" stroke="#d8d4cc"/>
+  <text x="36" y="250" fill="#1c1b19" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Seasonal residual</text>
+  <polyline fill="none" stroke="#9aa094" stroke-width="1.5" stroke-dasharray="4 3" points="48,300 90,270 140,260 190,270 240,300 290,330 330,340"/>
+  <polyline fill="none" stroke="#148282" stroke-width="2" points="48,310 90,300 140,290 190,250 240,240 290,280 330,300"/>
+  <text x="36" y="372" fill="#5c5954" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Dashed = usual profile; solid = off time-of-day shape.</text>
+
+  <rect x="366" y="228" width="330" height="160" fill="#fffefb" stroke="#d8d4cc"/>
+  <text x="378" y="250" fill="#1c1b19" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">Rhythm / spectral (context)</text>
+  <rect x="480" y="268" width="90" height="90" fill="#14828240"/>
+  <polyline fill="none" stroke="#148282" stroke-width="2" points="390,330 430,300 470,290 510,300 550,290 590,300 640,310 670,305"/>
+  <text x="378" y="372" fill="#5c5954" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Activity can look &quot;busy but familiar&quot; - confirm on PSD/STFT.</text>
+</svg>

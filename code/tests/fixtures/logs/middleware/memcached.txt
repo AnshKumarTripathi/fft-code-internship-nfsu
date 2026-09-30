@@ -1,0 +1,13 @@
+<10 get session:alice
+>10 sending key session:alice
+>10 END
+<11 set cart:1 0 60 12
+>11 STORED
+<12 get missing
+>12 NOT_FOUND
+<13 delete tmp:1
+>13 END
+<14 incr hits 1
+>14 VALUE hits
+<15 get flag:x
+>15 END

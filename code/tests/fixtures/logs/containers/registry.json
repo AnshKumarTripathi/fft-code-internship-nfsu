@@ -1,0 +1,11 @@
+{"timestamp":"2024-01-15T10:00:01Z","action":"pull","repository":"library/nginx","user":"alice","ip":"10.0.0.8"}
+{"timestamp":"2024-01-15T10:00:02Z","action":"push","repository":"apps/web","user":"bob","ip":"10.0.1.4"}
+{"timestamp":"2024-01-15T10:00:03Z","action":"pull","repository":"library/redis","user":"alice","ip":"10.0.0.8"}
+{"timestamp":"2024-01-15T10:00:04Z","action":"delete","repository":"apps/old","user":"carol","ip":"10.0.2.5"}
+{"timestamp":"2024-01-15T10:00:05Z","action":"push","repository":"apps/api","user":"bob","ip":"10.0.1.4"}
+{"timestamp":"2024-01-15T10:00:06Z","action":"pull","repository":"library/postgres","user":"alice","ip":"10.0.0.9"}
+{"timestamp":"2024-01-15T10:00:07Z","action":"head","repository":"apps/web","user":"alice","ip":"10.0.0.8"}
+{"timestamp":"2024-01-15T10:00:08Z","action":"push","repository":"apps/worker","user":"mallory","ip":"198.51.100.7"}
+{"timestamp":"2024-01-15T10:00:09Z","action":"pull","repository":"system/pause","user":"system","ip":"10.0.0.1"}
+{"timestamp":"2024-01-15T10:00:10Z","action":"push","repository":"apps/web","user":"bob","ip":"10.0.1.4"}
+{"timestamp":"2024-01-15T10:00:11Z","action":"pull","repository":"library/busybox","user":"alice","ip":"10.0.0.8"}

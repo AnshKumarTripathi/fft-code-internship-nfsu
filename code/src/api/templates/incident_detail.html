@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+{% block title %}{{ incident.incident_id }} · Incident{% endblock %}
+{% block head %}
+<script src="{{ request.url_for('static', path='vendor/chart.umd.min.js') }}" defer></script>
+<script src="{{ request.url_for('static', path='js/charts.js') }}" defer></script>
+{% endblock %}
+{% block content %}
+<p class="crumb"><a href="/">Incidents</a> / <span class="mono">{{ incident.incident_id }}</span></p>
+<h1 class="page-title">Incident <span class="mono">{{ incident.incident_id }}</span></h1>
+<p class="page-lede">
+  Severity <span class="severity severity-{{ incident.severity }}">{{ incident.severity }}</span>
+  for entity <a class="mono" href="{{ entity_window_href }}">{{ incident.entity_id }}</a>.
+</p>
+<p class="detector-badges" aria-label="Detectors">
+  {% for det in detector_order %}
+  <span class="badge {% if det in present_detectors %}badge-on{% else %}badge-off{% endif %}">{{ det }}</span>
+  {% endfor %}
+</p>
+
+<dl class="meta-grid">
+  <div class="meta-item">
+    <dt>Entity</dt>
+    <dd><a href="{{ entity_window_href }}">{{ incident.entity_id }}</a></dd>
+  </div>
+  <div class="meta-item">
+    <dt>Type</dt>
+    <dd>{{ entity.entity_type if entity and entity.entity_type else "—" }}</dd>
+  </div>
+  <div class="meta-item">
+    <dt>Label</dt>
+    <dd>{{ entity.label if entity and entity.label else "—" }}</dd>
+  </div>
+  <div class="meta-item">
+    <dt>Start (UTC)</dt>
+    <dd>{{ incident.start_time or "—" }}</dd>
+  </div>
+  <div class="meta-item">
+    <dt>End (UTC)</dt>
+    <dd>{{ incident.end_time or "—" }}</dd>
+  </div>
+  <div class="meta-item">
+    <dt>Contributing anomalies</dt>
+    <dd>{{ incident.contributing_anomaly_ids | length }}</dd>
+  </div>
+</dl>
+
+<section class="section">
+  <h2>Summary</h2>
+  <div class="summary-block">{{ incident.summary_text or "(no summary_text in warehouse)" }}</div>
+  <p class="muted">Statistical flags high rate only; rhythm/sequence use spectral and ML.</p>
+</section>
+
+<section class="section">
+  <h2>Contributing anomalies</h2>
+  {% if anomalies %}
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Anomaly ID</th>
+          <th>Detector</th>
+          <th>Role</th>
+          <th>Score</th>
+          <th>Window start</th>
+          <th>Window end</th>
+          <th>Metadata</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in anomalies %}
+        <tr>
+          <td class="mono">{{ a.anomaly_id }}</td>
+          <td class="mono">{{ a.source_detector }}</td>
+          <td>{{ a.source_detector | detector_role }}</td>
+          <td class="mono">{{ "%.4f"|format(a.score) }}</td>
+          <td class="mono">{{ a.window_start or "—" }}</td>
+          <td class="mono">{{ a.window_end or "—" }}</td>
+          <td class="raw-fields">
+            {% if a.metadata %}
+              {% for k, v in a.metadata.items() %}{{ k }}={{ v }}{% if not loop.last %}; {% endif %}{% endfor %}
+            {% else %}—{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="empty-state">No anomaly_events rows for contributing_anomaly_ids.</div>
+  {% endif %}
+</section>
+
+<section class="section">
+  <h2>Event timeline</h2>
+  {% if edges %}
+  <p class="muted">
+    showing {{ edges_shown }} of {{ edges_total }}
+    · <a href="{{ entity_window_href }}">entity window</a>
+  </p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Timestamp (UTC)</th>
+          <th>Relation</th>
+          <th>Template</th>
+          <th>Fields</th>
+          <th>Anomaly</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for e in edges %}
+        <tr>
+          <td class="mono">{{ e.event_timestamp or "—" }}</td>
+          <td class="mono">{{ e.relation_type or "—" }}</td>
+          <td>{{ e.template_string or e.snippet or "—" }}</td>
+          <td class="raw-fields">
+            {% if e.raw_fields %}
+              {% for k, v in e.raw_fields.items() %}{{ k }}={{ v }}{% if not loop.last %}; {% endif %}{% endfor %}
+            {% else %}—{% endif %}
+          </td>
+          <td class="mono">{{ e.dst_anomaly_id }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="empty-state">No correlation_edges for this incident’s anomalies.</div>
+  {% endif %}
+</section>
+
+<section class="section">
+  <h2>Correlation</h2>
+  {% if edges %}
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Edge</th>
+          <th>Event</th>
+          <th>Anomaly</th>
+          <th>Relation</th>
+          <th>Session</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for e in edges %}
+        <tr>
+          <td class="mono">{{ e.edge_id }}</td>
+          <td class="mono">{{ e.src_event_id if e.src_event_id is not none else "—" }}</td>
+          <td class="mono">{{ e.dst_anomaly_id }}</td>
+          <td class="mono">{{ e.relation_type }}</td>
+          <td class="mono">{{ e.session_id or "—" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="empty-state">No correlation edges to list.</div>
+  {% endif %}
+</section>
+
+<section class="section">
+  <h2>Activity (incident window)</h2>
+  {% if has_buckets %}
+  <div class="chart-panel">
+    <h3>event_count per bucket with flagged overlays</h3>
+    <div class="chart-wrap">
+      <canvas id="activity-chart" aria-label="Incident activity chart"></canvas>
+    </div>
+  </div>
+  <script id="activity-payload" type="application/json">{{ activity_json | safe }}</script>
+  {% else %}
+  <div class="empty-state">No entity_bucket_counts in the incident window.</div>
+  {% endif %}
+</section>
+
+{% if report_html_href or report_md_href %}
+<section class="section">
+  <h2>Report</h2>
+  <p>
+    {% if report_html_href %}
+    <a href="{{ report_html_href }}">HTML</a>
+    {% endif %}
+    {% if report_html_href and report_md_href %} · {% endif %}
+    {% if report_md_href %}
+    <a href="{{ report_md_href }}">Markdown</a>
+    {% endif %}
+  </p>
+</section>
+{% endif %}
+{% endblock %}

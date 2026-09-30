@@ -1,0 +1,12 @@
+Jan 15 10:00:01 vpn1 openvpn[412]: 10.0.0.8:54321 TLS: Username/Password authentication succeeded for username 'alice'
+Jan 15 10:00:02 vpn1 openvpn[412]: 10.0.0.8:54321 Peer Connection Initiated with [AF_INET]10.0.0.8:54321
+Jan 15 10:00:03 vpn1 openvpn[412]: alice/10.0.0.8:54321 MULTI_sva: pool returned IPv4=10.8.0.2
+Jan 15 10:00:04 vpn1 openvpn[412]: 10.0.0.9:40000 TLS: Username/Password authentication failed for username 'mallory'
+Jan 15 10:00:05 vpn1 openvpn[412]: 10.0.0.10:44122 TLS: Username/Password authentication succeeded for username 'bob'
+Jan 15 10:00:06 vpn1 openvpn[412]: bob/10.0.0.10:44122 MULTI_sva: pool returned IPv4=10.8.0.3
+Jan 15 10:00:07 vpn1 openvpn[412]: 10.0.0.11:50001 TLS: Username/Password authentication failed for username 'eve'
+Jan 15 10:00:08 vpn1 openvpn[412]: 10.0.0.12:53100 TLS: Username/Password authentication succeeded for username 'carol'
+Jan 15 10:00:09 vpn1 openvpn[412]: carol/10.0.0.12:53100 Peer Connection Initiated with [AF_INET]10.0.0.12:53100
+Jan 15 10:00:10 vpn1 openvpn[412]: 10.0.0.13:55555 TLS: Username/Password authentication failed for username 'trent'
+Jan 15 10:00:11 vpn1 openvpn[412]: alice/10.0.0.8:54321 Connection reset, restarting [0]
+Jan 15 10:00:12 vpn1 openvpn[412]: 10.0.0.14:60000 TLS: Username/Password authentication succeeded for username 'dave'

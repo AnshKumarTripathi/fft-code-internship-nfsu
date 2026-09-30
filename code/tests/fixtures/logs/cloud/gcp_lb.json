@@ -1,0 +1,12 @@
+{"insertId":"l1","timestamp":"2024-01-15T10:00:01Z","httpRequest":{"requestMethod":"GET","requestUrl":"https://example.com/","status":200,"remoteIp":"192.0.2.3"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l2","timestamp":"2024-01-15T10:00:02Z","httpRequest":{"requestMethod":"GET","requestUrl":"https://example.com/health","status":200,"remoteIp":"10.0.0.8"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l3","timestamp":"2024-01-15T10:00:03Z","httpRequest":{"requestMethod":"POST","requestUrl":"https://example.com/login","status":401,"remoteIp":"203.0.113.8"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l4","timestamp":"2024-01-15T10:00:04Z","httpRequest":{"requestMethod":"GET","requestUrl":"https://example.com/admin","status":403,"remoteIp":"198.51.100.9"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l5","timestamp":"2024-01-15T10:00:05Z","httpRequest":{"requestMethod":"GET","requestUrl":"https://api.example.com/v1/status","status":200,"remoteIp":"10.0.0.10"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l6","timestamp":"2024-01-15T10:00:06Z","httpRequest":{"requestMethod":"PUT","requestUrl":"https://example.com/item/1","status":204,"remoteIp":"10.0.0.11"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l7","timestamp":"2024-01-15T10:00:07Z","httpRequest":{"requestMethod":"GET","requestUrl":"https://example.com/missing","status":404,"remoteIp":"10.0.0.12"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l8","timestamp":"2024-01-15T10:00:08Z","httpRequest":{"requestMethod":"GET","requestUrl":"https://example.com/fail","status":500,"remoteIp":"10.0.0.13"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l9","timestamp":"2024-01-15T10:00:09Z","httpRequest":{"requestMethod":"GET","requestUrl":"https://example.com/","status":301,"remoteIp":"10.0.0.14"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l10","timestamp":"2024-01-15T10:00:10Z","httpRequest":{"requestMethod":"HEAD","requestUrl":"https://example.com/","status":200,"remoteIp":"10.0.0.15"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l11","timestamp":"2024-01-15T10:00:11Z","httpRequest":{"requestMethod":"GET","requestUrl":"https://example.com/favicon.ico","status":200,"remoteIp":"10.0.0.16"},"resource":{"type":"http_load_balancer"}}
+{"insertId":"l12","timestamp":"2024-01-15T10:00:12Z","httpRequest":{"requestMethod":"GET","requestUrl":"https://example.com/v2","status":200,"remoteIp":"10.0.0.17"},"resource":{"type":"http_load_balancer"}}

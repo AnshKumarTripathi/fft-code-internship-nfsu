@@ -1,0 +1,12 @@
+{"type":"indicator","spec_version":"2.1","id":"indicator--a1","pattern":"[ipv4-addr:value = '1.2.3.4']","valid_from":"2024-01-15T10:00:01.000Z","verdict":"accepted"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a2","pattern":"[ipv4-addr:value = '5.6.7.8']","valid_from":"2024-01-15T10:00:02.000Z","verdict":"rejected"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a3","pattern":"[ipv4-addr:value = '9.9.9.9']","timestamp":"2024-01-15T10:00:03.000Z","verdict":"accepted"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a4","pattern":"[domain-name:value = 'evil.example']","valid_from":"2024-01-15T10:00:04.000Z","verdict":"accepted","host":"ti-gw"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a5","pattern":"[ipv4-addr:value = '8.8.4.4']","valid_from":"2024-01-15T10:00:05.000Z","action":"accepted"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a6","src_ip":"10.0.0.8","valid_from":"2024-01-15T10:00:06.000Z","verdict":"rejected"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a7","pattern":"[ipv4-addr:value = '203.0.113.10']","valid_from":"2024-01-15T10:00:07.000Z","verdict":"accepted"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a8","pattern":"[ipv4-addr:value = '198.51.100.1']","valid_from":"2024-01-15T10:00:08.000Z","verdict":"accepted"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a9","hostname":"ti-collector","valid_from":"2024-01-15T10:00:09.000Z","verdict":"rejected"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a10","pattern":"[ipv4-addr:value = '192.0.2.1']","valid_from":"2024-01-15T10:00:10.000Z","verdict":"accepted"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a11","ip":"192.0.2.55","timestamp":"2024-01-15T10:00:11.000Z","verdict":"accepted"}
+{"type":"indicator","spec_version":"2.1","id":"indicator--a12","pattern":"[ipv4-addr:value = '192.0.2.99']","valid_from":"2024-01-15T10:00:12.000Z","verdict":"rejected"}

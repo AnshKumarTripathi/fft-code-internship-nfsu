@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% block title %}{{ entity.entity_id }} · Entity{% endblock %}
+{% block head %}
+<script src="{{ request.url_for('static', path='vendor/chart.umd.min.js') }}" defer></script>
+<script src="{{ request.url_for('static', path='js/charts.js') }}" defer></script>
+{% endblock %}
+{% block content %}
+<p class="crumb"><a href="/">Incidents</a> / <a href="/entities">Entities</a> / <span class="mono">{{ entity.entity_id }}</span></p>
+<h1 class="page-title">Entity <span class="mono">{{ entity.entity_id }}</span></h1>
+<p class="page-lede">
+  Activity rate, spectral baseline, and parsed event timeline from the warehouse.
+  {% if window_start or window_end %}
+  Window {{ window_start or "…" }} – {{ window_end or "…" }}.
+  {% endif %}
+</p>
+
+<dl class="meta-grid">
+  <div class="meta-item">
+    <dt>Type</dt>
+    <dd>{{ entity.entity_type or "—" }}</dd>
+  </div>
+  <div class="meta-item">
+    <dt>Label</dt>
+    <dd>{{ entity.label or "—" }}</dd>
+  </div>
+  <div class="meta-item">
+    <dt>First seen</dt>
+    <dd>{{ entity.first_seen or "—" }}</dd>
+  </div>
+  <div class="meta-item">
+    <dt>Last seen</dt>
+    <dd>{{ entity.last_seen or "—" }}</dd>
+  </div>
+</dl>
+
+<section class="section">
+  <h2>Incidents</h2>
+  {% if incidents %}
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Incident</th>
+          <th>Severity</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for inc in incidents %}
+        <tr>
+          <td><a class="mono" href="/incidents/{{ inc.incident_id }}">{{ inc.incident_id }}</a></td>
+          <td><span class="severity severity-{{ inc.severity }}">{{ inc.severity }}</span></td>
+          <td class="mono">{{ inc.start_time or "—" }}</td>
+          <td class="mono">{{ inc.end_time or "—" }}</td>
+          <td class="excerpt">{{ inc.summary_text or "—" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="empty-state">No incidents include this entity.</div>
+  {% endif %}
+</section>
+
+<section class="section">
+  <h2>Activity (entity_bucket_counts)</h2>
+  {% if buckets %}
+  <div class="chart-panel">
+    <h3>event_count per bucket</h3>
+    <div class="chart-wrap">
+      <canvas id="activity-chart" aria-label="Entity activity chart"></canvas>
+    </div>
+  </div>
+  <script id="activity-payload" type="application/json">{{ activity_json | safe }}</script>
+  {% else %}
+  <div class="empty-state">No entity_bucket_counts rows for this entity.</div>
+  {% endif %}
+</section>
+
+<section class="section">
+  <h2>Spectral fingerprint</h2>
+  {% if spectrum and spectrum.features %}
+  <div class="feature-row">
+    <div class="feature-cell">
+      <span class="label">Dominant period (h)</span>
+      <div class="value">
+        {% if spectrum.features.dominant_period_hours is not none %}
+          {{ "%.3f"|format(spectrum.features.dominant_period_hours) }}
+        {% else %}—{% endif %}
+      </div>
+    </div>
+    <div class="feature-cell">
+      <span class="label">Dominant power frac</span>
+      <div class="value">
+        {% if spectrum.features.dominant_power_frac is not none %}
+          {{ "%.4f"|format(spectrum.features.dominant_power_frac) }}
+        {% else %}—{% endif %}
+      </div>
+    </div>
+    <div class="feature-cell">
+      <span class="label">Spectral entropy</span>
+      <div class="value">
+        {% if spectrum.features.spectral_entropy is not none %}
+          {{ "%.4f"|format(spectrum.features.spectral_entropy) }}
+        {% else %}—{% endif %}
+      </div>
+    </div>
+    <div class="feature-cell">
+      <span class="label">Total power</span>
+      <div class="value">
+        {% if spectrum.features.total_power is not none %}
+          {{ "%.4f"|format(spectrum.features.total_power) }}
+        {% else %}—{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if spectrum and spectrum.freq_grid and spectrum.psd_norm %}
+  <div class="chart-panel">
+    <h3>Normalized PSD{% if spectrum.downsampled %} <span class="muted">(downsampled)</span>{% endif %}</h3>
+    <p class="muted">period_hours ≈ (1/f) × {{ bucket_seconds }} / 3600</p>
+    <div class="chart-wrap">
+      <canvas id="psd-chart" aria-label="PSD chart"></canvas>
+    </div>
+  </div>
+  <script id="psd-payload" type="application/json">{{ psd_json | safe }}</script>
+  {% elif not spectrum %}
+  <div class="empty-state">No spectral_baselines or entity_spectral_features for this entity.</div>
+  {% else %}
+  <div class="empty-state">Spectral features present, but no baseline PSD arrays.</div>
+  {% endif %}
+
+  {% if spectrum and spectrum.recent_scores %}
+  <h3 class="chart-panel-subhead">Recent spectral_window_scores</h3>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Window start</th>
+          <th>Window end</th>
+          <th>energy_z</th>
+          <th>shape_js_z</th>
+          <th>Flagged</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in spectrum.recent_scores %}
+        <tr>
+          <td class="mono">{{ s.window_start or "—" }}</td>
+          <td class="mono">{{ s.window_end or "—" }}</td>
+          <td class="mono">{% if s.energy_z is not none %}{{ "%.3f"|format(s.energy_z) }}{% else %}—{% endif %}</td>
+          <td class="mono">{% if s.shape_js_z is not none %}{{ "%.3f"|format(s.shape_js_z) }}{% else %}—{% endif %}</td>
+          <td class="mono">{{ s.flagged }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</section>
+
+<section class="section">
+  <h2>Event timeline (parsed_events)</h2>
+  {% if timeline %}
+  {% if timeline_newest_first %}
+  <p class="muted">newest first</p>
+  {% endif %}
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Timestamp (UTC)</th>
+          <th>Source</th>
+          <th>Template</th>
+          <th>Fields</th>
+          <th>Related anomalies</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ev in timeline %}
+        <tr>
+          <td class="mono">{{ ev.event_timestamp or "—" }}</td>
+          <td class="mono">{{ ev.log_source or "—" }}</td>
+          <td>
+            <div class="mono">{{ ev.template_string or ev.template_id or "—" }}</div>
+            {% if ev.template_id and ev.template_string %}
+            <div class="muted mono">{{ ev.template_id }}</div>
+            {% endif %}
+          </td>
+          <td class="raw-fields">
+            {% if ev.raw_fields %}
+              {% for k, v in ev.raw_fields.items() %}{{ k }}={{ v }}{% if not loop.last %}; {% endif %}{% endfor %}
+            {% else %}—{% endif %}
+          </td>
+          <td class="mono">
+            {% if ev.related_anomaly_ids %}
+              {{ ev.related_anomaly_ids | join(", ") }}
+            {% else %}—{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="empty-state">No parsed_events for this entity in the selected window.</div>
+  {% endif %}
+</section>
+{% endblock %}

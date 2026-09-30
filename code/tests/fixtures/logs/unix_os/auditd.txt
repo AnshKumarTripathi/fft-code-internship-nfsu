@@ -1,0 +1,12 @@
+type=USER_AUTH msg=audit(1705312801.123:456): pid=1234 uid=0 auid=1000 exe="/usr/sbin/sshd" success=yes acct="alice" hostname=testhost addr=10.0.0.8
+type=USER_LOGIN msg=audit(1705312802.123:457): pid=1234 uid=0 auid=1000 exe="/usr/sbin/sshd" success=yes acct="alice" hostname=testhost addr=10.0.0.8
+type=SYSCALL msg=audit(1705312803.123:458): arch=c000003e syscall=59 success=yes pid=2000 auid=1000 uid=1000 exe="/usr/bin/sudo" comm="sudo"
+type=USER_AUTH msg=audit(1705312804.123:459): pid=1235 uid=0 auid=1001 exe="/usr/sbin/sshd" success=no acct="mallory" hostname=testhost addr=10.0.0.9
+type=USER_LOGIN msg=audit(1705312805.123:460): pid=1235 uid=0 auid=4294967295 exe="/usr/sbin/sshd" success=no acct="mallory" hostname=testhost addr=10.0.0.9
+type=SYSCALL msg=audit(1705312806.123:461): arch=c000003e syscall=2 success=no pid=2001 auid=1000 uid=1000 exe="/usr/bin/cat" comm="cat"
+type=USER_AUTH msg=audit(1705312807.123:462): pid=1236 uid=0 auid=1002 exe="/usr/bin/login" success=yes acct="bob" hostname=testhost addr=10.0.0.10
+type=USER_LOGIN msg=audit(1705312808.123:463): pid=1236 uid=0 auid=1002 exe="/usr/bin/login" success=yes acct="bob" hostname=testhost
+type=SYSCALL msg=audit(1705312809.123:464): arch=c000003e syscall=59 success=yes pid=2002 auid=0 uid=0 exe="/usr/sbin/cron" comm="cron"
+type=USER_AUTH msg=audit(1705312810.123:465): pid=1237 uid=0 auid=1003 exe="/usr/sbin/sshd" success=yes acct="carol" hostname=testhost addr=10.0.0.11
+type=USER_LOGIN msg=audit(1705312811.123:466): pid=1237 uid=0 auid=1003 exe="/usr/sbin/sshd" success=yes acct="carol" hostname=testhost addr=10.0.0.11
+type=SYSCALL msg=audit(1705312812.123:467): arch=c000003e syscall=257 success=yes pid=2003 auid=1000 uid=1000 exe="/usr/bin/python3" comm="python3"

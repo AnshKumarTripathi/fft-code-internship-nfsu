@@ -1,0 +1,12 @@
+{"timestamp":"2024-01-15T10:00:01.000Z","malscore":8.4,"target":{"file":{"sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},"info":{"machine":{"name":"cuckoo1"},"started":"2024-01-15T10:00:01.000Z"}}
+{"timestamp":"2024-01-15T10:00:02.000Z","malscore":1.2,"target":{"file":{"sha256":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}},"info":{"machine":{"name":"cuckoo1"}}}
+{"timestamp":"2024-01-15T10:00:03.000Z","malscore":9.9,"sha256":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","host":"sandbox-02"}
+{"timestamp":"2024-01-15T10:00:04.000Z","malscore":0.1,"target":{"file":{"sha256":"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"}},"info":{"machine":{"name":"cuckoo2"}}}
+{"timestamp":"2024-01-15T10:00:05.000Z","malscore":7.0,"target":{"file":{"sha256":"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"}},"info":{"machine":{"name":"cuckoo1"}}}
+{"timestamp":"2024-01-15T10:00:06.000Z","malscore":3.3,"sha256":"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"}
+{"timestamp":"2024-01-15T10:00:07.000Z","malscore":6.1,"target":{"file":{"sha256":"1111111111111111111111111111111111111111111111111111111111111111"}},"info":{"machine":{"name":"cuckoo3"}}}
+{"timestamp":"2024-01-15T10:00:08.000Z","malscore":2.0,"target":{"file":{"sha256":"2222222222222222222222222222222222222222222222222222222222222222"}},"host":"sandbox-08"}
+{"timestamp":"2024-01-15T10:00:09.000Z","malscore":10.0,"target":{"file":{"sha256":"3333333333333333333333333333333333333333333333333333333333333333"}},"info":{"machine":{"name":"cuckoo1"}}}
+{"timestamp":"2024-01-15T10:00:10.000Z","malscore":4.5,"sha256":"4444444444444444444444444444444444444444444444444444444444444444","host":"sandbox-10"}
+{"timestamp":"2024-01-15T10:00:11.000Z","malscore":0.0,"target":{"file":{"sha256":"5555555555555555555555555555555555555555555555555555555555555555"}},"info":{"machine":{"name":"cuckoo2"}}}
+{"timestamp":"2024-01-15T10:00:12.000Z","malscore":8.8,"target":{"file":{"sha256":"6666666666666666666666666666666666666666666666666666666666666666"}},"info":{"machine":{"name":"cuckoo1"}}}

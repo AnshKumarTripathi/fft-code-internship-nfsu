@@ -1,0 +1,12 @@
+{"CreationTime":"2024-01-15T10:00:01","UserId":"alice@contoso.com","Operation":"UserLoggedIn","Workload":"AzureActiveDirectory","ClientIP":"10.0.0.8"}
+{"CreationTime":"2024-01-15T10:00:02","UserId":"bob@contoso.com","Operation":"UserLoggedIn","Workload":"AzureActiveDirectory","ClientIP":"10.0.0.9"}
+{"CreationTime":"2024-01-15T10:00:03","UserId":"mallory@contoso.com","Operation":"UserLoginFailed","Workload":"AzureActiveDirectory","ClientIP":"203.0.113.8"}
+{"CreationTime":"2024-01-15T10:00:04","UserId":"carol@contoso.com","Operation":"FileAccessed","Workload":"SharePoint","ClientIP":"10.0.0.10"}
+{"CreationTime":"2024-01-15T10:00:05","UserId":"dave@contoso.com","Operation":"MailItemsAccessed","Workload":"Exchange","ClientIP":"10.0.0.11"}
+{"CreationTime":"2024-01-15T10:00:06","UserId":"eve@contoso.com","Operation":"FileDownloaded","Workload":"OneDrive","ClientIP":"10.0.0.12"}
+{"CreationTime":"2024-01-15T10:00:07","UserId":"admin@contoso.com","Operation":"Add user.","Workload":"AzureActiveDirectory","ClientIP":"10.0.0.10"}
+{"CreationTime":"2024-01-15T10:00:08","UserId":"frank@contoso.com","Operation":"UserLoggedIn","Workload":"AzureActiveDirectory","ClientIP":"10.0.0.13"}
+{"CreationTime":"2024-01-15T10:00:09","UserId":"alice@contoso.com","Operation":"FileDeleted","Workload":"SharePoint","ClientIP":"10.0.0.8"}
+{"CreationTime":"2024-01-15T10:00:10","UserId":"bob@contoso.com","Operation":"Set-Mailbox","Workload":"Exchange","ClientIP":"10.0.0.9"}
+{"CreationTime":"2024-01-15T10:00:11","UserId":"carol@contoso.com","Operation":"UserLoggedIn","Workload":"AzureActiveDirectory","ClientIP":"10.0.0.11"}
+{"CreationTime":"2024-01-15T10:00:12","UserId":"mallory@contoso.com","Operation":"UserLoginFailed","Workload":"AzureActiveDirectory","ClientIP":"198.51.100.9"}

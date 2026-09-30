@@ -1,0 +1,12 @@
+Jan 15 10:00:01 bms1 panel[12]: panel=AHU1 zone=floor3 alarm=fire
+Jan 15 10:00:02 bms1 panel[12]: panel=AHU1 zone=floor3 alarm=clear
+Jan 15 10:00:03 bms1 panel[12]: panel=AHU2 zone=floor1 alarm=smoke
+Jan 15 10:00:04 bms1 panel[12]: panel=CHILL1 zone=basement setpoint=18
+Jan 15 10:00:05 bms1 panel[12]: panel=AHU2 zone=floor1 alarm=clear
+Jan 15 10:00:06 bms1 panel[12]: panel=ALARM1 zone=lobby alarm=intrusion
+Jan 15 10:00:07 bms1 panel[12]: panel=AHU1 zone=floor4 alarm=overtemp
+Jan 15 10:00:08 bms1 panel[12]: panel=CHILL1 zone=basement alarm=clear
+Jan 15 10:00:09 bms1 panel[12]: panel=ALARM1 zone=dock alarm=door
+Jan 15 10:00:10 bms1 panel[12]: panel=AHU3 zone=floor2 setpoint=21
+Jan 15 10:00:11 bms1 panel[12]: panel=AHU3 zone=floor2 alarm=clear
+Jan 15 10:00:12 bms1 panel[12]: panel=ALARM1 zone=lobby alarm=clear

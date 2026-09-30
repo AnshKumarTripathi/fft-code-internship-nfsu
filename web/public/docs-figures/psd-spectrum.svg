@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-labelledby="title desc">
+  <title id="title">PSD Welch spectrum schematic</title>
+  <desc id="desc">Line chart of normalised PSD with peaks labelled as recurring period hours.</desc>
+  <rect width="720" height="280" fill="#f7f6f2"/>
+  <text x="24" y="28" fill="#1c1b19" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">PSD / Welch spectrum</text>
+  <text x="24" y="48" fill="#5c5954" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Y = psd_norm | X = period (hours) from frequency x bucket seconds - not attack IDs</text>
+  <rect x="64" y="68" width="620" height="160" fill="#fffefb" stroke="#d8d4cc"/>
+  <polyline fill="rgba(20,130,128,0.08)" stroke="#148282" stroke-width="2" points="80,200 140,195 200,188 260,120 300,70 340,125 400,175 460,90 500,130 560,170 620,185 660,190 684,192 684,228 80,228"/>
+  <line x1="300" y1="70" x2="300" y2="228" stroke="#c45c3a" stroke-dasharray="4 3" stroke-width="1"/>
+  <text x="308" y="84" fill="#8a4b36" font-family="IBM Plex Mono, Consolas, monospace" font-size="11">~24 h</text>
+  <text x="468" y="84" fill="#5c5954" font-family="IBM Plex Mono, Consolas, monospace" font-size="11">~12 h</text>
+  <text x="18" y="155" fill="#5c5954" font-family="IBM Plex Mono, Consolas, monospace" font-size="10" transform="rotate(-90 18 155)">psd_norm</text>
+  <text x="64" y="250" fill="#5c5954" font-family="IBM Plex Mono, Consolas, monospace" font-size="10">longer period</text>
+  <text x="600" y="250" fill="#5c5954" font-family="IBM Plex Mono, Consolas, monospace" font-size="10">shorter</text>
+  <text x="64" y="268" fill="#5c5954" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">UI captions assume default 600 s buckets. Use the numeric table for exact period_hours / freq / psd.</text>
+</svg>

@@ -1,0 +1,4 @@
+entity_id,window_start,window_end,label,attack_type
+alice,2024-01-01T10:00:00Z,2024-01-01T11:00:00Z,attacker,bruteforce
+alice,2024-01-01T00:00:00Z,2024-01-01T01:00:00Z,benign,
+bob,,,benign,

@@ -1,0 +1,11 @@
+Jan 15 10:00:01 worker1 dockerd[1200]: time="2024-01-15T10:00:01Z" level=info msg="starting container" container=abc123
+Jan 15 10:00:02 worker1 dockerd[1200]: time="2024-01-15T10:00:02Z" level=info msg="container started" container=abc123
+Jan 15 10:00:03 worker1 dockerd[1200]: Handler for POST /v1.41/containers/create returned 201
+Jan 15 10:00:04 worker2 dockerd[2211]: time="2024-01-15T10:00:04Z" level=warning msg="healthcheck failed" container=web1
+Jan 15 10:00:05 worker2 dockerd[2211]: time="2024-01-15T10:00:05Z" level=info msg="pulling image nginx:1.25"
+Jan 15 10:00:06 worker1 dockerd[1200]: time="2024-01-15T10:00:06Z" level=error msg="no such container" container=missing
+Jan 15 10:00:07 worker3 dockerd[3300]: time="2024-01-15T10:00:07Z" level=info msg="live restore enabled"
+Jan 15 10:00:08 worker1 dockerd[1200]: time="2024-01-15T10:00:08Z" level=info msg="container died" container=job9
+Jan 15 10:00:09 worker2 dockerd[2211]: time="2024-01-15T10:00:09Z" level=info msg="network connect" container=api
+Jan 15 10:00:10 worker1 dockerd[1200]: time="2024-01-15T10:00:10Z" level=info msg="daemon shutting down"
+Jan 15 10:00:11 worker3 dockerd[3300]: time="2024-01-15T10:00:11Z" level=info msg="overlay2 driver loaded"

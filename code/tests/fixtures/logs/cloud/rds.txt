@@ -1,0 +1,12 @@
+2024-01-15 10:00:01 UTC:10.0.1.5(54321):alice@appdb:[12345]:LOG: statement: SELECT 1
+2024-01-15 10:00:02 UTC:10.0.1.5(54322):alice@appdb:[12345]:LOG: duration: 5123.000 ms  statement: SELECT * FROM big
+2024-01-15 10:00:03 UTC:10.0.1.6(40000):bob@appdb:[12346]:LOG: connection authorized: user=bob database=appdb
+2024-01-15 10:00:04 UTC:10.0.1.7(40001):carol@appdb:[12347]:ERROR: permission denied for table t
+2024-01-15 10:00:05 UTC:10.0.1.5(54321):alice@appdb:[12345]:LOG: statement: CREATE TABLE t (id int)
+2024-01-15 10:00:06 UTC:10.0.1.8(54323):dave@appdb:[12348]:LOG: statement: CALL refresh_stats()
+2024-01-15 10:00:07 UTC:10.0.1.9(54324):eve@appdb:[12349]:FATAL: password authentication failed for user eve
+2024-01-15 10:00:08 UTC:10.0.1.5(54321):alice@appdb:[12345]:LOG: disconnection: session time: 0:00:10.00
+2024-01-15 10:00:09 UTC:10.0.1.10(54325):frank@reports:[12350]:LOG: statement: SELECT count(*) FROM events
+2024-01-15 10:00:10 UTC:10.0.1.5(54326):alice@appdb:[12351]:LOG: statement: INSERT INTO t VALUES (1)
+2024-01-15 10:00:11 UTC:10.0.1.11(54327):mallory@appdb:[12352]:ERROR: AUDIT: permission denied for table secrets
+2024-01-15 10:00:12 UTC:10.0.1.5(54321):alice@appdb:[12353]:LOG: checkpoint starting: time

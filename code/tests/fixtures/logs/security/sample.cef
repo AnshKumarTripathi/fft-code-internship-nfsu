@@ -1,0 +1,4 @@
+CEF:0|Security|ThreatAmp|1.0|100|Login success|3|src=10.0.0.8 dst=10.0.0.2 suser=alice rt=Jan 15 2024 10:00:01
+CEF:0|Security|ThreatAmp|1.0|200|Blocked connection|8|src=10.0.0.9 dst=1.2.3.4 act=blocked rt=Jan 15 2024 10:00:02
+CEF:0|Security|ThreatAmp|1.0|300|Escaped equals|5|src=10.0.0.8 msg=key\=value still here dst=10.0.0.2 rt=1705312803000
+Jan 15 10:00:04 labhost CEF:0|Security|ThreatAmp|1.0|400|Syslog prefix|4|src=10.0.0.8 suser=bob

@@ -1,0 +1,12 @@
+Jan 15 10:00:01 kdc krb5kdc[123]: AS_REQ (6 etypes {18 17 16 23 25 26}) 10.0.0.8: ISSUE: authtime 1705312801, alice@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Jan 15 10:00:02 kdc krb5kdc[123]: TGS_REQ (6 etypes {18 17 16}) 10.0.0.8: ISSUE: authtime 1705312801, alice@EXAMPLE.COM for HTTP/web.example.com@EXAMPLE.COM
+Jan 15 10:00:03 kdc krb5kdc[123]: AS_REQ (6 etypes {18 17 16}) 10.0.0.9: NEEDED_PREAUTH: mallory@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Jan 15 10:00:04 kdc krb5kdc[123]: AS_REQ (6 etypes {18 17 16}) 10.0.0.10: CLIENT_NOT_FOUND: nosuch@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Jan 15 10:00:05 kdc krb5kdc[123]: AS_REQ (6 etypes {18 17 16}) 10.0.0.11: ISSUE: authtime 1705312805, bob@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Jan 15 10:00:06 kdc krb5kdc[123]: TGS_REQ (6 etypes {18 17 16}) 10.0.0.11: ISSUE: authtime 1705312805, bob@EXAMPLE.COM for cifs/fs.example.com@EXAMPLE.COM
+Jan 15 10:00:07 kdc krb5kdc[123]: AS_REQ (6 etypes {18 17 16}) 10.0.0.12: UNKNOWN_SERVER: carol@EXAMPLE.COM for HTTP/missing.example.com@EXAMPLE.COM
+Jan 15 10:00:08 kdc krb5kdc[123]: AS_REQ (6 etypes {18 17 16}) 10.0.0.13: ISSUE: authtime 1705312808, dave@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Jan 15 10:00:09 kdc kadmind[50]: AS_REQ from 10.0.0.14: ISSUE: eve@EXAMPLE.COM for kadmin/admin@EXAMPLE.COM
+Jan 15 10:00:10 kdc krb5kdc[123]: TGS_REQ (6 etypes {18 17 16}) 10.0.0.8: ISSUE: authtime 1705312810, alice@EXAMPLE.COM for host/kdc.example.com@EXAMPLE.COM
+Jan 15 10:00:11 kdc krb5kdc[123]: AS_REQ (6 etypes {18 17 16}) 10.0.0.15: NEEDED_PREAUTH: frank@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Jan 15 10:00:12 kdc krb5kdc[123]: AS_REQ (6 etypes {18 17 16}) 10.0.0.16: ISSUE: authtime 1705312812, gina@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM

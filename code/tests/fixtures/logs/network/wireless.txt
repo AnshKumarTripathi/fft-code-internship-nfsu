@@ -1,0 +1,12 @@
+Jan 15 10:00:01 ap1 hostapd[90]: wlan0: STA aa:bb:cc:dd:ee:01 IEEE 802.11: associated
+Jan 15 10:00:01 ap1 hostapd[90]: wlan0: AP-STA-CONNECTED aa:bb:cc:dd:ee:01
+Jan 15 10:00:02 ap1 hostapd[90]: wlan0: STA aa:bb:cc:dd:ee:02 IEEE 802.11: associated
+Jan 15 10:00:02 ap1 hostapd[90]: wlan0: AP-STA-CONNECTED aa:bb:cc:dd:ee:02 10.0.0.9
+Jan 15 10:00:03 ap1 hostapd[90]: wlan0: STA aa:bb:cc:dd:ee:03 IEEE 802.11: deauthenticated
+Jan 15 10:00:03 ap1 hostapd[90]: wlan0: AP-STA-DISCONNECTED aa:bb:cc:dd:ee:03
+Jan 15 10:00:04 ap1 hostapd[90]: wlan0: STA aa:bb:cc:dd:ee:04 IEEE 802.11: associated
+Jan 15 10:00:04 ap1 hostapd[90]: wlan0: AP-STA-CONNECTED aa:bb:cc:dd:ee:04
+Jan 15 10:00:05 ap1 hostapd[90]: wlan0: STA aa:bb:cc:dd:ee:05 IEEE 802.11: disassociated
+Jan 15 10:00:06 ap1 hostapd[90]: wlan0: AP-STA-DISCONNECTED aa:bb:cc:dd:ee:05
+Jan 15 10:00:07 ap1 hostapd[90]: wlan0: STA aa:bb:cc:dd:ee:06 IEEE 802.11: associated
+Jan 15 10:00:08 ap1 hostapd[90]: wlan0: AP-STA-CONNECTED aa:bb:cc:dd:ee:06 10.0.0.16

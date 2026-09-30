@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Runs · Log Anomaly{% endblock %}
+{% block content %}
+<p class="crumb">Pipeline runs</p>
+<h1 class="page-title">Runs</h1>
+<p class="page-lede">
+  Recent <code>pipeline_runs</code> rows from the warehouse. Read-only; there is no cancel action.
+</p>
+
+{% if runs %}
+<div class="table-wrap">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Run ID</th>
+        <th>Stage</th>
+        <th>Started (UTC)</th>
+        <th>Finished (UTC)</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for run in runs %}
+      <tr>
+        <td class="mono">{{ run.run_id }}</td>
+        <td>{{ run.stage }}</td>
+        <td>{{ run.started_at }}</td>
+        <td>{{ run.finished_at or "—" }}</td>
+        <td>{{ run.status }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="empty-state">No pipeline_runs rows in the warehouse yet.</div>
+{% endif %}
+{% endblock %}

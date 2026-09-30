@@ -1,0 +1,12 @@
+TimeCreated=2024-01-15T13:30:01.000Z EventID=5857 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-SRV01 User=alice Query=SELECT * FROM Win32_Process
+TimeCreated=2024-01-15T13:30:02.000Z EventID=5858 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-SRV01 User=alice Operation=TempEvent
+TimeCreated=2024-01-15T13:30:03.000Z EventID=5859 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-SRV01 User=bob Operation=PermanentEvent
+TimeCreated=2024-01-15T13:30:04.000Z EventID=5860 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-SRV02 User=carol Operation=TempConsumer
+TimeCreated=2024-01-15T13:30:05.000Z EventID=5861 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-SRV02 User=carol Operation=PermanentConsumer
+TimeCreated=2024-01-15T13:30:06.000Z EventID=5857 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-WS01 User=dave Query=SELECT * FROM Win32_Service
+TimeCreated=2024-01-15T13:30:07.000Z EventID=5858 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-WS01 User=dave Operation=TempEvent
+TimeCreated=2024-01-15T13:30:08.000Z EventID=5859 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-DC01 User=admin Operation=PermanentEvent
+TimeCreated=2024-01-15T13:30:09.000Z EventID=5860 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-DC01 User=admin Operation=TempConsumer
+TimeCreated=2024-01-15T13:30:10.000Z EventID=5861 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-DC01 User=eve Operation=PermanentConsumer
+TimeCreated=2024-01-15T13:30:11.000Z EventID=5857 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-SRV01 User=alice Query=SELECT * FROM Win32_UserAccount
+TimeCreated=2024-01-15T13:30:12.000Z EventID=5858 LogName=Microsoft-Windows-WMI-Activity/Operational Provider=Microsoft-Windows-WMI-Activity Computer=WIN-SRV03 User=frank Operation=TempEvent

@@ -1,0 +1,12 @@
+Starting CircleCI build
+====>> Spin up environment
+====>> Checkout code
+CircleCI job web started
+====>> Restore cache
+====>> npm install
+====>> Run tests
+CircleCI: tests passed
+====>> Save cache
+====>> Upload artifacts
+CircleCI build #88 finished
+====>> Teardown

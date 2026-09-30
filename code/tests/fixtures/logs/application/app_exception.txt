@@ -1,0 +1,12 @@
+2024-01-15 10:00:01,123 ERROR [api] Traceback (most recent call last):
+2024-01-15 10:00:02,000 ERROR [worker] Traceback (most recent call last):
+2024-01-15T10:00:03.000Z ERROR [billing] Traceback (most recent call last):
+Exception in thread "main" java.lang.NullPointerException
+2024-01-15 10:00:05,001 ERROR [api] Traceback (most recent call last):
+java.lang.IllegalStateException: not started
+2024-01-15 10:00:07,500 ERROR [worker] Traceback (most recent call last):
+Exception in thread "pool-1-thread-1" java.lang.RuntimeException
+2024-01-15 10:00:09,000 ERROR [checkout] Traceback (most recent call last):
+2024-01-15T10:00:10.000Z WARN [api] Traceback (most recent call last):
+Exception in thread "main" java.io.IOException: broken pipe
+2024-01-15 10:00:12,999 ERROR [api] Traceback (most recent call last):

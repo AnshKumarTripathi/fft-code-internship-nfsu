@@ -1,0 +1,13 @@
+ts,badge_id,door,result
+2024-01-15T10:00:01Z,B-1001,door-lobby,allow
+2024-01-15T10:00:02Z,B-1002,door-lab,deny
+2024-01-15T10:00:03Z,B-1001,door-stair,allow
+2024-01-15T10:00:04Z,B-1003,door-lobby,allow
+2024-01-15T10:00:05Z,B-1004,door-server,deny
+2024-01-15T10:00:06Z,B-1002,door-lobby,allow
+2024-01-15T10:00:07Z,B-1005,door-lab,allow
+2024-01-15T10:00:08Z,B-1001,door-server,deny
+2024-01-15T10:00:09Z,B-1006,door-lobby,allow
+2024-01-15T10:00:10Z,B-1003,door-stair,allow
+2024-01-15T10:00:11Z,B-1007,door-lab,deny
+2024-01-15T10:00:12Z,B-1002,door-server,allow

@@ -1,0 +1,12 @@
+{"ts":"2024-01-15T10:00:01.000Z","level":"info","msg":"server started","service":"api","host":"app-01"}
+{"ts":"2024-01-15T10:00:02.000Z","level":"info","msg":"request ok","service":"api","user":"alice"}
+{"timestamp":"2024-01-15T10:00:03.000Z","level":"warn","message":"slow query","service":"api","host":"app-01"}
+{"ts":"2024-01-15T10:00:04.000Z","level":"error","msg":"db timeout","service":"worker","host":"app-02"}
+{"ts":"2024-01-15T10:00:05.000Z","level":"info","msg":"cache hit","service":"api","user":"bob"}
+{"ts":"2024-01-15T10:00:06.000Z","level":"debug","msg":"feature evaluated","service":"api","user":"carol"}
+{"time":"2024-01-15T10:00:07.000Z","level":"info","msg":"job complete","service":"worker","host":"app-03"}
+{"ts":"2024-01-15T10:00:08.000Z","level":"error","msg":"payment failed","service":"billing","user":"dave"}
+{"ts":"2024-01-15T10:00:09.000Z","level":"info","msg":"health ok","service":"api","host":"app-01"}
+{"ts":"2024-01-15T10:00:10.000Z","level":"warn","msg":"retrying","service":"worker","host":"app-02"}
+{"ts":"2024-01-15T10:00:11.000Z","level":"info","msg":"logout","service":"api","user":"eve"}
+{"ts":"2024-01-15T10:00:12.000Z","level":"error","msg":"panic recovered","service":"api","host":"app-01"}

@@ -1,0 +1,12 @@
+{"platform":"slack","actor":"alice","action":"file_share","workspace":"T123","ip":"203.0.113.10","ts":"2024-01-15T10:00:01Z"}
+{"platform":"slack","actor":"bob","action":"channel_create","workspace":"T123","ip":"10.0.0.8","ts":"2024-01-15T10:00:02Z"}
+{"platform":"teams","actor":"carol@contoso.com","action":"message_deleted","workspace":"contoso","ip":"10.0.0.9","ts":"2024-01-15T10:00:03Z"}
+{"platform":"teams","actor":"dave@contoso.com","action":"member_added","workspace":"contoso","client_ip":"198.51.100.20","ts":"2024-01-15T10:00:04Z"}
+{"platform":"zoom","actor":"eve","action":"meeting_started","workspace":"acme","ip":"203.0.113.11","ts":"2024-01-15T10:00:05Z"}
+{"platform":"zoom","actor":"frank","action":"recording_download","workspace":"acme","ip":"10.0.0.10","ts":"2024-01-15T10:00:06Z"}
+{"platform":"slack","actor":"grace","action":"app_installed","workspace":"T456","ip":"10.0.0.11","ts":"2024-01-15T10:00:07Z"}
+{"platform":"slack","actor":"heidi","action":"user_login","workspace":"T123","ip":"203.0.113.12","ts":"2024-01-15T10:00:08Z"}
+{"platform":"teams","actor":"ivan@contoso.com","action":"file_download","workspace":"contoso","ip":"10.0.0.12","ts":"2024-01-15T10:00:09Z"}
+{"platform":"zoom","actor":"judy","action":"participant_joined","workspace":"acme","ip":"198.51.100.21","ts":"2024-01-15T10:00:10Z"}
+{"platform":"slack","actor":"mallory","action":"file_share","workspace":"T123","ip":"203.0.113.13","ts":"2024-01-15T10:00:11Z"}
+{"platform":"teams","actor":"olivia@contoso.com","action":"guest_access","workspace":"contoso","ip":"203.0.113.14","ts":"2024-01-15T10:00:12Z"}

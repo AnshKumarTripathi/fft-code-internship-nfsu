@@ -1,0 +1,12 @@
+[2024-01-15 10:00:01,123] INFO [KafkaServer id=0] started (kafka.server.KafkaServer)
+[2024-01-15 10:00:02,200] INFO [KafkaServer id=0] awaiting socket connections on 0.0.0.0:9092 (kafka.server.KafkaServer)
+[2024-01-15 10:00:03,010] INFO [GroupCoordinator 0]: Starting up. (kafka.coordinator.group.GroupCoordinator)
+[2024-01-15 10:00:04,111] INFO [GroupCoordinator 0]: Preparing to rebalance group payments in state PreparingRebalance
+[2024-01-15 10:00:05,222] INFO [GroupCoordinator 0]: Stabilized group payments generation 3
+[2024-01-15 10:00:06,333] INFO [KafkaController id=0] Currently active controller is 0 (kafka.controller.KafkaController)
+[2024-01-15 10:00:07,444] INFO [GroupCoordinator 0]: Member alice-1 in group orders has left
+[2024-01-15 10:00:08,555] WARN [KafkaServer id=0] Connection to replica 1 failed (kafka.server.ReplicaFetcherThread)
+[2024-01-15 10:00:09,666] INFO [GroupCoordinator 0]: Dynamic member with unknown member id joins group inventory
+[2024-01-15 10:00:10,777] INFO [KafkaServer id=1] [kafka-network-thread] Processor 0 closed connection from 10.0.0.8 (kafka.network.Processor)
+[2024-01-15 10:00:11,888] INFO [KafkaController id=0] Partition orders-0 leader is 0 (kafka.controller.KafkaController)
+[2024-01-15 10:00:12,999] INFO [GroupCoordinator 0]: Preparing to rebalance group payments in state CompletingRebalance

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Reports · Log Anomaly{% endblock %}
+{% block content %}
+<p class="crumb">Reports</p>
+<h1 class="page-title">Reports</h1>
+<p class="page-lede">
+  Deterministic Markdown and HTML artifacts from <span class="mono">python -m src.pipeline report</span>.
+</p>
+
+{% if rows %}
+<div class="table-wrap">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Incident</th>
+        <th>Severity</th>
+        <th>Entity</th>
+        <th>Markdown</th>
+        <th>HTML</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <td><a class="mono" href="/incidents/{{ row.incident.incident_id }}">{{ row.incident.incident_id }}</a></td>
+        <td><span class="severity severity-{{ row.incident.severity }}">{{ row.incident.severity }}</span></td>
+        <td class="mono">{{ row.incident.entity_id }}</td>
+        <td>
+          {% if row.md_href %}<a href="{{ row.md_href }}">.md</a>{% else %}—{% endif %}
+        </td>
+        <td>
+          {% if row.html_href %}<a href="{{ row.html_href }}">.html</a>{% else %}—{% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="empty-state">
+  No incidents in warehouse. Run <span class="mono">python -m src.pipeline report</span>
+  after correlate, then refresh.
+</div>
+{% endif %}
+{% endblock %}

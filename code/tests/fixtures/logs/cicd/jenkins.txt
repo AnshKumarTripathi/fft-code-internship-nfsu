@@ -1,0 +1,12 @@
+2024-01-15T10:00:01Z Started by user alice
+2024-01-15T10:00:02Z [Pipeline] Start of Pipeline
+2024-01-15T10:00:03Z [Pipeline] { (Build)
+2024-01-15T10:00:04Z Building in workspace /var/jenkins_home/workspace/web
+2024-01-15T10:00:05Z Jenkins build #42 started
+2024-01-15T10:00:06Z [Pipeline] sh
+2024-01-15T10:00:07Z + make test
+2024-01-15T10:00:08Z Finished: SUCCESS
+2024-01-15T10:00:09Z Started by user bob
+2024-01-15T10:00:10Z [Pipeline] { (Test)
+2024-01-15T10:00:11Z Jenkins build #43 started
+2024-01-15T10:00:12Z Finished: FAILURE

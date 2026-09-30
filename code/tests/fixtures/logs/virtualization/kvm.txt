@@ -1,0 +1,12 @@
+Jan 15 10:00:01 kvmhost libvirtd[1234]: Domain 'web01' started
+Jan 15 10:00:02 kvmhost libvirtd[1234]: Domain 'web02' shutdown
+Jan 15 10:00:03 kvmhost qemu-kvm[2001]: Domain 'db01' running
+Jan 15 10:00:04 kvmhost libvirtd[1234]: Domain 'app01' defined
+Jan 15 10:00:05 kvmhost libvirtd[1234]: Domain 'web01' paused
+Jan 15 10:00:06 kvmhost qemu[2002]: Domain 'jump01' started
+Jan 15 10:00:07 kvmhost libvirtd[1234]: Domain 'web03' started
+Jan 15 10:00:08 kvmhost libvirtd[1234]: Domain 'app01' destroyed
+Jan 15 10:00:09 kvmhost qemu-kvm[2003]: Domain 'db01' resumed
+Jan 15 10:00:10 kvmhost libvirtd[1234]: Domain 'web01' reboot
+Jan 15 10:00:11 kvmhost libvirtd[1234]: Domain 'cache01' started
+Jan 15 10:00:12 kvmhost libvirtd[1234]: Domain 'web02' started

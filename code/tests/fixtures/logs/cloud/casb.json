@@ -1,0 +1,12 @@
+{"time":"2024-01-15T10:00:01.000Z","user":"alice@contoso.com","app":"Box","action":"download","ip":"10.0.0.8"}
+{"time":"2024-01-15T10:00:02.000Z","user":"bob@contoso.com","app":"Dropbox","action":"upload","ip":"10.0.0.9"}
+{"time":"2024-01-15T10:00:03.000Z","user":"mallory@contoso.com","app":"Google Drive","action":"share","ip":"203.0.113.8"}
+{"time":"2024-01-15T10:00:04.000Z","user":"carol@contoso.com","app":"Salesforce","action":"login","ip":"10.0.0.10"}
+{"time":"2024-01-15T10:00:05.000Z","user":"dave@contoso.com","app":"Slack","action":"message","ip":"10.0.0.11"}
+{"time":"2024-01-15T10:00:06.000Z","user":"eve@contoso.com","app":"Box","action":"delete","ip":"10.0.0.12"}
+{"time":"2024-01-15T10:00:07.000Z","username":"frank@contoso.com","app":"GitHub","action":"clone","ip":"10.0.0.13"}
+{"time":"2024-01-15T10:00:08.000Z","user":"alice@contoso.com","app":"Office 365","action":"download","src_ip":"10.0.0.8"}
+{"time":"2024-01-15T10:00:09.000Z","actor":"bob@contoso.com","app":"Zoom","action":"join","ip":"10.0.0.9"}
+{"time":"2024-01-15T10:00:10.000Z","user":"admin@contoso.com","app":"AWS Console","action":"login","ip":"10.0.0.10"}
+{"time":"2024-01-15T10:00:11.000Z","user":"carol@contoso.com","app":"Box","action":"view","ip":"10.0.0.11"}
+{"time":"2024-01-15T10:00:12.000Z","user":"mallory@contoso.com","app":"Dropbox","action":"share","ip":"198.51.100.9"}

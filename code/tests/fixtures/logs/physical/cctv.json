@@ -1,0 +1,12 @@
+{"camera_id":"cam-lobby","event":"motion","ts":"2024-01-15T10:00:01Z"}
+{"camera_id":"cam-lab","event":"offline","ts":"2024-01-15T10:00:02Z"}
+{"camera_id":"cam-stair","event":"online","ts":"2024-01-15T10:00:03Z"}
+{"camera_id":"cam-server","event":"tamper","ts":"2024-01-15T10:00:04Z"}
+{"camera_id":"cam-lobby","event":"offline","ts":"2024-01-15T10:00:05Z"}
+{"camera_id":"cam-parking","event":"motion","ts":"2024-01-15T10:00:06Z"}
+{"camera_id":"cam-lab","event":"online","ts":"2024-01-15T10:00:07Z"}
+{"camera_id":"cam-roof","event":"motion","ts":"2024-01-15T10:00:08Z"}
+{"camera_id":"cam-server","event":"offline","ts":"2024-01-15T10:00:09Z"}
+{"camera_id":"cam-lobby","event":"online","ts":"2024-01-15T10:00:10Z"}
+{"camera_id":"cam-dock","event":"tamper","ts":"2024-01-15T10:00:11Z"}
+{"camera_id":"cam-parking","event":"offline","ts":"2024-01-15T10:00:12Z"}

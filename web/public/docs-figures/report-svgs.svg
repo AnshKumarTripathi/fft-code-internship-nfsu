@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="title desc">
+  <title id="title">Report SVG charts schematic</title>
+  <desc id="desc">Two compact report sparkline panels for activity and PSD embedded in HTML incident reports.</desc>
+  <rect width="720" height="260" fill="#f7f6f2"/>
+  <text x="24" y="28" fill="#1c1b19" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">HTML report charts (SVG)</text>
+  <text x="24" y="48" fill="#5c5954" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11">Same story as Analysis tabs, but static sparklines inside incident HTML - not the interactive Chart.js UI.</text>
+
+  <rect x="24" y="64" width="330" height="150" fill="#fffefb" stroke="#d8d4cc"/>
+  <text x="36" y="86" fill="#1c1b19" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">activity_svg</text>
+  <rect x="160" y="100" width="40" height="80" fill="#d9775733"/>
+  <polyline fill="none" stroke="#333" stroke-width="1.5" points="48,160 90,155 130,150 170,120 210,125 250,150 300,148 330,150"/>
+
+  <rect x="366" y="64" width="330" height="150" fill="#fffefb" stroke="#d8d4cc"/>
+  <text x="378" y="86" fill="#1c1b19" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600">psd_svg</text>
+  <polyline fill="none" stroke="#333" stroke-width="1.5" points="390,180 430,170 470,120 510,90 550,140 590,160 640,170 670,175"/>
+
+  <text x="24" y="240" fill="#5c5954" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="10">Open via Reports viewer. No STFT heatmap in report SVG - use Analysis disclosure for STFT.</text>
+</svg>

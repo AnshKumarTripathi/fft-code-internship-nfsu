@@ -1,0 +1,12 @@
+Jan 15 10:00:01 mail opendmarc[200]: example.com pass
+Jan 15 10:00:02 mail opendmarc[200]: evil.example fail
+Jan 15 10:00:03 mail opendmarc[200]: ignoring connection from 203.0.113.10
+Jan 15 10:00:04 mail opendmarc[200]: SPF fail for 203.0.113.11
+Jan 15 10:00:05 mail opendkim[201]: 4F8A3: DKIM verification successful
+Jan 15 10:00:06 mail opendkim[201]: 4F8A4: DKIM signature verification failed
+Jan 15 10:00:07 mail opendkim[201]: 4F8A5: DKIM verification successful
+Jan 15 10:00:08 mail opendmarc[200]: example.net none
+Jan 15 10:00:09 mail policyd-spf[300]: : Pass; identity=mailfrom; client-ip=198.51.100.20; helo=mail.example.com; envelope-from=alice@example.com; receiver=mail.example.com
+Jan 15 10:00:10 mail policyd-spf[300]: : Fail; identity=mailfrom; client-ip=203.0.113.12; helo=mail.evil.com; envelope-from=bob@evil.com; receiver=mail.example.com
+Jan 15 10:00:11 mail opendmarc[200]: example.org pass
+Jan 15 10:00:12 mail opendkim[201]: 4F8A6: no signature data

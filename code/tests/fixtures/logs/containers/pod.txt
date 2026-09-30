@@ -1,0 +1,11 @@
+2024-01-15T10:00:01.123456789Z stdout F starting nginx
+2024-01-15T10:00:02.123456789Z stdout F {"ts":"2024-01-15T10:00:02Z","level":"info","msg":"listening","service":"web"}
+2024-01-15T10:00:03.123456789Z stderr F warn: slow request
+2024-01-15T10:00:04.123456789Z stdout F GET /health 200
+2024-01-15T10:00:05.123456789Z stdout F {"ts":"2024-01-15T10:00:05Z","level":"info","msg":"ready","pod":"web-7d8f9"}
+2024-01-15T10:00:06.123456789Z stderr F error: connection refused
+2024-01-15T10:00:07.123456789Z stdout F handled 12 requests
+2024-01-15T10:00:08.123456789Z stdout F {"ts":"2024-01-15T10:00:08Z","level":"info","msg":"user login","user":"alice","ip":"10.0.0.8"}
+2024-01-15T10:00:09.123456789Z stdout F shutting down
+2024-01-15T10:00:10.123456789Z stderr F panic recovered
+2024-01-15T10:00:11.123456789Z stdout F done

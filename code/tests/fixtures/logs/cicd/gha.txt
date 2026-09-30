@@ -1,0 +1,12 @@
+##[group]Run tests
+##[error]Process completed with exit code 1
+##[warning]Node.js 16 actions are deprecated
+##[group]Set up job
+GitHub Actions runner started
+##[notice]Complete job
+##[group]Checkout repository
+##[error]npm test failed
+##[warning]deprecated workflow command
+##[group]Post job cleanup
+##[error]Upload artifact failed
+GitHub Actions: job web completed

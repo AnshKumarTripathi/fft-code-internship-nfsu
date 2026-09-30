@@ -1,0 +1,12 @@
+10.0.0.8 - alice [15/Jan/2024:10:00:01 +0000] "GET /repository/maven-releases/com/example/app/1.0.jar HTTP/1.1" 200 1234
+10.0.0.9 - bob [15/Jan/2024:10:00:02 +0000] "PUT /repository/maven-releases/com/example/app/1.1.jar HTTP/1.1" 201 88
+10.0.0.8 - alice [15/Jan/2024:10:00:03 +0000] "GET /repository/npm-hosted/lodash/-/lodash-4.17.21.tgz HTTP/1.1" 200 5000
+2024-01-15T10:00:04.123Z|carol|10.0.1.4|GET /artifactory/libs-release/com/example/lib/2.0.jar
+2024-01-15T10:00:05.123Z|dave|10.0.1.5|PUT /artifactory/libs-snapshot/com/example/lib/2.1-SNAPSHOT.jar
+10.0.0.10 - eve [15/Jan/2024:10:00:06 +0000] "GET /repository/maven-central/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar HTTP/1.1" 200 41000
+10.0.0.11 - frank [15/Jan/2024:10:00:07 +0000] "DELETE /repository/maven-releases/com/example/old/0.1.jar HTTP/1.1" 204 0
+2024-01-15T10:00:08.123Z|grace|198.51.100.20|GET /artifactory/libs-release/com/example/app/1.0.jar
+10.0.0.12 - heidi [15/Jan/2024:10:00:09 +0000] "GET /repository/pypi-hosted/packages/requests/2.31.0/requests-2.31.0.tar.gz HTTP/1.1" 200 9000
+2024-01-15T10:00:10.123Z|ivan|10.0.2.8|GET /artifactory/generic-local/installer.bin
+10.0.0.13 - judy [15/Jan/2024:10:00:11 +0000] "PUT /repository/maven-releases/com/example/app/1.2.jar HTTP/1.1" 201 90
+Jan 15 10:00:12 nexus1 nexus[2200]: downloaded /repository/maven-releases/com/example/app/1.0.jar

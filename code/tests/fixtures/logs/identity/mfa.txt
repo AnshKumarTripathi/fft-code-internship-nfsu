@@ -1,0 +1,12 @@
+{"isotimestamp":"2024-01-15T10:00:01+00:00","username":"alice","eventtype":"authentication","result":"success","ip":"10.0.0.8"}
+{"isotimestamp":"2024-01-15T10:00:02+00:00","username":"mallory","eventtype":"authentication","result":"failure","ip":"10.0.0.9"}
+{"isotimestamp":"2024-01-15T10:00:03+00:00","username":"bob","eventtype":"authentication","result":"fraud","ip":"10.0.0.10"}
+{"isotimestamp":"2024-01-15T10:00:04+00:00","username":"carol","eventtype":"authentication","result":"allow","ip":"10.0.0.11"}
+{"isotimestamp":"2024-01-15T10:00:05+00:00","username":"dave","eventtype":"authentication","result":"deny","ip":"10.0.0.12"}
+Jan 15 10:00:06 duo duo_auth_proxy[1]: Success. Logging you in... user=alice ip=10.0.0.8
+Jan 15 10:00:07 duo duo_auth_proxy[1]: Failure. user=mallory ip=10.0.0.9
+Jan 15 10:00:08 host duo[22]: Success user=eve ip=10.0.0.13
+{"isotimestamp":"2024-01-15T10:00:09+00:00","username":"frank","eventtype":"authentication","result":"success","ip":"10.0.0.14"}
+{"isotimestamp":"2024-01-15T10:00:10+00:00","username":"gina","eventtype":"authentication","result":"success","ip":"10.0.0.15"}
+Jan 15 10:00:11 duo duo_auth_proxy[1]: Success. user=harry ip=10.0.0.16
+{"isotimestamp":"2024-01-15T10:00:12+00:00","username":"ivy","eventtype":"authentication","result":"failure","ip":"10.0.0.17"}

@@ -1,0 +1,12 @@
+{"timestamp":"2024-01-15T10:00:01.000Z","event_simpleName":"ProcessRollup2","ComputerName":"WIN-WS01","UserName":"alice","CommandLine":"powershell.exe -enc AA==","ImageFileName":"powershell.exe","severity":"high"}
+{"timestamp":"2024-01-15T10:00:02.000Z","event_simpleName":"NetworkConnectIP4","ComputerName":"WIN-WS01","UserName":"alice","LocalAddressIP4":"10.0.0.8","action":"connect"}
+{"timestamp":"2024-01-15T10:00:03.000Z","event_simpleName":"ProcessRollup2","ComputerName":"WIN-WS02","UserName":"bob","CommandLine":"cmd.exe /c whoami","ImageFileName":"cmd.exe"}
+{"timestamp":"2024-01-15T10:00:04.000Z","event_simpleName":"DnsRequest","ComputerName":"WIN-WS03","UserName":"carol","action":"query"}
+{"timestamp":"2024-01-15T10:00:05.000Z","event_simpleName":"ProcessRollup2","ComputerName":"WIN-WS04","UserName":"dave","CommandLine":"rundll32.exe","ImageFileName":"rundll32.exe","severity":"medium"}
+{"timestamp":"2024-01-15T10:00:06.000Z","event_simpleName":"NetworkConnectIP4","ComputerName":"WIN-WS05","UserName":"eve","LocalAddressIP4":"10.0.0.13","action":"connect"}
+{"timestamp":"2024-01-15T10:00:07.000Z","event_simpleName":"ProcessRollup2","ComputerName":"WIN-WS06","UserName":"frank","CommandLine":"wscript.exe drop.js","ImageFileName":"wscript.exe","severity":"high"}
+{"timestamp":"2024-01-15T10:00:08.000Z","event_simpleName":"RegKeyUpdated","ComputerName":"WIN-WS07","UserName":"gina","action":"modify"}
+{"timestamp":"2024-01-15T10:00:09.000Z","event_simpleName":"ProcessRollup2","ComputerName":"WIN-WS08","UserName":"harry","CommandLine":"net user","ImageFileName":"net.exe"}
+{"timestamp":"2024-01-15T10:00:10.000Z","event_simpleName":"NetworkConnectIP4","ComputerName":"WIN-WS09","UserName":"ivy","LocalAddressIP4":"10.0.0.17","action":"connect"}
+{"timestamp":"2024-01-15T10:00:11.000Z","event_simpleName":"ProcessRollup2","ComputerName":"WIN-WS10","UserName":"joe","CommandLine":"msiexec.exe /i payload.msi","ImageFileName":"msiexec.exe","severity":"medium"}
+{"timestamp":"2024-01-15T10:00:12.000Z","event_simpleName":"ProcessRollup2","ComputerName":"WIN-WS11","UserName":"kate","CommandLine":"excel.exe","ImageFileName":"excel.exe"}

@@ -1,0 +1,12 @@
+INFO  [Native-Transport-Requests-1] 2024-01-15 10:00:01,123 Message.java:1 - SELECT * FROM ks.users
+INFO  [Native-Transport-Requests-1] 2024-01-15 10:00:02,123 Monitoring.java:1 - slow query log SELECT * FROM ks.big (5123 ms)
+INFO  [Native-Transport-Requests-1] 2024-01-15 10:00:03,123 QueryProcessor.java:1 - CALL procedure refresh_stats
+INFO  [MigrationStage:1] 2024-01-15 10:00:04,123 CreateKeyspace.java:1 - CREATE KEYSPACE appks WITH replication = {'class':'SimpleStrategy'}
+INFO  [Native-Transport-Requests-1] 2024-01-15 10:00:05,123 Auth.java:1 - audit user=alice authenticated to keyspace appks
+INFO  [CommitLog] 2024-01-15 10:00:06,123 CommitLog.java:1 - CommitLog segment created
+INFO  [RepairJobTask:1] 2024-01-15 10:00:07,123 RepairSession.java:1 - Repair session started for appks
+INFO  [main] 2024-01-15 10:00:08,123 CassandraDaemon.java:1 - Starting listening for CQL clients
+INFO  [OptionalTasks:1] 2024-01-15 10:00:09,123 Snapshot.java:1 - nodetool snapshot of keyspace appks
+INFO  [Native-Transport-Requests-2] 2024-01-15 10:00:10,123 Message.java:1 - INSERT INTO ks.users (id) VALUES (1)
+INFO  [Native-Transport-Requests-1] 2024-01-15 10:00:11,123 Auth.java:1 - audit user=mallory login failed
+INFO  [CompactionExecutor:1] 2024-01-15 10:00:12,123 CompactionTask.java:1 - Compacting keyspace appks

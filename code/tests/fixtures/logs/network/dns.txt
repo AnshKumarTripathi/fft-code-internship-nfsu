@@ -1,0 +1,12 @@
+Jan 15 10:00:01 ns1 named[88]: client @0x7f8a 10.0.0.8#54321 (example.com): query: example.com IN A + (127.0.0.1)
+Jan 15 10:00:02 ns1 named[88]: client 10.0.0.9#53100 (example.net): query: example.net IN AAAA + (127.0.0.1)
+Jan 15 10:00:03 ns1 named[88]: client @0x7f8b 10.0.0.10#40000 (evil.example): query: evil.example IN A +E (127.0.0.1)
+Jan 15 10:00:04 ns1 named[88]: client 10.0.0.10#40000 (evil.example): NXDOMAIN
+Jan 15 10:00:05 ns1 named[88]: client @0x7f8c 10.0.0.11#44301 (corp.example): query: corp.example IN MX + (127.0.0.1)
+Jan 15 10:00:06 ns1 named[88]: client 10.0.0.12#50001 (mail.example.com): query: mail.example.com IN A + (127.0.0.1)
+Jan 15 10:00:07 ns1 named[88]: client @0x7f8d 192.168.1.50#55555 (internal.example): query: internal.example IN A + (127.0.0.1)
+Jan 15 10:00:08 ns1 named[88]: client 10.0.0.13#44122 (missing.example): query: missing.example IN A + (127.0.0.1)
+Jan 15 10:00:09 ns1 named[88]: client 10.0.0.13#44122 (missing.example): NXDOMAIN
+Jan 15 10:00:10 ns1 named[88]: client @0x7f8e 10.0.0.14#60000 (www.example.org): query: www.example.org IN A + (127.0.0.1)
+Jan 15 10:00:11 ns1 named[88]: client 10.0.0.15#53002 (example.com): query: example.com IN TXT + (127.0.0.1)
+Jan 15 10:00:12 ns1 named[88]: client @0x7f8f 10.0.0.16#22100 (ns.example.com): query: ns.example.com IN NS + (127.0.0.1)

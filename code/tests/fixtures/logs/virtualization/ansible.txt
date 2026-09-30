@@ -1,0 +1,12 @@
+2024-01-15T10:00:01Z TASK [install nginx] on web01
+2024-01-15T10:00:02Z ok: [web01]
+2024-01-15T10:00:03Z TASK [restart nginx] on web01
+2024-01-15T10:00:04Z changed: [web01]
+2024-01-15T10:00:05Z TASK [install nginx] on web02
+2024-01-15T10:00:06Z ok: [web02]
+2024-01-15T10:00:07Z PLAY RECAP *********************************************************************
+2024-01-15T10:00:08Z web01 : ok=2 changed=1 unreachable=0 failed=0
+2024-01-15T10:00:09Z web02 : ok=2 changed=0 unreachable=0 failed=0
+2024-01-15T10:00:10Z ansible-playbook site.yml user=alice
+2024-01-15T10:00:11Z TASK [copy config] on db01
+2024-01-15T10:00:12Z changed: [db01]

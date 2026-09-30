@@ -1,0 +1,12 @@
+{"timestamp":"2024-01-15T10:00:01.000Z","policy":"PII-outbound","user":"alice","host":"LAPTOP-01","action":"block","file":"ssn.csv","severity":"high"}
+{"timestamp":"2024-01-15T10:00:02.000Z","policy":"PII-outbound","user":"bob","host":"LAPTOP-02","action":"allow","file":"readme.txt","severity":"low"}
+{"timestamp":"2024-01-15T10:00:03.000Z","policy":"PCI-cardholder","user":"carol","host":"LAPTOP-03","action":"block","file":"cards.xlsx","severity":"high"}
+{"timestamp":"2024-01-15T10:00:04.000Z","policy":"source-code","user":"dave","host":"DEV-04","action":"block","file":"secrets.py","severity":"medium"}
+{"timestamp":"2024-01-15T10:00:05.000Z","policy":"PII-outbound","user":"eve","host":"LAPTOP-05","action":"alert","file":"contacts.csv","severity":"medium"}
+{"timestamp":"2024-01-15T10:00:06.000Z","policy":"HIPAA-phi","user":"frank","host":"CLINIC-06","action":"block","file":"patients.csv","severity":"high"}
+{"timestamp":"2024-01-15T10:00:07.000Z","policy":"PII-outbound","user":"gina","host":"LAPTOP-07","action":"allow","file":"notes.txt","severity":"low"}
+{"timestamp":"2024-01-15T10:00:08.000Z","policy":"USB-block","user":"harry","host":"LAPTOP-08","action":"block","file":"backup.zip","severity":"medium"}
+{"timestamp":"2024-01-15T10:00:09.000Z","policy":"cloud-upload","user":"ivy","host":"LAPTOP-09","action":"block","file":"design.psd","severity":"low"}
+{"timestamp":"2024-01-15T10:00:10.000Z","policy":"PII-outbound","user":"joe","host":"LAPTOP-10","action":"allow","file":"agenda.pdf","severity":"low"}
+{"timestamp":"2024-01-15T10:00:11.000Z","policy":"PCI-cardholder","user":"kate","host":"POS-11","action":"block","file":"pan.txt","severity":"high"}
+{"timestamp":"2024-01-15T10:00:12.000Z","policy":"source-code","user":"leo","host":"DEV-12","action":"alert","file":"config.yml","severity":"medium"}

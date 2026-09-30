@@ -1,0 +1,12 @@
+2024-01-15T10:00:01Z Veeam Backup Job 'Daily' finished Status=Success host=veeam01
+2024-01-15T10:00:02Z Veeam Backup Job 'SQL' finished Status=Success host=veeam01
+2024-01-15T10:00:03Z Veeam Backup Job 'Files' finished Status=Warning host=veeam01
+2024-01-15T10:00:04Z Veeam Backup Job 'Daily' started host=veeam01
+2024-01-15T10:00:05Z Veeam Backup Job 'Exchange' finished Status=Success host=veeam02
+2024-01-15T10:00:06Z Veeam Backup Job 'Daily' finished Status=Failed host=veeam01
+2024-01-15T10:00:07Z Veeam Backup Job 'NAS' finished Status=Success host=veeam01
+2024-01-15T10:00:08Z Veeam Backup Job 'SQL' started host=veeam01
+2024-01-15T10:00:09Z Veeam Backup Job 'Files' finished Status=Success host=veeam02
+2024-01-15T10:00:10Z Veeam Backup Job 'Daily' finished Status=Success host=veeam01
+2024-01-15T10:00:11Z Veeam Backup Job 'Replica' finished Status=Success host=veeam01
+2024-01-15T10:00:12Z Veeam Backup Job 'SQL' finished Status=Success host=veeam01

@@ -1,0 +1,12 @@
+Jan 15 10:00:01 hsm1 pkcs11[9]: slot=0 op=sign user=alice
+Jan 15 10:00:02 hsm1 pkcs11[9]: slot=0 op=verify user=alice
+Jan 15 10:00:03 hsm1 pkcs11[9]: slot=1 op=generate user=bob
+Jan 15 10:00:04 hsm1 pkcs11[9]: slot=0 op=unwrap user=carol
+Jan 15 10:00:05 hsm1 pkcs11[9]: slot=2 op=sign user=dave
+Jan 15 10:00:06 hsm1 pkcs11[9]: slot=1 op=login user=eve
+Jan 15 10:00:07 hsm1 pkcs11[9]: slot=0 op=sign user=frank
+Jan 15 10:00:08 hsm1 pkcs11[9]: slot=3 op=delete user=alice
+Jan 15 10:00:09 hsm1 pkcs11[9]: slot=0 op=wrap user=bob
+Jan 15 10:00:10 hsm1 pkcs11[9]: slot=1 op=sign user=carol
+Jan 15 10:00:11 hsm1 pkcs11[9]: slot=2 op=verify user=dave
+Jan 15 10:00:12 hsm1 pkcs11[9]: slot=0 op=logout user=eve

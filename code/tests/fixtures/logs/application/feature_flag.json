@@ -1,0 +1,12 @@
+{"timestamp":"2024-01-15T10:00:01.000Z","flag":"new-checkout","user":"alice","action":"enable","service":"web"}
+{"timestamp":"2024-01-15T10:00:02.000Z","flag":"new-checkout","user":"bob","action":"disable","service":"web"}
+{"timestamp":"2024-01-15T10:00:03.000Z","flag":"dark-mode","user":"carol","action":"enable","service":"web"}
+{"timestamp":"2024-01-15T10:00:04.000Z","flag":"rate-limit-v2","user":"dave","action":"enable","service":"api"}
+{"timestamp":"2024-01-15T10:00:05.000Z","flag":"new-checkout","user":"eve","action":"enable","service":"web"}
+{"timestamp":"2024-01-15T10:00:06.000Z","flag":"beta-search","user":"frank","action":"disable","service":"search"}
+{"timestamp":"2024-01-15T10:00:07.000Z","flag":"dark-mode","user":"gina","action":"enable","service":"web"}
+{"timestamp":"2024-01-15T10:00:08.000Z","flag":"config-timeout","user":"harry","action":"update","service":"api"}
+{"timestamp":"2024-01-15T10:00:09.000Z","flag":"new-checkout","user":"ivy","action":"enable","service":"web"}
+{"timestamp":"2024-01-15T10:00:10.000Z","flag":"beta-search","user":"joe","action":"enable","service":"search"}
+{"timestamp":"2024-01-15T10:00:11.000Z","flag":"dark-mode","user":"kate","action":"disable","service":"web"}
+{"timestamp":"2024-01-15T10:00:12.000Z","flag":"rate-limit-v2","user":"leo","action":"disable","service":"api"}

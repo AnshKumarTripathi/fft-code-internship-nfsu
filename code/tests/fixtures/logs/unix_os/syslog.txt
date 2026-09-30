@@ -1,0 +1,12 @@
+Jan 15 10:00:01 testhost rsyslogd[123]: rsyslogd was HUPed
+Jan 15 10:00:02 testhost ntpd[200]: synchronized to 10.0.0.1
+Jan 15 10:00:03 testhost NetworkManager[250]: <info> device eth0 connected
+Jan 15 10:00:04 testhost dbus-daemon[300]: [system] Activating service
+Jan 15 10:00:05 testhost cron-helper[310]: skipping (not CRON daemon)
+Jan 15 10:00:06 testhost dhclient[400]: DHCPACK from 10.0.0.1
+Jan 15 10:00:07 testhost rsyslogd[123]: [origin software="rsyslogd"] start
+Jan 15 10:00:08 testhost named[500]: listening on IPv4 interface
+Jan 15 10:00:09 testhost smartd[600]: Device: /dev/sda, SMART Enabled
+Jan 15 10:00:10 testhost rsyslogd[123]: action 'builtin:omfile' resumed
+Jan 15 10:00:11 testhost systemd-logind[700]: New session 5 of user alice
+<34>1 2024-01-15T10:00:12.000Z testhost myapp 800 - - request completed

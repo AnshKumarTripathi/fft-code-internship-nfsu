@@ -1,0 +1,12 @@
+2024/01/15 10:00:01 [error] 1234#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 10.0.0.8, server: example.com, request: "GET / HTTP/1.1"
+2024/01/15 10:00:02 [error] 1234#0: *2 open() "/var/www/html/missing" failed (2: No such file or directory), client: 10.0.0.9, server: example.com, request: "GET /missing HTTP/1.1"
+[Wed Jan 15 10:00:03.123456 2024] [core:error] [pid 2222] [client 10.0.0.10:54321] File does not exist: /var/www/html/favicon.ico
+[Wed Jan 15 10:00:04.000000 2024] [authz_core:error] [pid 2223] [client 10.0.0.11:40000] AH01630: client denied by server configuration: /var/www/html/admin
+2024/01/15 10:00:05 [error] 1234#0: *3 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 10.0.0.12, server: api.example.com
+2024/01/15 10:00:06 [warn] 1234#0: *4 an upstream response is buffered to a temporary file, client: 10.0.0.13, server: example.com
+[Wed Jan 15 10:00:07.111111 2024] [php:error] [pid 2224] [client 10.0.0.14:44122] PHP Fatal error: Allowed memory size exhausted
+2024/01/15 10:00:08 [error] 1234#0: *5 rewrite or internal redirection cycle, client: 10.0.0.15, server: example.com
+[Wed Jan 15 10:00:09.222222 2024] [core:error] [pid 2225] [client 10.0.0.16:55555] AH00124: Request exceeded the limit of 10 internal redirects
+2024/01/15 10:00:10 [error] 1234#0: *6 SSL_do_handshake() failed, client: 10.0.0.17, server: example.com
+[Wed Jan 15 10:00:11.000000 2024] [proxy:error] [pid 2226] [client 10.0.0.18:60000] AH00957: HTTP: attempt to connect to 10.0.0.1:8080 failed
+2024/01/15 10:00:12 [error] 1234#0: *7 no live upstreams while connecting to upstream, client: 10.0.0.19, server: example.com

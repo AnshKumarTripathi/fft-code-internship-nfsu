@@ -1,0 +1,12 @@
+TimeCreated=2024-01-15T14:20:01.000Z EventID=2889 LogName=Directory Service Provider=Microsoft-Windows-ActiveDirectory_DomainService Computer=WIN-DC01 User=alice ClientIP=10.0.0.8
+TimeCreated=2024-01-15T14:20:02.000Z EventID=1644 LogName=Directory Service Provider=Microsoft-Windows-ActiveDirectory_DomainService Computer=WIN-DC01 User=bob ClientIP=10.0.0.9
+TimeCreated=2024-01-15T14:20:03.000Z EventID=1200 LogName=AD FS/Admin Provider=AD FS Computer=WIN-ADFS01 User=carol ClientIP=10.0.0.10
+TimeCreated=2024-01-15T14:20:04.000Z EventID=1201 LogName=AD FS/Admin Provider=AD FS Computer=WIN-ADFS01 User=mallory ClientIP=10.0.0.11
+TimeCreated=2024-01-15T14:20:05.000Z EventID=501 LogName=AD FS/Admin Provider=AD FS Computer=WIN-ADFS01 User=dave ClientIP=10.0.0.12
+TimeCreated=2024-01-15T14:20:06.000Z EventID=510 LogName=AD FS/Admin Provider=AD FS Computer=WIN-ADFS01 User=eve ClientIP=10.0.0.13
+TimeCreated=2024-01-15T14:20:07.000Z EventID=2889 LogName=Directory Service Provider=Microsoft-Windows-ActiveDirectory_DomainService Computer=WIN-DC02 User=frank ClientIP=10.0.0.14
+TimeCreated=2024-01-15T14:20:08.000Z EventID=1644 LogName=Directory Service Provider=Microsoft-Windows-ActiveDirectory_DomainService Computer=WIN-DC02 User=alice ClientIP=10.0.0.8
+TimeCreated=2024-01-15T14:20:09.000Z EventID=1200 LogName=AD FS/Admin Provider=AD FS Computer=WIN-ADFS01 User=admin ClientIP=10.0.0.1
+TimeCreated=2024-01-15T14:20:10.000Z EventID=1201 LogName=AD FS/Admin Provider=AD FS Computer=WIN-ADFS01 User=attacker ClientIP=192.168.1.50
+TimeCreated=2024-01-15T14:20:11.000Z EventID=2889 LogName=Directory Service Provider=Microsoft-Windows-ActiveDirectory_DomainService Computer=WIN-DC01 User=guest ClientIP=10.0.0.20
+TimeCreated=2024-01-15T14:20:12.000Z EventID=501 LogName=AD FS/Admin Provider=AD FS Computer=WIN-ADFS02 User=bob ClientIP=10.0.0.9

@@ -1,0 +1,12 @@
+Jan 15 10:00:01 testhost kernel: avc:  denied  { read } for  pid=123 comm="httpd" scontext=system_u:system_r:httpd_t:s0 tcontext=system_u:object_r:etc_t:s0 tclass=file
+Jan 15 10:00:02 testhost kernel: avc:  denied  { write } for  pid=124 comm="nginx" scontext=system_u:system_r:httpd_t:s0 tcontext=system_u:object_r:var_t:s0 tclass=file
+Jan 15 10:00:03 testhost kernel: apparmor="DENIED" operation="open" profile="/usr/bin/foo" name="/etc/shadow" pid=200 comm="foo"
+Jan 15 10:00:04 testhost kernel: apparmor="DENIED" operation="exec" profile="/usr/sbin/named" name="/bin/bash" pid=201 comm="named"
+Jan 15 10:00:05 testhost kernel: avc:  denied  { getattr } for  pid=125 comm="sshd" scontext=system_u:system_r:sshd_t:s0 tcontext=system_u:object_r:user_home_t:s0 tclass=file
+Jan 15 10:00:06 testhost kernel: avc:  denied  { create } for  pid=126 comm="auditd" scontext=system_u:system_r:auditd_t:s0 tcontext=system_u:object_r:var_log_t:s0 tclass=file
+Jan 15 10:00:07 testhost kernel: apparmor="DENIED" operation="mknod" profile="/usr/bin/bar" name="/tmp/x" pid=202 comm="bar"
+Jan 15 10:00:08 testhost kernel: avc:  denied  { connectto } for  pid=127 comm="curl" scontext=system_u:system_r:unconfined_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=unix_stream_socket
+Jan 15 10:00:09 testhost kernel: apparmor="DENIED" operation="capable" profile="/usr/sbin/ntpd" capname="net_admin" pid=203 comm="ntpd"
+Jan 15 10:00:10 testhost kernel: avc:  denied  { ioctl } for  pid=128 comm="python3" scontext=unconfined_u:unconfined_r:unconfined_t:s0 tcontext=system_u:object_r:fixed_disk_device_t:s0
+Jan 15 10:00:11 testhost kernel: apparmor="DENIED" operation="file_mmap" profile="/usr/bin/java" name="/tmp/lib.so" pid=204 comm="java"
+Jan 15 10:00:12 testhost kernel: avc:  denied  { setuid } for  pid=129 comm="su" scontext=unconfined_u:unconfined_r:unconfined_t:s0 tclass=capability

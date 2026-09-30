@@ -1,0 +1,12 @@
+Jan 15 10:00:01 testhost kernel: usb 1-1: USB disconnect, device number 4
+Jan 15 10:00:02 testhost kernel: EXT4-fs (sda1): mounted filesystem
+Jan 15 10:00:03 testhost kernel: CPU0: Core temperature above threshold
+Jan 15 10:00:04 testhost kernel: nf_conntrack: table full, dropping packet
+Jan 15 10:00:05 testhost kernel: Out of memory: Killed process 1234 (java)
+Jan 15 10:00:06 testhost kernel: IPv6: ADDRCONF(NETDEV_UP): eth0
+Jan 15 10:00:07 testhost kernel: audit: initializing netlink socket
+Jan 15 10:00:08 testhost kernel: device eth0 entered promiscuous mode
+Jan 15 10:00:09 testhost kernel: TCP: request_sock_TCP: Possible SYN flooding
+Jan 15 10:00:10 testhost kernel: floppy0: no floppy controllers found
+Jan 15 10:00:11 testhost kernel: ACPI: Thermal Zone [TZ00] (50 C)
+Jan 15 10:00:12 testhost kernel: Dropping NETIF_F_SG since no checksum feature

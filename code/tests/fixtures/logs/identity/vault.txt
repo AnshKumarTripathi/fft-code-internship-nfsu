@@ -1,0 +1,12 @@
+{"time":"2024-01-15T10:00:01.123Z","type":"request","auth":{"display_name":"token","metadata":{"username":"alice"}},"request":{"operation":"read","path":"secret/data/foo","remote_address":"10.0.0.8"}}
+{"time":"2024-01-15T10:00:02.123Z","type":"response","auth":{"display_name":"token","metadata":{"username":"alice"}},"request":{"operation":"read","path":"secret/data/foo","remote_address":"10.0.0.8"}}
+{"time":"2024-01-15T10:00:03.123Z","type":"request","auth":{"display_name":"token","metadata":{"username":"mallory"}},"request":{"operation":"read","path":"secret/data/denied","remote_address":"10.0.0.9"},"error":"permission denied"}
+{"time":"2024-01-15T10:00:04.123Z","type":"request","auth":{"display_name":"bob"},"request":{"operation":"update","path":"secret/data/bar","remote_address":"10.0.0.10"}}
+{"time":"2024-01-15T10:00:05.123Z","type":"response","auth":{"display_name":"token","metadata":{"username":"carol"}},"request":{"operation":"list","path":"secret/metadata","remote_address":"10.0.0.11"}}
+{"time":"2024-01-15T10:00:06.123Z","type":"request","auth":{"display_name":"token"},"request":{"operation":"read","path":"auth/token/lookup-self","remote_address":"10.0.0.12"}}
+{"time":"2024-01-15T10:00:07.123Z","type":"request","auth":{"display_name":"token","metadata":{"username":"dave"}},"request":{"operation":"create","path":"secret/data/new","remote_address":"10.0.0.13"}}
+{"time":"2024-01-15T10:00:08.123Z","type":"response","error":"invalid token","auth":{"display_name":"hmac"},"request":{"operation":"read","path":"secret/data/x","remote_address":"10.0.0.14"}}
+{"time":"2024-01-15T10:00:09.123Z","type":"request","auth":{"display_name":"token","metadata":{"username":"eve"}},"request":{"operation":"read","path":"kv/data/prod","remote_address":"10.0.0.15"}}
+{"time":"2024-01-15T10:00:10.123Z","type":"request","hmac":"abcd","auth":{"metadata":{"username":"frank"}},"request":{"operation":"read","path":"secret/data/keys","remote_address":"10.0.0.16"}}
+{"time":"2024-01-15T10:00:11.123Z","type":"response","auth":{"display_name":"token","metadata":{"username":"gina"}},"request":{"operation":"delete","path":"secret/data/old","remote_address":"10.0.0.17"}}
+{"time":"2024-01-15T10:00:12.123Z","type":"request","auth":{"display_name":"token","metadata":{"username":"harry"}},"request":{"operation":"read","path":"secret/data/last","remote_address":"10.0.0.18"}}

@@ -1,0 +1,181 @@
+ingestion:
+  dedup_backend: memory
+  dedup_memory_max_hashes: 2000000
+  syslog_year_policy: carry
+  enabled_sources: []   # empty = all registered; SSH-only lab: [ssh]
+  evidence_line_hash: false  # true = extra sha256 of raw line bytes (not Policy A)
+  max_line_bytes: 1048576    # oversized lines go to ingest_dead_letter; ingest continues
+
+parse:
+  mode: train_and_snapshot   # train_and_snapshot | reuse_snapshot
+  start_empty: false         # true = named empty Drain3 (do not reuse a leftover state)
+  snapshot_id: null          # required when mode is reuse_snapshot
+
+paths:
+  raw_log_dir: data/raw/
+  parsed_dir: data/parsed/
+  timeseries_dir: data/timeseries/
+  baseline_dir: data/baselines/
+  scores_dir: data/scores/
+  report_dir: data/reports/
+  analyses_dir: data/analyses/   # Phase 66 B2 triage snapshots (JSON)
+  db_path: data/warehouse.duckdb
+
+bucketing:
+  bucket_seconds: 600
+
+statistical:
+  window_buckets: 6
+  z_threshold: 4.0
+
+spectral:
+  window: hann                 # FFT taper: hann | hamming | boxcar | blackman | bartlett
+  min_welch_length: 4          # skip series shorter than this many buckets
+  window_hours: 72
+  step_fraction: 0.333
+  baseline_max_nperseg: 1440
+  z_threshold: 4.0             # legacy shared default (Phase 51)
+  energy_z_threshold: null     # null → use z_threshold
+  shape_js_z_threshold: null
+  flag_mode: or                # or | and | energy_only | shape_only
+  discount_last_window: false  # true = never flag final STFT remainder column
+  cluster_eps: 1.2
+  cluster_min_samples: 2
+  cluster_min_entities: 20
+  max_buckets_per_entity: 100000  # skip entity STFT above this many buckets (R6)
+
+changepoint:
+  min_history_buckets: 48   # soft-skip shorter series (~8 h at 600 s)
+  baseline_buckets: 48      # median/MAD from the first N buckets
+  drift_k: 0.5              # CUSUM allowance in MAD-sigma units
+  decision_h: 5.0           # flag when max(S+, S−) / sigma ≥ this
+
+seasonal:
+  enabled: true
+  period_buckets: 144       # 24h at 600 s
+  min_history_buckets: 288  # ≥ 2 periods (soft-skip shorter)
+  z_threshold: 4.0          # |residual_z| cutoff
+
+ml:
+  model_type: isolation_forest   # isolation_forest | autoencoder | onnx
+  onnx_model_path: null
+  contamination: 0.02          # only used when flagging: predict
+  flagging: mad_threshold      # predict | score_threshold | mad_threshold | none
+  score_threshold: null
+  mad_k: 4.0
+  min_windows_to_fit: 20
+  mode: refit_and_snapshot   # refit_and_snapshot | reuse_snapshot
+  snapshot_id: null          # required when mode is reuse_snapshot
+  ae_hidden_dims: [32, 8, 32] # MLP autoencoder layers (CPU-safe)
+  ae_max_iter: 200
+  # Opt-in IF + AE majority vote (UI can override per job). Default off = IF only.
+  ensemble:
+    enabled: false
+    models: [isolation_forest, autoencoder]
+    fusion: majority         # majority | any | unanimous
+correlation:
+  session_gap_minutes: 30
+  same_ip_link: true
+  same_host_link: true
+  incident_gap_minutes: 360
+  cluster_outlier_window: overlapping_flags
+  cluster_outlier_lookback_days: 14
+  ip_link_horizon_hours: 24
+  # Ensemble promotion (Phase 54). Default any_flag = pre-54 behaviour.
+  # severity_boost: raise high/critical only when ≥ min_detectors agree.
+  # min_detectors: drop incidents below agreement (anomalies still written).
+  promotion:
+    mode: any_flag          # any_flag | severity_boost | min_detectors
+    min_detectors: 2        # used by severity_boost and min_detectors modes
+
+reporting:
+  template_path: src/reporting/templates/incident_report.md.j2
+  html_template_path: src/reporting/templates/incident_report.html.j2
+  use_llm_narrative: false
+  llm_model: qwen3-coder:30b
+
+orchestration:
+  parallel_backend: threads
+  n_workers: 8
+  run_all_require_complete: false
+
+evaluation:
+  labels_path: null
+  output_dir: data/reports/eval/
+  overlap_rule: any              # any | iou_0_1 (IoU ≥ 0.1)
+  write_entity_labels: true
+
+dashboard:
+  default_incident_limit: 50
+  max_incident_limit: 500
+  default_timeline_limit: 200
+  incident_chart_pad_hours: 6
+  serve_vendor_locally: true
+  cors_origins:
+    - http://127.0.0.1:3000
+    - http://localhost:3000
+  serve_legacy_html: false  # true = Jinja on :8000; product UI is Next on :3000
+  operator_label: local     # R9 default attribution (UI field may override)
+
+# Phase 57 — operator upload landing zone (must stay under paths.raw_log_dir).
+pipeline_ui:
+  upload_dir: data/raw/uploads/
+  max_upload_bytes: 52428800      # 50 MiB per file
+  max_files_per_request: 50
+  allowed_suffixes: [".log", ".txt", ".json", ".jsonl", ".csv", ".cef"]
+
+# Phase 80 — opt-in pre-ingest archive expand (gunzip/zip/tar → normalized/).
+# When enabled, uploads may also use .gz/.bz2/.zip/.tar/.tgz/.ndjson; after a
+# successful normalize run in the same process, ingest reads output_dir only.
+normalize:
+  enabled: false
+  input_dir: null                 # null → pipeline_ui.upload_dir
+  output_dir: data/raw/normalized
+  clear_output_on_run: true
+  converters: [gunzip, bunzip2, unzip, tar, evtx_text, journal_export]
+  on_unsupported: dead_letter     # dead_letter | skip | fail
+  max_members_per_archive: 500
+  max_member_bytes: 52428800
+  max_total_output_bytes: 536870912
+  allow_suffixes_passthrough: [".log", ".txt", ".json", ".jsonl", ".csv", ".cef", ".ndjson"]
+  # Phase 81 — EVTX / journal adapters (require python-evtx / journalctl).
+  evtx:
+    output_format: text_oneline   # text_oneline | jsonl
+    max_events: 500000
+  journal:
+    output_format: short_iso
+    max_lines: 500000
+
+# Phase 88 — line-safe large-corpus splitter (opt-in; does not auto-start ingest).
+# CLI: python -m src.pipeline shard-split --input path/to/huge.log
+sharding:
+  enabled: false
+  target_shard_bytes: 1073741824  # 1 GiB soft target (line-safe)
+  # target_shard_lines: 5000000   # optional alternate / additional soft target
+  output_dir: data/raw/shards/
+  max_shards: 500
+  prefer_server_path: true
+  analysis_window:                # Phase 92 — bound heavy detectors (opt-in)
+    enabled: false
+    last_days: 30
+    # Optional absolute UTC bounds (both required when set; overrides last_days):
+    # start_utc: "2024-01-01T00:00:00+00:00"
+    # end_utc: "2024-01-31T23:59:59+00:00"
+
+# Phase 95 — assistive AI copilot (Q/A only; not a detector).
+# Dual-gate: both copilot.enabled (YAML) AND COPILOT_ENABLED=true (.env) required.
+# Secrets / provider URLs live in code/.env — never commit API keys here.
+copilot:
+  enabled: true
+  max_attachment_chars: 4000
+  max_timeline_events: 20
+  ai_insight:
+    enabled: false            # Phase 98 — optional *_ai_insight.md at report stage
+
+explainability:
+  playbooks_path: config/playbooks.yaml
+  log_source_limit: 8
+  ml_top_templates: 5
+  spectral_top_js_bins: 3
+  gap_zero_fraction: 0.5   # zero-bucket fraction that sets gap.possible_gap
+  warn_band: 0.5           # R8: |z − threshold| ≤ this is a near miss (display only)

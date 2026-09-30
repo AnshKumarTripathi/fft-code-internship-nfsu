@@ -1,0 +1,12 @@
+Jan 15 10:00:01 scanhost clamd[221]: /tmp/eicar.com: Eicar-Test-Signature FOUND
+Jan 15 10:00:02 scanhost clamd[221]: /var/mail/alice: Win.Trojan.Generic FOUND
+Jan 15 10:00:03 scanhost clamd[221]: /home/bob/download.exe: Heuristics.Phishing.Email FOUND
+Jan 15 10:00:04 scanhost clamd[221]: /tmp/payload.bin: Unix.Malware.Agent FOUND
+Jan 15 10:00:05 scanhost clamd[221]: /var/www/upload.php: PHP.Shell.C99 FOUND
+Jan 15 10:00:06 scanhost clamd[221]: /tmp/doc.docm: Doc.Dropper.Agent FOUND
+Jan 15 10:00:07 scanhost clamd[221]: /home/carol/photo.jpg: OK
+Jan 15 10:00:08 scanhost clamd[221]: /tmp/ransom.exe: Win.Ransomware.Locky FOUND
+Jan 15 10:00:09 scanhost clamd[221]: /var/tmp/a.out: Elf.Trojan.Generic FOUND
+Jan 15 10:00:10 scanhost clamd[221]: /home/dave/notes.txt: OK
+Jan 15 10:00:11 scanhost clamd[221]: /tmp/macro.xlsm: Doc.Macro.Suspicious FOUND
+Jan 15 10:00:12 scanhost clamd[221]: /opt/pkg/installer.bin: Win.Packed.Generic FOUND

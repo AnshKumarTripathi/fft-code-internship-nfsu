@@ -1,0 +1,12 @@
+Jan 15 10:00:01 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.1(r1) in vrf default Up
+Jan 15 10:00:02 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.2(r2) in vrf default Down
+Jan 15 10:00:03 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.3 Up
+Jan 15 10:00:04 rtr1 bgpd[44]: %ADJCHANGE: neighbor 192.168.1.1(edge) in vrf default Up
+Jan 15 10:00:05 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.2 Down BGP Notification sent
+Jan 15 10:00:06 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.4(core) in vrf default Up
+Jan 15 10:00:07 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.5 in vrf default Down
+Jan 15 10:00:08 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.1(r1) in vrf default Down
+Jan 15 10:00:09 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.6(peer6) Up
+Jan 15 10:00:10 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.7 in vrf default Up
+Jan 15 10:00:11 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.8(r8) in vrf default Down
+Jan 15 10:00:12 rtr1 bgpd[44]: %ADJCHANGE: neighbor 10.0.0.1(r1) in vrf default Up

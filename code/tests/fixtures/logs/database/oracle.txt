@@ -1,0 +1,12 @@
+Tue Jan 15 10:00:01 2024 Starting ORACLE instance (normal)
+Tue Jan 15 10:00:02 2024 ORA-01017: invalid username/password; logon denied user=mallory
+Tue Jan 15 10:00:03 2024 AUDIT: ACTION: SELECT BY alice ON appdb.emp
+Tue Jan 15 10:00:04 2024 AUDIT: ACTION: CREATE TABLE BY alice ON appdb.t
+Tue Jan 15 10:00:05 2024 ARC0: Evaluating archive log 1 thread 1 sequence 99
+Tue Jan 15 10:00:06 2024 DataGuard replication apply lag 2 seconds
+Tue Jan 15 10:00:07 2024 RMAN-08002: starting backup of datafile 1
+Tue Jan 15 10:00:08 2024 Slow query duration: 5123 ms SELECT * FROM emp
+Tue Jan 15 10:00:09 2024 PL/SQL procedure refresh_stats executed by user=alice
+Tue Jan 15 10:00:10 2024 ACTION: SELECT BY bob ON appdb.dept
+Tue Jan 15 10:00:11 2024 ORA-01555: snapshot too old: rollback segment number 5
+Tue Jan 15 10:00:12 2024 Starting ORACLE instance (abort)

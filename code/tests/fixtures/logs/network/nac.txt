@@ -1,0 +1,12 @@
+Jan 15 10:00:01 ise1 CISE_Passed_Authentications: Authentication succeeded, UserName=alice, Framed-IP-Address=10.0.0.8, Device IP Address=10.0.0.1
+Jan 15 10:00:02 ise1 CISE_Failed_Attempts: Authentication failed, UserName=mallory, Framed-IP-Address=10.0.0.9, Device IP Address=10.0.0.1
+Jan 15 10:00:03 ise1 CISE_Passed_Authentications: Authentication succeeded, UserName=bob, Framed-IP-Address=10.0.0.10, Device IP Address=10.0.0.2
+Jan 15 10:00:04 ise1 CISE_Failed_Attempts: Authentication failed, UserName=eve, Device IP Address=10.0.0.1
+Jan 15 10:00:05 ise1 CISE_Passed_Authentications: Authentication succeeded, UserName=carol, Framed-IP-Address=10.0.0.12, Device IP Address=10.0.0.1
+Jan 15 10:00:06 ise1 CISE_Failed_Attempts: Authentication failed, UserName=trent, Framed-IP-Address=10.0.0.13, Device IP Address=10.0.0.2
+Jan 15 10:00:07 ise1 CISE_Passed_Authentications: Authentication succeeded, UserName=dave, Framed-IP-Address=10.0.0.14, Device IP Address=10.0.0.1
+Jan 15 10:00:08 ise1 CISE_Passed_Authentications: Authentication succeeded, UserName=alice, Framed-IP-Address=10.0.0.8, Device IP Address=10.0.0.3
+Jan 15 10:00:09 ise1 CISE_Failed_Attempts: Authentication failed, UserName=mallory, Device IP Address=10.0.0.3
+Jan 15 10:00:10 ise1 CISE_Passed_Authentications: Authentication succeeded, UserName=bob, Framed-IP-Address=10.0.0.16, Device IP Address=10.0.0.1
+Jan 15 10:00:11 ise1 CISE_Failed_Attempts: Authentication failed, UserName=guest, Framed-IP-Address=10.0.0.17, Device IP Address=10.0.0.1
+Jan 15 10:00:12 ise1 CISE_Passed_Authentications: Authentication succeeded, UserName=carol, Framed-IP-Address=10.0.0.18, Device IP Address=10.0.0.2

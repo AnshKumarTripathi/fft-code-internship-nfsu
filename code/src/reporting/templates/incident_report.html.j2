@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incident {{ incident.incident_id }}</title>
+  <style>
+{% include "report.css.inc" %}
+  </style>
+</head>
+<body>
+  <h1>Incident Report</h1>
+  <p>
+    <strong>Incident ID</strong>
+    <span class="mono">{{ incident.incident_id }}</span>
+    · <strong>Severity</strong>
+    <span class="severity severity-{{ incident.severity }}">{{ incident.severity }}</span>
+  </p>
+
+  <h2>Entity</h2>
+  <table>
+    <tr><th>Entity ID</th><td class="mono">{{ entity.entity_id }}</td></tr>
+    <tr><th>Type</th><td>{{ entity.entity_type or "unknown" }}</td></tr>
+    <tr><th>First seen</th><td class="mono">{{ entity.first_seen or "n/a" }}</td></tr>
+    <tr><th>Last seen</th><td class="mono">{{ entity.last_seen or "n/a" }}</td></tr>
+    {% if entity.label %}
+    <tr><th>Label</th><td>{{ entity.label }}</td></tr>
+    {% endif %}
+  </table>
+
+  <h2>Time range</h2>
+  <p class="mono">{{ incident.start_time }} — {{ incident.end_time }}</p>
+
+  <h2>Summary</h2>
+  <p>{{ incident.summary_text or "(no summary)" }}</p>
+  {% if llm_narrative %}
+  <h3>LLM narrative</h3>
+  <p>{{ llm_narrative }}</p>
+  {% endif %}
+
+  <h2>Why flagged</h2>
+  <p class="meta">Deterministic explanation from stored flag metadata (LLM off). Showing {{ anomalies_shown }} of {{ anomalies_total }} anomalies (highest |score|).</p>
+  {% if anomalies %}
+    {% for a in anomalies %}
+    <h3>{{ a.source_detector }}</h3>
+    <p>{{ a.explanation.headline }}</p>
+    <table>
+      <tr><th>Entity</th><td class="mono">{{ a.entity_id }}</td></tr>
+      <tr><th>Window (UTC)</th><td class="mono">{{ a.window_start }} — {{ a.window_end }}</td></tr>
+      {% if a.explanation.bucket_seconds %}
+      <tr><th>Bucket seconds</th><td class="mono">{{ a.explanation.bucket_seconds }}</td></tr>
+      {% endif %}
+      {% if a.explanation.statistical %}
+      <tr><th>rate_z</th><td class="mono">{{ a.explanation.statistical.rate_z }}</td></tr>
+      <tr><th>Rule</th><td>{{ a.explanation.statistical.rule }}</td></tr>
+      <tr><th>Threshold</th><td class="mono">{{ a.explanation.statistical.z_threshold }}</td></tr>
+      {% endif %}
+      {% if a.explanation.spectral %}
+      <tr><th>energy_z</th><td class="mono">{{ a.explanation.spectral.energy_z }}</td></tr>
+      <tr><th>shape_js_z</th><td class="mono">{{ a.explanation.spectral.shape_js_z }}</td></tr>
+      <tr><th>Crossing legs</th><td class="mono">{{ a.explanation.spectral.crossing_legs | join(", ") or "—" }}</td></tr>
+      <tr><th>Window dominant period (h)</th><td class="mono">{{ a.explanation.spectral.dominant_period_hours if a.explanation.spectral.dominant_period_hours is not none else "n/a" }}</td></tr>
+      {% endif %}
+      {% if a.explanation.ml %}
+      <tr><th>model_score</th><td class="mono">{{ a.explanation.ml.model_score }}</td></tr>
+      <tr><th>mad_z</th><td class="mono">{{ a.explanation.ml.mad_z }}</td></tr>
+      <tr><th>Flagging</th><td class="mono">{{ a.explanation.ml.flagging }}</td></tr>
+      <tr><th>Snapshot</th><td class="mono">{{ a.explanation.ml.model_snapshot_id or "n/a" }}</td></tr>
+      {% endif %}
+      {% if a.explanation.cluster %}
+      <tr><th>Cluster run</th><td class="mono">{{ a.explanation.cluster.cluster_run_id }}</td></tr>
+      <tr><th>Outliers / entities</th><td class="mono">{{ a.explanation.cluster.n_outliers }} / {{ a.explanation.cluster.n_entities }}</td></tr>
+      <tr><th>Nearest distance</th><td class="mono">{{ a.explanation.cluster.nearest_distance if a.explanation.cluster.nearest_distance is not none else "n/a" }}</td></tr>
+      <tr><th>Window policy</th><td>{{ a.explanation.cluster.window_policy }} (lookback {{ a.explanation.cluster.lookback_days }} d)</td></tr>
+      {% endif %}
+      {% if a.explanation.log_sources %}
+      <tr><th>Log sources</th><td>{% for s in a.explanation.log_sources %}{{ s.log_source }} ({{ s.event_count }}){% if not loop.last %}, {% endif %}{% endfor %}</td></tr>
+      {% endif %}
+      {% if a.explanation.gap %}
+      <tr><th>Zero buckets</th><td>{{ a.explanation.gap.zero_bucket_count }} / {{ a.explanation.gap.bucket_count }}{% if a.explanation.gap.possible_gap %} (possible gap){% endif %}</td></tr>
+      {% endif %}
+    </table>
+    {% if a.explanation.playbook %}
+    <p><strong>{{ a.explanation.playbook.title }}</strong> — {{ a.explanation.playbook.hint }}</p>
+    <ul>
+      {% for step in a.explanation.playbook.actions %}
+      <li>{{ step }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+  {% else %}
+  <p class="meta">No contributing anomalies found.</p>
+  {% endif %}
+
+  <h2>Detector agreement</h2>
+  {% if detector_set %}
+  <table>
+    <thead><tr><th>Detector</th><th>Role</th></tr></thead>
+    <tbody>
+      {% for det in detector_set %}
+      <tr>
+        <td class="mono">{{ det }}</td>
+        <td>{{ detector_roles.get(det, det) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="meta">
+    IP link: {{ "yes" if has_ip_link else "no" }}
+    · Host link: {{ "yes" if has_host_link else "no" }}
+    {% if top_score is not none %}· Top score: {{ "%.2f"|format(top_score) }}{% endif %}
+  </p>
+  {% else %}
+  <p class="meta">No contributing detectors.</p>
+  {% endif %}
+
+  <h2>Activity</h2>
+  {% if activity_svg %}
+  <div class="chart">{{ activity_svg | safe }}</div>
+  <p class="meta">Shaded bands are flagged statistical (amber) and spectral (green) windows.</p>
+  {% else %}
+  <p class="meta">No entity_bucket_counts in the incident window.</p>
+  {% endif %}
+
+  <h2>Spectral fingerprint</h2>
+  {% if spectral_features %}
+  <table>
+    <tr><th>Dominant period (h)</th><td class="mono">{{ spectral_features.dominant_period_hours if spectral_features.dominant_period_hours is not none else "n/a" }}</td></tr>
+    <tr><th>Dominant power frac</th><td class="mono">{{ spectral_features.dominant_power_frac if spectral_features.dominant_power_frac is not none else "n/a" }}</td></tr>
+    <tr><th>Spectral entropy</th><td class="mono">{{ spectral_features.spectral_entropy if spectral_features.spectral_entropy is not none else "n/a" }}</td></tr>
+    <tr><th>Total power</th><td class="mono">{{ spectral_features.total_power if spectral_features.total_power is not none else "n/a" }}</td></tr>
+  </table>
+  {% else %}
+  <p class="meta">No entity_spectral_features for this entity.</p>
+  {% endif %}
+  {% if psd_svg %}
+  <div class="chart">{{ psd_svg | safe }}</div>
+  {% else %}
+  <p class="meta">No baseline PSD arrays.</p>
+  {% endif %}
+
+  <h2>Top anomalies by detector</h2>
+  <p class="meta">Showing {{ anomalies_shown }} of {{ anomalies_total }} anomalies (highest |score|).</p>
+  {% if anomalies_by_detector %}
+    {% for det, rows in anomalies_by_detector.items() %}
+    <h3>{{ det }} <span class="meta">({{ detector_roles.get(det, det) }})</span></h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Score</th>
+          <th>Window start</th>
+          <th>Window end</th>
+          <th>Metadata</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in rows %}
+        <tr>
+          <td class="mono">{{ a.score }}</td>
+          <td class="mono">{{ a.window_start }}</td>
+          <td class="mono">{{ a.window_end }}</td>
+          <td>{{ a.metadata_text }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endfor %}
+  {% else %}
+  <p class="meta">No contributing anomalies found.</p>
+  {% endif %}
+
+  <h2>Correlation edges (counts)</h2>
+  <table>
+    <thead><tr><th>Relation</th><th>Count</th></tr></thead>
+    <tbody>
+      {% for rel, n in edge_counts.items() %}
+      <tr>
+        <td class="mono">{{ rel }}</td>
+        <td class="mono">{{ n }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Event timeline</h2>
+  <p class="meta">Showing {{ timeline|length }} of {{ timeline_total }} linked events.</p>
+  {% if timeline %}
+  <table>
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Relation</th>
+        <th>Source</th>
+        <th>Template / fields</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in timeline %}
+      <tr>
+        <td class="mono">{{ row.event_timestamp }}</td>
+        <td class="mono">{{ row.relation_type }}</td>
+        <td class="mono">{{ row.log_source or "—" }}</td>
+        <td>{{ row.snippet }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="meta">No linked events (no correlation edges or parsed_events).</p>
+  {% endif %}
+
+  <h2>Analyst actions</h2>
+  <p class="meta">Append-only warehouse log (dismiss / note / reopen). Undo is a compensating reopen row.</p>
+  {% if analyst_actions %}
+  <table>
+    <thead>
+      <tr>
+        <th>Created (UTC)</th>
+        <th>Operator</th>
+        <th>Action</th>
+        <th>Anomaly</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in analyst_actions %}
+      <tr>
+        <td class="mono">{{ row.created_at }}</td>
+        <td class="mono">{{ row.operator_label }}</td>
+        <td class="mono">{{ row.action }}</td>
+        <td class="mono">{{ row.anomaly_id or "—" }}</td>
+        <td>{{ row.note or "—" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="meta">No analyst actions recorded.</p>
+  {% endif %}
+
+  <h2>Notes</h2>
+  <ul class="notes">
+    <li>Statistical detector flags high event <em>rates</em> only.</li>
+    <li>Showing {{ anomalies_shown }} of {{ anomalies_total }} anomalies.</li>
+    <li>Thresholds (<code>z_threshold</code> / <code>mad_k</code> default <strong>4.0</strong>) are heuristics, not p-values. Dual spectral flagging is <code>energy_z OR shape_js_z</code>. Operator catalogue: repository file <code>KNOWN_LIMITATIONS.md</code>.</li>
+  </ul>
+
+  <footer>Generated at {{ generated_at }} — deterministic report (Jinja2).</footer>
+</body>
+</html>

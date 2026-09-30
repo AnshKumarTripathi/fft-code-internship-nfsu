@@ -1,0 +1,12 @@
+Jan 15 10:00:01 testhost systemd[1]: Started ssh.service
+Jan 15 10:00:02 testhost systemd[1]: Started cron.service
+Jan 15 10:00:03 testhost systemd[1]: Started NetworkManager.service
+Jan 15 10:00:04 testhost systemd[1]: Reached target Multi-User System
+Jan 15 10:00:05 testhost systemd[1]: Started rsyslog.service
+Jan 15 10:00:06 testhost systemd[1]: Started docker.service
+Jan 15 10:00:07 testhost systemd[1]: Stopping user@1000.service
+Jan 15 10:00:08 testhost systemd[1]: Started user@1000.service
+Jan 15 10:00:09 testhost systemd[1]: Reloading
+_SYSTEMD_UNIT=nginx.service _COMM=nginx MESSAGE=worker process started
+_SYSTEMD_UNIT=sshd.service _COMM=sshd MESSAGE=Server listening on 0.0.0.0 port 22
+Jan 15 10:00:12 testhost systemd[1]: Started apparmor.service

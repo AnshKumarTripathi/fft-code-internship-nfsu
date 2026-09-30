@@ -1,0 +1,12 @@
+Jan 15 10:00:01 scada1 icsd[9]: plc=PLC01 tag=TI101 value=72.5
+Jan 15 10:00:02 scada1 icsd[9]: plc=PLC01 tag=PI202 value=14.2
+Jan 15 10:00:03 scada1 icsd[9]: plc=PLC02 tag=TI101 value=68.0
+Jan 15 10:00:04 scada1 icsd[9]: plc=PLC01 tag=RUN value=1
+Jan 15 10:00:05 scada1 icsd[9]: plc=PLC03 tag=FI303 value=120.1
+Jan 15 10:00:06 scada1 icsd[9]: plc=PLC02 tag=ALARM value=0
+Jan 15 10:00:07 scada1 icsd[9]: plc=PLC01 tag=SP101 value=70.0
+Jan 15 10:00:08 scada1 icsd[9]: plc=PLC03 tag=TI101 value=71.2
+Jan 15 10:00:09 scada1 icsd[9]: plc=PLC02 tag=RUN value=1
+Jan 15 10:00:10 scada1 icsd[9]: plc=PLC01 tag=PI202 value=14.8
+Jan 15 10:00:11 scada1 icsd[9]: plc=PLC04 tag=TI401 value=55.0
+Jan 15 10:00:12 scada1 icsd[9]: plc=PLC01 tag=ALARM value=1

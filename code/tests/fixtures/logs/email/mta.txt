@@ -1,0 +1,12 @@
+Jan 15 10:00:01 mail postfix/qmgr[99]: 4F8A3: from=<alice@example.com>, size=1234, nrcpt=1 (queue active)
+Jan 15 10:00:02 mail postfix/qmgr[99]: 4F8A4: from=<bob@example.com>, size=2048, nrcpt=2 (queue active)
+Jan 15 10:00:03 mail postfix/pickup[77]: 4F8A5: uid=1000 from=<carol>
+Jan 15 10:00:04 mail postfix/pickup[77]: 4F8A6: uid=1001 from=<dave@example.com>
+Jan 15 10:00:05 mail postfix/cleanup[88]: 4F8A3: message-id=<id1@example.com>
+Jan 15 10:00:06 mail postfix/cleanup[88]: 4F8A4: message-id=<id2@example.com>
+Jan 15 10:00:07 mail postfix/qmgr[99]: 4F8A3: removed
+Jan 15 10:00:08 mail postfix/qmgr[99]: 4F8A7: from=<eve@example.net>, size=512, nrcpt=1 (queue active)
+Jan 15 10:00:09 mail postfix/cleanup[88]: 4F8A7: message-id=<id3@example.net>
+2024-01-15T10:00:10.123Z,MAILBOX01,SMTP,RECEIVE,STOREDRIVER,alice@contoso.com,203.0.113.20
+2024-01-15T10:00:11.123Z,MAILBOX01,SMTP,SEND,alice@contoso.com,198.51.100.40
+2024-01-15T10:00:12.123Z,MAILBOX02,SMTP,DELIVER,STOREDRIVER,bob@contoso.com,10.0.0.15

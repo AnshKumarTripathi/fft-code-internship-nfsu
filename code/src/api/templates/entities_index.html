@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Entities · Log Anomaly{% endblock %}
+{% block content %}
+<p class="crumb">Entities</p>
+<h1 class="page-title">Entities</h1>
+<p class="page-lede">Search the entity registry. Open a row for activity, spectrum, and incidents.</p>
+
+<form class="filters" method="get" action="/entities">
+  <div class="filter-field">
+    <label for="q">Entity ID</label>
+    <input id="q" type="search" name="q" value="{{ q or '' }}" placeholder="alice">
+  </div>
+  <button class="btn" type="submit">Search</button>
+  <a class="btn btn-ghost" href="/entities">Clear</a>
+</form>
+
+{% if entities %}
+<div class="table-wrap">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Entity</th>
+        <th>Type</th>
+        <th>Label</th>
+        <th>First seen</th>
+        <th>Last seen</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ent in entities %}
+      <tr>
+        <td><a class="mono" href="{{ ent.entity_id | entity_href }}">{{ ent.entity_id }}</a></td>
+        <td>{{ ent.entity_type or "—" }}</td>
+        <td>{{ ent.label or "—" }}</td>
+        <td class="mono">{{ ent.first_seen or "—" }}</td>
+        <td class="mono">{{ ent.last_seen or "—" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="empty-state">
+  No entities{% if q %} matching <span class="mono">{{ q }}</span>{% endif %}.
+</div>
+{% endif %}
+{% endblock %}

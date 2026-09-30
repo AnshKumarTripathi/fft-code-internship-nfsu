@@ -1,0 +1,11 @@
+Jan 15 10:00:01 master kube-scheduler[77]: I0115 10:00:01.123456       1 scheduler.go:102] Successfully assigned default/web to node1
+Jan 15 10:00:02 master kube-scheduler[77]: I0115 10:00:02.123456       1 scheduler.go:102] Successfully assigned kube-system/coredns to node2
+Jan 15 10:00:03 master kube-scheduler[77]: W0115 10:00:03.123456       1 scheduler.go:210] Unable to schedule pod
+Jan 15 10:00:04 master kube-scheduler[77]: I0115 10:00:04.123456       1 scheduler.go:102] Successfully assigned default/api to node1
+Jan 15 10:00:05 master kube-scheduler[77]: I0115 10:00:05.123456       1 scheduler.go:300] Preempting pod
+Jan 15 10:00:06 master kube-scheduler[77]: I0115 10:00:06.123456       1 scheduler.go:102] Successfully assigned prod/worker to node3
+Jan 15 10:00:07 master kube-scheduler[77]: E0115 10:00:07.123456       1 scheduler.go:401] Predicate failed
+Jan 15 10:00:08 master kube-scheduler[77]: I0115 10:00:08.123456       1 scheduler.go:102] Successfully assigned default/db to node2
+Jan 15 10:00:09 master kube-scheduler[77]: I0115 10:00:09.123456       1 scheduler.go:510] Binding pod
+Jan 15 10:00:10 master kube-scheduler[77]: I0115 10:00:10.123456       1 scheduler.go:102] Successfully assigned staging/job to node1
+Jan 15 10:00:11 master kube-scheduler[77]: I0115 10:00:11.123456       1 scheduler.go:102] Successfully assigned default/cache to node3

@@ -1,0 +1,12 @@
+TimeCreated=2024-01-15T12:10:01.000Z EventID=1000 LogName=Application Computer=WIN-APP01 Provider=Application Error
+TimeCreated=2024-01-15T12:10:02.000Z EventID=1001 LogName=Application Computer=WIN-APP01 Provider=Windows Error Reporting
+TimeCreated=2024-01-15T12:10:03.000Z EventID=11707 LogName=Application Computer=WIN-APP01 Provider=MsiInstaller
+TimeCreated=2024-01-15T12:10:04.000Z EventID=1033 LogName=Application Computer=WIN-APP01 Provider=MsiInstaller
+TimeCreated=2024-01-15T12:10:05.000Z EventID=1000 LogName=Application Computer=WIN-APP02 Provider=Application Error
+TimeCreated=2024-01-15T12:10:06.000Z EventID=1001 LogName=Application Computer=WIN-APP02 Provider=Windows Error Reporting
+TimeCreated=2024-01-15T12:10:07.000Z EventID=8193 LogName=Application Computer=WIN-APP01 Provider=VSS
+TimeCreated=2024-01-15T12:10:08.000Z EventID=1008 LogName=Application Computer=WIN-APP01 Provider=Microsoft-Windows-Perflib
+TimeCreated=2024-01-15T12:10:09.000Z EventID=1026 LogName=Application Computer=WIN-APP01 Provider=.NET Runtime
+TimeCreated=2024-01-15T12:10:10.000Z EventID=1000 LogName=Application Computer=WIN-APP03 Provider=Application Error
+TimeCreated=2024-01-15T12:10:11.000Z EventID=11707 LogName=Application Computer=WIN-APP03 Provider=MsiInstaller
+TimeCreated=2024-01-15T12:10:12.000Z EventID=1001 LogName=Application Computer=WIN-APP03 Provider=Windows Error Reporting

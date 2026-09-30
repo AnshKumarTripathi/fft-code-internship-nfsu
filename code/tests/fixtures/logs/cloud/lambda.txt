@@ -1,0 +1,12 @@
+2024-01-15T10:00:01.000Z START RequestId: 6b0e1c06-e381-4f52-8e1c-000000000001 Version: $LATEST
+2024-01-15T10:00:01.100Z REPORT RequestId: 6b0e1c06-e381-4f52-8e1c-000000000001 Duration: 12.34 ms Billed Duration: 13 ms Memory Size: 128 MB Max Memory Used: 50 MB
+2024-01-15T10:00:02.000Z START RequestId: 6b0e1c06-e381-4f52-8e1c-000000000002 Version: $LATEST
+2024-01-15T10:00:02.200Z REPORT RequestId: 6b0e1c06-e381-4f52-8e1c-000000000002 Duration: 40.00 ms Billed Duration: 40 ms Memory Size: 256 MB Max Memory Used: 80 MB
+START RequestId: 6b0e1c06-e381-4f52-8e1c-000000000003 Version: $LATEST FunctionName=ingest
+REPORT RequestId: 6b0e1c06-e381-4f52-8e1c-000000000003 Duration: 8.10 ms Billed Duration: 9 ms Memory Size: 128 MB Max Memory Used: 40 MB
+2024-01-15T10:00:04.000Z END RequestId: 6b0e1c06-e381-4f52-8e1c-000000000004
+2024-01-15T10:00:05.000Z START RequestId: 6b0e1c06-e381-4f52-8e1c-000000000005 Version: $LATEST
+2024-01-15T10:00:05.050Z REPORT RequestId: 6b0e1c06-e381-4f52-8e1c-000000000005 Duration: 5.00 ms Billed Duration: 5 ms Memory Size: 128 MB Max Memory Used: 32 MB
+2024-01-15T10:00:06.000Z START RequestId: 6b0e1c06-e381-4f52-8e1c-000000000006 Version: $LATEST FunctionName=notify
+2024-01-15T10:00:06.300Z REPORT RequestId: 6b0e1c06-e381-4f52-8e1c-000000000006 Duration: 100.00 ms Billed Duration: 100 ms Memory Size: 512 MB Max Memory Used: 200 MB
+2024-01-15T10:00:07.000Z END RequestId: 6b0e1c06-e381-4f52-8e1c-000000000007

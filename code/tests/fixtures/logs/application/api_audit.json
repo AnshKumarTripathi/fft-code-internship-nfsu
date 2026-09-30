@@ -1,0 +1,12 @@
+{"timestamp":"2024-01-15T10:00:01.000Z","method":"GET","path":"/users","status":200,"actor":"alice","service":"user-api"}
+{"timestamp":"2024-01-15T10:00:02.000Z","method":"POST","path":"/login","status":401,"actor":"bob","service":"auth-api"}
+{"timestamp":"2024-01-15T10:00:03.000Z","method":"GET","path":"/orders","status":200,"actor":"carol","service":"order-api"}
+{"timestamp":"2024-01-15T10:00:04.000Z","method":"PUT","path":"/users/1","status":204,"actor":"alice","service":"user-api"}
+{"timestamp":"2024-01-15T10:00:05.000Z","method":"DELETE","path":"/users/2","status":403,"actor":"dave","service":"user-api"}
+{"timestamp":"2024-01-15T10:00:06.000Z","method":"GET","path":"/health","status":200,"actor":"probe","service":"gateway"}
+{"timestamp":"2024-01-15T10:00:07.000Z","method":"POST","path":"/pay","status":500,"actor":"eve","service":"billing-api"}
+{"timestamp":"2024-01-15T10:00:08.000Z","method":"GET","path":"/items","status":200,"actor":"frank","service":"catalog-api"}
+{"timestamp":"2024-01-15T10:00:09.000Z","method":"PATCH","path":"/items/9","status":200,"actor":"gina","service":"catalog-api"}
+{"timestamp":"2024-01-15T10:00:10.000Z","method":"HEAD","path":"/","status":200,"actor":"monitor","service":"gateway"}
+{"timestamp":"2024-01-15T10:00:11.000Z","method":"POST","path":"/users","status":201,"actor":"harry","service":"user-api"}
+{"timestamp":"2024-01-15T10:00:12.000Z","method":"GET","path":"/audit","status":200,"actor":"ivy","service":"audit-api"}

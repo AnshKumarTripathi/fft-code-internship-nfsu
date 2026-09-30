@@ -1,0 +1,11 @@
+2024-01-15T10:00:01Z helm install web bitnami/nginx --namespace default
+2024-01-15T10:00:02Z Release "web" has been deployed. Happy Helming!
+2024-01-15T10:00:03Z helm upgrade api ./charts/api --namespace prod user=alice
+2024-01-15T10:00:04Z Release "api" has been upgraded. Happy Helming!
+2024-01-15T10:00:05Z helm status web --namespace default
+2024-01-15T10:00:06Z STATUS: deployed NAME: web REVISION: 2
+2024-01-15T10:00:07Z helm uninstall old --namespace staging
+2024-01-15T10:00:08Z Release "jobs" has been installed. Happy Helming!
+2024-01-15T10:00:09Z helm rollback web 1 --namespace default
+2024-01-15T10:00:10Z helm.sh/release-name=web helm.sh/release-namespace=default
+2024-01-15T10:00:11Z helm list --namespace default

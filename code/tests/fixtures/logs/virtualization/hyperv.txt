@@ -1,0 +1,12 @@
+TimeCreated=2024-01-15T10:00:01.000Z Provider=Microsoft-Windows-Hyper-V-VMMS Computer=HV01 Message=VM web01 started
+TimeCreated=2024-01-15T10:00:02.000Z Provider=Microsoft-Windows-Hyper-V-VMMS Computer=HV01 Message=VM web02 stopped
+TimeCreated=2024-01-15T10:00:03.000Z Provider=Microsoft-Windows-Hyper-V-Worker Computer=HV01 Message=VM db01 saved
+TimeCreated=2024-01-15T10:00:04.000Z Provider=Microsoft-Windows-Hyper-V-VMMS Computer=HV02 Message=VM app01 started
+TimeCreated=2024-01-15T10:00:05.000Z Provider=Microsoft-Windows-Hyper-V-VMMS Computer=HV01 Message=VM web01 checkpoint created
+TimeCreated=2024-01-15T10:00:06.000Z Provider=Microsoft-Windows-Hyper-V-Worker Computer=HV02 Message=VM app01 paused
+TimeCreated=2024-01-15T10:00:07.000Z Provider=Microsoft-Windows-Hyper-V-VMMS Computer=HV01 Message=VM jump01 started
+TimeCreated=2024-01-15T10:00:08.000Z Provider=Microsoft-Windows-Hyper-V-VMMS Computer=HV03 Message=VM web03 started
+TimeCreated=2024-01-15T10:00:09.000Z Provider=Microsoft-Windows-Hyper-V-SynthStor Computer=HV01 Message=VM db01 disk attached
+TimeCreated=2024-01-15T10:00:10.000Z Provider=Microsoft-Windows-Hyper-V-VMMS Computer=HV01 Message=VM web01 live migrated
+TimeCreated=2024-01-15T10:00:11.000Z Provider=Microsoft-Windows-Hyper-V-VMMS Computer=HV02 Message=VM app01 stopped
+TimeCreated=2024-01-15T10:00:12.000Z Provider=Microsoft-Windows-Hyper-V-Worker Computer=HV01 Message=VM web01 reset

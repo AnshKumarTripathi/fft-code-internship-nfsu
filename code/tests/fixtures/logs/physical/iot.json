@@ -1,0 +1,12 @@
+{"device_id":"sensor-01","fw_version":"1.2.0","event":"telemetry","ts":"2024-01-15T10:00:01Z"}
+{"device_id":"sensor-02","fw_version":"1.2.0","event":"firmware_update","ts":"2024-01-15T10:00:02Z"}
+{"device_id":"gateway-1","fw_version":"2.0.1","event":"telemetry","ts":"2024-01-15T10:00:03Z"}
+{"device_id":"sensor-01","fw_version":"1.2.1","event":"ota","ts":"2024-01-15T10:00:04Z"}
+{"device_id":"lock-11","fw_version":"0.9.4","event":"telemetry","ts":"2024-01-15T10:00:05Z"}
+{"device_id":"sensor-03","fw_version":"1.1.0","event":"fw_update","ts":"2024-01-15T10:00:06Z"}
+{"device_id":"gateway-1","fw_version":"2.0.2","event":"firmware_update","ts":"2024-01-15T10:00:07Z"}
+{"device_id":"sensor-02","fw_version":"1.2.1","event":"telemetry","ts":"2024-01-15T10:00:08Z"}
+{"device_id":"thermostat-4","fw_version":"3.0.0","event":"telemetry","ts":"2024-01-15T10:00:09Z"}
+{"device_id":"lock-11","fw_version":"0.9.5","event":"firmware","ts":"2024-01-15T10:00:10Z"}
+{"device_id":"sensor-03","fw_version":"1.1.1","event":"telemetry","ts":"2024-01-15T10:00:11Z"}
+{"device_id":"gateway-2","fw_version":"2.0.1","event":"ota","ts":"2024-01-15T10:00:12Z"}

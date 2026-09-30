@@ -1,0 +1,53 @@
+# Secrets (Phase 95 copilot) — never commit real keys
+.env
+.env.local
+.env.*.local
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# DuckDB warehouse (regenerable; never commit)
+*.duckdb
+*.duckdb.wal
+data/warehouse.duckdb
+data/warehouse.duckdb.wal
+
+# Local corpus drop (LogHub SSH.log, auth.log, …). Keep the empty folder.
+data/raw/**
+!data/raw/.gitkeep
+
+# Generated pipeline artifacts (keep directory structure via .gitkeep)
+data/parsed/**
+!data/parsed/.gitkeep
+data/timeseries/**
+!data/timeseries/.gitkeep
+data/baselines/**
+!data/baselines/.gitkeep
+data/scores/**
+!data/scores/.gitkeep
+data/reports/**
+!data/reports/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

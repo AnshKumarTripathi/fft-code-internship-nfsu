@@ -1,0 +1,12 @@
+Jan 15 10:00:01 dhcp1 dhcpd[77]: DHCPDISCOVER from aa:bb:cc:dd:ee:01 via eth0
+Jan 15 10:00:01 dhcp1 dhcpd[77]: DHCPOFFER on 10.0.0.8 to aa:bb:cc:dd:ee:01 via eth0
+Jan 15 10:00:02 dhcp1 dhcpd[77]: DHCPREQUEST for 10.0.0.8 from aa:bb:cc:dd:ee:01 via eth0
+Jan 15 10:00:02 dhcp1 dhcpd[77]: DHCPACK on 10.0.0.8 to aa:bb:cc:dd:ee:01 via eth0
+Jan 15 10:00:03 dhcp1 dhcpd[77]: DHCPDISCOVER from aa:bb:cc:dd:ee:02 via eth0
+Jan 15 10:00:03 dhcp1 dhcpd[77]: DHCPOFFER on 10.0.0.9 to aa:bb:cc:dd:ee:02 via eth0
+Jan 15 10:00:04 dhcp1 dhcpd[77]: DHCPREQUEST for 10.0.0.9 from aa:bb:cc:dd:ee:02 via eth0
+Jan 15 10:00:04 dhcp1 dhcpd[77]: DHCPACK on 10.0.0.9 to aa:bb:cc:dd:ee:02 via eth0
+Jan 15 10:00:05 dhcp1 dhcpd[77]: DHCPREQUEST for 10.0.0.99 from aa:bb:cc:dd:ee:03 via eth0
+Jan 15 10:00:05 dhcp1 dhcpd[77]: DHCPNAK on 10.0.0.99 to aa:bb:cc:dd:ee:03 via eth0
+Jan 15 10:00:06 dhcp1 dhcpd[77]: DHCPACK on 10.0.0.10 to aa:bb:cc:dd:ee:04 via eth0
+Jan 15 10:00:07 dhcp1 dhcpd[77]: DHCPDISCOVER from aa:bb:cc:dd:ee:05 via eth1

@@ -1,0 +1,12 @@
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:01.000Z","applicationName":"login","uniqueQualifier":"1"},"actor":{"email":"alice@example.com"},"ipAddress":"10.0.0.8"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:02.000Z","applicationName":"login","uniqueQualifier":"2"},"actor":{"email":"bob@example.com"},"ipAddress":"10.0.0.9"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:03.000Z","applicationName":"login","uniqueQualifier":"3"},"actor":{"email":"mallory@example.com"},"ipAddress":"203.0.113.8"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:04.000Z","applicationName":"admin","uniqueQualifier":"4"},"actor":{"email":"admin@example.com"},"ipAddress":"10.0.0.10"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:05.000Z","applicationName":"drive","uniqueQualifier":"5"},"actor":{"email":"carol@example.com"},"ipAddress":"10.0.0.11"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:06.000Z","applicationName":"login","uniqueQualifier":"6"},"actor":{"email":"dave@example.com"},"ipAddress":"10.0.0.12"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:07.000Z","applicationName":"gmail","uniqueQualifier":"7"},"actor":{"email":"eve@example.com"},"ipAddress":"10.0.0.13"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:08.000Z","applicationName":"login","uniqueQualifier":"8"},"actor":{"email":"frank@example.com"},"ipAddress":"10.0.0.14"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:09.000Z","applicationName":"admin","uniqueQualifier":"9"},"actor":{"email":"alice@example.com"},"ipAddress":"10.0.0.8"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:10.000Z","applicationName":"drive","uniqueQualifier":"10"},"actor":{"email":"bob@example.com"},"ipAddress":"10.0.0.9"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:11.000Z","applicationName":"login","uniqueQualifier":"11"},"actor":{"email":"carol@example.com"},"ipAddress":"10.0.0.11"}
+{"kind":"admin#reports#activity","id":{"time":"2024-01-15T10:00:12.000Z","applicationName":"login","uniqueQualifier":"12"},"actor":{"email":"mallory@example.com"},"ipAddress":"198.51.100.9"}

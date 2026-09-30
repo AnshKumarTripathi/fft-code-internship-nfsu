@@ -1,0 +1,12 @@
+{"domain":"web.example.com","issuer":"Lets Encrypt","event":"seen","ts":"2024-01-15T10:00:01Z"}
+{"domain":"api.example.com","issuer":"Lets Encrypt","event":"seen","ts":"2024-01-15T10:00:02Z"}
+{"domain":"evil.example.com","issuer":"Unknown CA","event":"misissue","ts":"2024-01-15T10:00:03Z"}
+{"domain":"mail.example.com","issuer":"DigiCert","event":"seen","ts":"2024-01-15T10:00:04Z"}
+{"domain":"vpn.example.com","issuer":"Lets Encrypt","event":"seen","ts":"2024-01-15T10:00:05Z"}
+{"domain":"phish.example.com","issuer":"Unknown CA","event":"misissue","ts":"2024-01-15T10:00:06Z"}
+{"domain":"cdn.example.com","issuer":"Cloudflare","event":"seen","ts":"2024-01-15T10:00:07Z"}
+{"domain":"app.example.com","issuer":"Lets Encrypt","event":"seen","ts":"2024-01-15T10:00:08Z"}
+{"domain":"sso.example.com","issuer":"DigiCert","event":"seen","ts":"2024-01-15T10:00:09Z"}
+{"domain":"spoof.example.com","issuer":"Unknown CA","event":"misissue","ts":"2024-01-15T10:00:10Z"}
+{"domain":"db.example.com","issuer":"Lets Encrypt","event":"seen","ts":"2024-01-15T10:00:11Z"}
+{"domain":"www.example.com","issuer":"DigiCert","event":"seen","ts":"2024-01-15T10:00:12Z"}

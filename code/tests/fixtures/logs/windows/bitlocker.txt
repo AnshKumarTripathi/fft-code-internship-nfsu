@@ -1,0 +1,12 @@
+TimeCreated=2024-01-15T14:10:01.000Z EventID=768 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-LAP01 User=alice VolumeName=C:
+TimeCreated=2024-01-15T14:10:02.000Z EventID=769 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-LAP01 User=alice VolumeName=C:
+TimeCreated=2024-01-15T14:10:03.000Z EventID=770 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-LAP01 User=alice VolumeName=D:
+TimeCreated=2024-01-15T14:10:04.000Z EventID=775 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-LAP01 User=alice VolumeName=C:
+TimeCreated=2024-01-15T14:10:05.000Z EventID=780 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-LAP01 User=alice VolumeName=C:
+TimeCreated=2024-01-15T14:10:06.000Z EventID=768 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-LAP02 User=bob VolumeName=C:
+TimeCreated=2024-01-15T14:10:07.000Z EventID=769 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-LAP02 User=bob VolumeName=C:
+TimeCreated=2024-01-15T14:10:08.000Z EventID=780 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-LAP02 User=bob VolumeName=C:
+TimeCreated=2024-01-15T14:10:09.000Z EventID=775 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-SRV01 VolumeName=E:
+TimeCreated=2024-01-15T14:10:10.000Z EventID=770 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-SRV01 VolumeName=E:
+TimeCreated=2024-01-15T14:10:11.000Z EventID=768 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-WS01 User=carol VolumeName=C:
+TimeCreated=2024-01-15T14:10:12.000Z EventID=780 LogName=Microsoft-Windows-BitLocker/BitLocker Drive Encryption Provider=Microsoft-Windows-BitLocker Computer=WIN-WS01 User=carol VolumeName=C:

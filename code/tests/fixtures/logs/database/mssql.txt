@@ -1,0 +1,12 @@
+2024-01-15 10:00:01.12 spid51      Login succeeded for user 'alice'. Connection: [client 10.0.0.8]
+2024-01-15 10:00:02.12 spid51      SQL Server statement: SELECT 1 FROM dbo.t
+2024-01-15 10:00:03.12 spid51      Slow query duration 5123 ms statement: SELECT * FROM dbo.big
+2024-01-15 10:00:04.12 spid52      RPC:Completed stored proc refresh_stats
+2024-01-15 10:00:05.12 spid51      CREATE TABLE dbo.t (id int) in database 'appdb'
+2024-01-15 10:00:06.12 spid51      Audit: GRANT SELECT on database 'appdb' to user 'alice'
+2024-01-15 10:00:07.12 spid20      CHECKPOINT complete
+2024-01-15 10:00:08.12 spid15      Always On replica synchronized
+2024-01-15 10:00:09.12 spid51      BACKUP DATABASE appdb to disk = 'D:\bak\appdb.bak'
+2024-01-15 10:00:10.12 spid51      Logout of user 'alice'
+2024-01-15 10:00:11.12 spid53      Login failed for user 'mallory'. [client 10.0.0.9]
+2024-01-15 10:00:12.12 spid51      SQL Server statement: INSERT INTO dbo.t VALUES (1)

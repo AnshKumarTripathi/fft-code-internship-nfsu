@@ -1,0 +1,11 @@
+Jan 15 10:00:01 node1 kubelet[2048]: I0115 10:00:01.123456       1 kubelet.go:102] SyncLoop (ADD, "pod")
+Jan 15 10:00:02 node1 kubelet[2048]: I0115 10:00:02.123456       1 kubelet.go:210] PLEG: event for pod web
+Jan 15 10:00:03 node1 kubelet[2048]: W0115 10:00:03.123456       1 kubelet.go:330] Failed to get node
+Jan 15 10:00:04 node2 kubelet[3001]: I0115 10:00:04.123456       1 kubelet.go:102] SyncLoop (UPDATE, "pod")
+Jan 15 10:00:05 node1 kubelet[2048]: I0115 10:00:05.123456       1 kubelet.go:440] Started container
+Jan 15 10:00:06 node1 kubelet[2048]: E0115 10:00:06.123456       1 kubelet.go:501] Image pull failed
+Jan 15 10:00:07 node2 kubelet[3001]: I0115 10:00:07.123456       1 kubelet.go:102] SyncLoop (REMOVE, "pod")
+Jan 15 10:00:08 node3 kubelet[4100]: I0115 10:00:08.123456       1 kubelet.go:612] Probe succeeded
+Jan 15 10:00:09 node1 kubelet[2048]: W0115 10:00:09.123456       1 kubelet.go:700] Evicting pod
+Jan 15 10:00:10 node2 kubelet[3001]: I0115 10:00:10.123456       1 kubelet.go:102] SyncLoop (HOUSEKEEPING)
+Jan 15 10:00:11 node1 kubelet[2048]: I0115 10:00:11.123456       1 kubelet.go:880] Node ready

@@ -1,0 +1,12 @@
+{"timestamp":"2024-01-15T10:00:01.000Z","traceId":"abc111","spanId":"s1","duration":12.5,"service":"checkout","host":"app-01"}
+{"timestamp":"2024-01-15T10:00:02.000Z","trace_id":"abc112","span_id":"s2","duration":3.1,"service":"api","host":"app-01"}
+{"timestamp":"2024-01-15T10:00:03.000Z","traceId":"abc113","duration":40.0,"service":"billing","host":"app-02"}
+{"timestamp":"2024-01-15T10:00:04.000Z","traceId":"abc114","spanId":"s4","duration":1.2,"service":"api","host":"app-01"}
+{"timestamp":"2024-01-15T10:00:05.000Z","traceId":"abc115","duration":88.8,"service":"worker","host":"app-03"}
+{"timestamp":"2024-01-15T10:00:06.000Z","trace_id":"abc116","duration":0.4,"service":"gateway","host":"edge-01"}
+{"timestamp":"2024-01-15T10:00:07.000Z","traceId":"abc117","spanId":"s7","duration":15.0,"service":"checkout","host":"app-01"}
+{"timestamp":"2024-01-15T10:00:08.000Z","traceId":"abc118","duration":9.9,"service":"search","host":"app-04"}
+{"timestamp":"2024-01-15T10:00:09.000Z","traceId":"abc119","duration":120.0,"service":"billing","host":"app-02"}
+{"timestamp":"2024-01-15T10:00:10.000Z","trace_id":"abc120","span_id":"s10","duration":2.2,"service":"api","host":"app-01"}
+{"timestamp":"2024-01-15T10:00:11.000Z","traceId":"abc121","duration":6.6,"service":"worker","host":"app-03"}
+{"timestamp":"2024-01-15T10:00:12.000Z","traceId":"abc122","duration":4.4,"service":"checkout","host":"app-01"}

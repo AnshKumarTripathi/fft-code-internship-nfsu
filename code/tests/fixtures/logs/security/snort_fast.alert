@@ -1,0 +1,12 @@
+01/15-10:00:01.123456  [**] [1:2001219:1] ET SCAN SSH Brute Force [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 10.0.0.1:54321 -> 10.0.0.2:22
+01/15-10:00:02.000001  [**] [1:2001219:1] ET SCAN SSH Brute Force [**] [Classification: Attempted Information Leak] [Priority: 1] {TCP} 10.0.0.9:40000 -> 10.0.0.2:22
+01/15-10:00:03.500000  [**] [1:2010937:2] ET WEB SQL Injection [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.0.10:80 -> 10.0.0.1:80
+01/15-10:00:04.111111  [**] [1:2100368:5] GPL ICMP_INFO PING [**] [Priority: 3] {ICMP} 192.168.1.50 -> 10.0.0.1
+01/15-10:00:05.222222  [**] [1:2000345:1] ET DNS Query [**] [Classification: Potentially Bad Traffic] [Priority: 3] {UDP} 10.0.0.11:53 -> 8.8.8.8:53
+01/15-10:00:06.333333  [**] [1:2013504:1] ET POLICY TLS [**] [Classification: Misc activity] [Priority: 3] {TCP} 10.0.0.12:44301 -> 93.184.216.34:443
+01/15-10:00:07.444444  [**] [1:2102466:1] ET EXPLOIT SMB [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} 10.0.0.13:4444 -> 10.0.0.1:445
+01/15-10:00:08.555555  [**] [1:2001219:1] ET SCAN Nmap [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 10.0.0.15:22 -> 10.0.0.1:22
+01/15-10:00:09.666666  [**] [1:2013028:1] ET WEB XSS [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.0.0.16:8080 -> 10.0.0.1:8080
+01/15-10:00:10.777777  [**] [1:2000345:2] ET DNS Tunnel [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.0.0.18:12345 -> 1.1.1.1:53
+01/15-10:00:11.888888  [**] [1:2101411:1] GPL SNMP public access udp [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 10.0.0.20:161 -> 10.0.0.1:161
+01/15-10:00:12.999999  [**] [1:2001219:3] ET SCAN something [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 10.0.0.21:54321 -> 10.0.0.2:22

@@ -1,0 +1,11 @@
+Jan 15 10:00:01 mail rspamd[1423]: <abc>; rspamd_task_write_log: id: <m1@example.com>, qid: <4F8A3>, ip: 203.0.113.10, from: <alice@example.com>, action=reject, score=15.20
+Jan 15 10:00:02 mail rspamd[1423]: <abd>; rspamd_task_write_log: id: <m2@example.com>, qid: <4F8A4>, ip: 203.0.113.11, from: <bob@example.com>, action=add header, score=6.10
+Jan 15 10:00:03 mail rspamd[1423]: <abe>; rspamd_task_write_log: id: <m3@example.com>, qid: <4F8A5>, ip: 198.51.100.20, user: carol, action=no action, score=0.10
+Jan 15 10:00:04 mail rspamd[1423]: <abf>; rspamd_task_write_log: id: <m4@example.com>, qid: <4F8A6>, ip: 203.0.113.12, from: <dave@example.net>, action=rewrite subject, score=8.40
+Jan 15 10:00:05 mail rspamd[1423]: <abg>; rspamd_task_write_log: id: <m5@example.com>, qid: <4F8A7>, ip: 203.0.113.13, from: <eve@example.com>, action=soft reject, score=12.00
+Jan 15 10:00:06 mail spamd[200]: spamd: result: Y 15 - USER_IN_BLACKLIST,RAZOR2_CHECK scantime=0.2,size=1234,user=frank,uid=1001,required_score=5.0,ip=203.0.113.14
+Jan 15 10:00:07 mail rspamd[1423]: <abh>; rspamd_task_write_log: id: <m6@example.com>, qid: <4F8A8>, ip: 10.0.0.8, user: alice, action=greylist, score=4.20
+Jan 15 10:00:08 mail rspamd[1423]: <abi>; rspamd_task_write_log: id: <m7@example.com>, qid: <4F8A9>, ip: 10.0.0.9, from: <grace@example.com>, action=no action, score=-0.50
+Jan 15 10:00:09 mail rspamd[1423]: <abj>; rspamd_task_write_log: id: <m8@example.com>, qid: <4F8AA>, ip: 203.0.113.15, from: <heidi@example.com>, action=reject, score=20.10
+Jan 15 10:00:10 mail rspamd[1423]: <abk>; rspamd_task_write_log: id: <m9@example.com>, qid: <4F8AB>, ip: 198.51.100.21, user: ivan, action=add header, score=5.50
+Jan 15 10:00:11 mail rspamd[1423]: <abl>; rspamd_task_write_log: id: <m10@example.com>, qid: <4F8AC>, ip: 203.0.113.16, from: <judy@example.com>, action=reject, score=18.00

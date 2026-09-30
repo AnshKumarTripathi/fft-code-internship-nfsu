@@ -1,0 +1,173 @@
+RESEARCH PAPER READING LIST
+============================
+Curated for: Fourier/signal processing foundations, Fourier in ML, transformers/attention,
+information theory, and log-based anomaly detection (directly relevant to the log
+anomaly detection SDD).
+
+Note: "Claude Shannon" (Claude Elwood Shannon) is the founder of information theory —
+same first name as Anthropic's Claude, no other relation.
+
+
+1. FOURIER TRANSFORM & SIGNAL PROCESSING — FOUNDATIONS
+--------------------------------------------------------
+
+Cooley, J.W. & Tukey, J.W. (1965)
+"An Algorithm for the Machine Calculation of Complex Fourier Series"
+The original Fast Fourier Transform (FFT) paper — the algorithm that made Fourier
+analysis computationally practical.
+https://web.stanford.edu/class/cme324/classics/cooley-tukey.pdf
+
+Gabor, D. (1946)
+"Theory of Communication"
+Introduces the windowed/time-localized Fourier transform (the "Gabor transform"),
+the conceptual ancestor of the Short-Time Fourier Transform (STFT) used in the
+spectral log-anomaly detector.
+https://digital-library.theiet.org/doi/10.1049/ji-3-2.1946.0074
+
+Shannon, C.E. (1949)
+"Communication in the Presence of Noise"
+Introduces the sampling theorem (often called Nyquist-Shannon) — the formal basis
+for why signals must be evenly sampled before an FFT/STFT is meaningful, directly
+relevant to the log-bucketing step of the pipeline.
+https://ieeexplore.ieee.org/document/1697831
+
+Ahmed, N., Natarajan, T., & Rao, K.R. (1974)
+"Discrete Cosine Transform"
+Introduces the DCT, the frequency-domain transform underlying JPEG image compression
+and closely related to the FFT.
+https://ieeexplore.ieee.org/document/1672377
+
+
+2. INFORMATION THEORY
+--------------------------------------------------------
+
+Shannon, C.E. (1948)
+"A Mathematical Theory of Communication"
+The founding paper of information theory: entropy, channel capacity, the bit as a
+unit of information. Arguably the most influential single paper in computer science.
+https://archive.org/details/bstj27-3-379
+(readable PDF mirror: https://www.essrl.wustl.edu/~jao/itrg/shannon.pdf)
+
+
+3. FOURIER TRANSFORM IN MACHINE LEARNING
+--------------------------------------------------------
+
+Vaswani, A. et al. (2017)
+"Attention Is All You Need"
+Introduces the Transformer architecture, and with it, sinusoidal positional
+encoding — sine/cosine waves at multiple frequencies used to inject sequence order
+into a model with no inherent notion of position.
+https://arxiv.org/abs/1706.03762
+
+Su, J. et al. (2021)
+"RoFormer: Enhanced Transformer with Rotary Position Embedding (RoPE)"
+The positional encoding scheme used in most modern LLMs (LLaMA and others) — encodes
+relative position as a rotation angle at multiple frequencies, a more direct use of
+Fourier-style machinery than the original sinusoidal encoding.
+https://arxiv.org/abs/2104.09864
+
+Tancik, M. et al. (2020)
+"Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains"
+Shows that mapping inputs through sine/cosine features before feeding them to a
+neural network dramatically helps it learn fine spatial detail — foundational to
+NeRF-style 3D scene reconstruction.
+https://arxiv.org/abs/2006.10739
+
+Li, Z. et al. (2020)
+"Fourier Neural Operator for Parametric Partial Differential Equations"
+Uses the Fourier transform inside a neural network layer to learn solution operators
+for PDEs, orders of magnitude faster than traditional solvers.
+https://arxiv.org/abs/2010.08895
+
+Lee-Thorp, J. et al. (2021)
+"FNet: Mixing Tokens with Fourier Transforms"
+Replaces the attention mechanism in a Transformer with a literal (parameter-free)
+Fourier transform, and shows it still works surprisingly well — a nice illustration
+of how much of what attention does is really just mixing information across positions.
+https://arxiv.org/abs/2105.03824
+
+
+4. FOUNDATIONAL DEEP LEARNING (BROADER CONTEXT)
+--------------------------------------------------------
+
+He, K. et al. (2015)
+"Deep Residual Learning for Image Recognition" (ResNet)
+Introduces residual/skip connections, which made training very deep networks
+practical and underlie most modern architectures, including Transformers.
+https://arxiv.org/abs/1512.03385
+
+Goodfellow, I. et al. (2014)
+"Generative Adversarial Networks"
+Introduces GANs — two networks trained adversarially against each other.
+https://arxiv.org/abs/1406.2661
+
+Devlin, J. et al. (2018)
+"BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+Popularized the pretrain-then-finetune paradigm for NLP using Transformers.
+https://arxiv.org/abs/1810.04805
+
+Brown, T. et al. (2020)
+"Language Models are Few-Shot Learners" (GPT-3)
+Showed that scaling a Transformer language model far enough produces strong
+few-shot/in-context learning without task-specific fine-tuning.
+https://arxiv.org/abs/2005.14165
+
+Ho, J., Jain, A., & Abbeel, P. (2020)
+"Denoising Diffusion Probabilistic Models"
+The paper underlying modern image-generation diffusion models (Stable Diffusion,
+DALL-E 2 and successors build on this).
+https://arxiv.org/abs/2006.11239
+
+
+5. LOG PARSING & LOG-BASED ANOMALY DETECTION (directly relevant to the project)
+--------------------------------------------------------
+
+He, P., Zhu, J., Zheng, Z., & Lyu, M.R. (2017)
+"Drain: An Online Log Parsing Approach with Fixed Depth Tree"
+The template-mining algorithm the pipeline's parsing stage is built around.
+https://jiemingzhu.github.io/pub/pjhe_icws2017.pdf
+
+Xu, W., Huang, L., Fox, A., Patterson, D., & Jordan, M.I. (2009)
+"Detecting Large-Scale System Problems by Mining Console Logs"
+Early, influential paper on turning parsed console/system logs into features for
+automated anomaly detection — a direct ancestor of the correlation/scoring stage
+in the SDD.
+https://doi.org/10.1145/1629575.1629587
+
+Du, M., Li, F., Zheng, G., & Srikumar, V. (2017)
+"DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning"
+Treats a log as a sequence (like a sentence) and uses an LSTM to learn normal
+sequences, flagging deviations — the conceptual basis for the ML detector stage.
+https://doi.org/10.1145/3133956.3134015
+
+Zhu, J. et al. (2019)
+"Tools and Benchmarks for Automated Log Parsing"
+The paper introducing LogHub / benchmarking a wide set of log parsers on real
+datasets — the standard reference dataset collection for this kind of work.
+https://arxiv.org/abs/1811.03509
+
+Meng, W. et al. (2019)
+"LogAnomaly: Unsupervised Detection of Sequential and Quantitative Anomalies in
+Unstructured Logs"
+Combines semantic (content) and quantitative (count-based) signals for log anomaly
+detection — a good illustration of the "combine multiple detector types" philosophy
+used in the SDD's correlation stage.
+https://www.ijcai.org/proceedings/2019/0658.pdf
+
+
+6. BONUS — ANTHROPIC INTERPRETABILITY RESEARCH
+--------------------------------------------------------
+Not required reading for this project, but relevant if you want to go deeper on how
+transformer internals (like the ones using RoPE above) are actually studied.
+
+Elhage, N. et al. (2022)
+"Toy Models of Superposition"
+https://transformer-circuits.pub/2022/toy_model/index.html
+
+Templeton, A. et al. (2024)
+"Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet"
+https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html
+
+Bai, Y. et al. (2022)
+"Constitutional AI: Harmlessness from AI Feedback"
+https://arxiv.org/abs/2212.08073

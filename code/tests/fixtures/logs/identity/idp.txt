@@ -1,0 +1,12 @@
+{"uuid":"a1","published":"2024-01-15T10:00:01.000Z","eventType":"user.session.start","actor":{"alternateId":"alice@example.com","displayName":"Alice"},"client":{"ipAddress":"10.0.0.8"},"outcome":{"result":"SUCCESS"}}
+{"uuid":"a2","published":"2024-01-15T10:00:02.000Z","eventType":"user.session.start","actor":{"alternateId":"mallory@example.com","displayName":"Mallory"},"client":{"ipAddress":"10.0.0.9"},"outcome":{"result":"FAILURE"}}
+{"uuid":"a3","published":"2024-01-15T10:00:03.000Z","eventType":"user.authentication.sso","actor":{"alternateId":"bob@example.com"},"client":{"ipAddress":"10.0.0.10"},"outcome":{"result":"SUCCESS"}}
+{"uuid":"a4","published":"2024-01-15T10:00:04.000Z","eventType":"app.oauth2.token.grant","actor":{"alternateId":"carol@example.com"},"client":{"ipAddress":"10.0.0.11"},"outcome":{"result":"SUCCESS"}}
+{"uuid":"a5","published":"2024-01-15T10:00:05.000Z","eventType":"app.oidc.authorize","actor":{"alternateId":"dave@example.com"},"client":{"ipAddress":"10.0.0.12"},"outcome":{"result":"SUCCESS"}}
+{"uuid":"a6","published":"2024-01-15T10:00:06.000Z","eventType":"user.session.end","actor":{"alternateId":"alice@example.com"},"client":{"ipAddress":"10.0.0.8"},"outcome":{"result":"SUCCESS"}}
+{"uuid":"a7","published":"2024-01-15T10:00:07.000Z","eventType":"user.authentication.verify","actor":{"alternateId":"eve@example.com"},"client":{"ipAddress":"10.0.0.13"},"outcome":{"result":"FAILURE"}}
+{"uuid":"a8","published":"2024-01-15T10:00:08.000Z","eventType":"user.session.start","actor":{"alternateId":"frank@example.com"},"client":{"ipAddress":"10.0.0.14"},"outcome":{"result":"SUCCESS"}}
+{"time":"2024-01-15T10:00:09Z","eventType":"sso.login","user":"gina","ip":"10.0.0.15","result":"success"}
+{"uuid":"a10","published":"2024-01-15T10:00:10.000Z","eventType":"user.account.lock","actor":{"alternateId":"harry@example.com"},"client":{"ipAddress":"10.0.0.16"},"outcome":{"result":"SUCCESS"}}
+{"uuid":"a11","published":"2024-01-15T10:00:11.000Z","eventType":"app.oauth2.authorize","actor":{"alternateId":"ivy@example.com"},"client":{"ipAddress":"10.0.0.17"},"outcome":{"result":"FAILURE"}}
+{"uuid":"a12","published":"2024-01-15T10:00:12.000Z","eventType":"user.session.start","actor":{"alternateId":"joe@example.com"},"client":{"ipAddress":"10.0.0.18"},"outcome":{"result":"SUCCESS"}}

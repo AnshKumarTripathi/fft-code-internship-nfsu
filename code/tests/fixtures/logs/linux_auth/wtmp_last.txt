@@ -1,0 +1,10 @@
+alice    pts/0        192.168.1.10    Sun Aug 16 10:00:01 2026   still logged in
+bob      pts/1        10.0.0.5        Sun Aug 16 09:30:00 2026 - 09:45  (00:15)
+carol    pts/2        office-host     Sun Aug 16 08:00:00 2026   still logged in
+dave     tty1         :0              Sat Aug 15 22:10:00 2026 - 23:00  (00:50)
+reboot   system boot  5.15.0-76-generic Sun Aug 16 07:00:00 2026
+eve      pts/3        192.0.2.10      Fri Aug 14 11:11:11 2026 - 12:00  (00:48)
+frank    pts/4        198.51.100.9    Thu Aug 13 16:00:00 2026   still logged in
+mallory  pts/5        203.0.113.8     Wed Aug 12 01:02:03 2026 - 01:10  (00:08)
+root     pts/6        192.168.1.1     Tue Aug 11 18:18:18 2026   still logged in
+alice    pts/7        lab-gateway     Mon Aug 10 09:09:09 2026 - 10:00  (00:50)

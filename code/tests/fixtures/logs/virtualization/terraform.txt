@@ -1,0 +1,12 @@
+2024-01-15T10:00:01Z Terraform will perform the following actions host=ci01 user=alice
+2024-01-15T10:00:02Z Plan: 1 to add, 0 to change, 0 to destroy.
+2024-01-15T10:00:03Z Apply complete! Resources: 1 added, 0 changed, 0 destroyed. user=alice host=ci01
+2024-01-15T10:00:04Z Terraform Apply complete on workspace prod user=bob
+2024-01-15T10:00:05Z Plan: 0 to add, 2 to change, 0 to destroy.
+2024-01-15T10:00:06Z Apply complete! Resources: 0 added, 2 changed, 0 destroyed. user=bob host=ci01
+2024-01-15T10:00:07Z Terraform will perform the following actions host=ci02 user=carol
+2024-01-15T10:00:08Z Plan: 3 to add, 0 to change, 1 to destroy.
+2024-01-15T10:00:09Z Apply complete! Resources: 3 added, 0 changed, 1 destroyed. user=carol host=ci02
+2024-01-15T10:00:10Z Apply complete! Resources: 0 added, 0 changed, 0 destroyed. user=alice host=ci01
+2024-01-15T10:00:11Z Terraform will perform the following actions host=ci01 user=dave
+2024-01-15T10:00:12Z Apply complete! Resources: 1 added, 0 changed, 0 destroyed. user=dave host=ci01

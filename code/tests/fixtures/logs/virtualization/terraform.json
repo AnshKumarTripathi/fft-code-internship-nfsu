@@ -1,0 +1,12 @@
+{"@level":"info","@message":"Apply complete! Resources: 1 added, 0 changed, 0 destroyed.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:01.000000Z","type":"apply_complete","user":"alice","host":"ci01"}
+{"@level":"info","@message":"Plan: 1 to add, 0 to change, 0 to destroy.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:02.000000Z","type":"change_summary","user":"alice"}
+{"@level":"info","@message":"Apply complete! Resources: 0 added, 1 changed, 0 destroyed.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:03.000000Z","type":"apply_complete","user":"bob","host":"ci01"}
+{"@level":"info","@message":"Terraform will perform the following actions","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:04.000000Z","type":"planned_change","user":"carol"}
+{"@level":"info","@message":"Apply complete! Resources: 2 added, 0 changed, 0 destroyed.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:05.000000Z","type":"apply_complete","user":"carol","workspace":"prod"}
+{"@level":"info","@message":"Plan: 0 to add, 0 to change, 1 to destroy.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:06.000000Z","type":"change_summary","user":"dave"}
+{"@level":"info","@message":"Apply complete! Resources: 0 added, 0 changed, 1 destroyed.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:07.000000Z","type":"apply_complete","user":"dave","host":"ci02"}
+{"@level":"info","@message":"Apply complete! Resources: 1 added, 0 changed, 0 destroyed.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:08.000000Z","type":"apply_complete","user":"alice"}
+{"@level":"info","@message":"Plan: 4 to add, 1 to change, 0 to destroy.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:09.000000Z","type":"change_summary","user":"bob"}
+{"@level":"info","@message":"Apply complete! Resources: 4 added, 1 changed, 0 destroyed.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:10.000000Z","type":"apply_complete","user":"bob","host":"ci01"}
+{"@level":"info","@message":"Terraform will perform the following actions","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:11.000000Z","type":"planned_change","user":"alice"}
+{"@level":"info","@message":"Apply complete! Resources: 0 added, 0 changed, 0 destroyed.","@module":"terraform.ui","@timestamp":"2024-01-15T10:00:12.000000Z","type":"apply_complete","user":"alice","host":"ci01"}

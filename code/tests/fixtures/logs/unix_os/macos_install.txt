@@ -1,0 +1,12 @@
+Jan 15 10:00:01 macbook installd[501]: PackageKit: Installing package com.example.foo
+Jan 15 10:00:02 macbook installd[501]: PackageKit: Installed package com.example.foo
+Jan 15 10:00:03 macbook installer[502]: PackageKit: Preparing
+Jan 15 10:00:04 macbook installd[501]: PackageKit: Removing package com.example.bar
+Date/Time: 2024-01-15 10:00:05.123 +0000 Process: foo [123] Path: /Applications/Foo.app
+Date/Time: 2024-01-15 10:00:06.123 +0000 Process: Bar [124] Path: /Applications/Bar.app
+Jan 15 10:00:07 macbook installd[501]: PackageKit: Writing receipt
+Jan 15 10:00:08 macbook installer[503]: PackageKit: Registered bundle
+Date/Time: 2024-01-15 10:00:09.123 +0000 Process: crashpad [125] Path: /Library/Logs
+Jan 15 10:00:10 macbook installd[501]: PackageKit: Applying patches
+Jan 15 10:00:11 macbook installd[501]: PackageKit: Succeeded
+Jan 15 10:00:12 macbook installer[504]: PackageKit: Done

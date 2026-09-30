@@ -1,0 +1,12 @@
+[Mon Jan 15 10:00:01 2024] usb 1-1: USB disconnect, device number 4
+[Mon Jan 15 10:00:02 2024] EXT4-fs (sda1): mounted filesystem with ordered data mode
+[Mon Jan 15 10:00:03 2024] CPU0: Core temperature above threshold, cpu clock throttled
+[Mon Jan 15 10:00:04 2024] nf_conntrack: table full, dropping packet
+[Mon Jan 15 10:00:05 2024] Out of memory: Killed process 1234 (java)
+[Mon Jan 15 10:00:06 2024] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    0.000000] Linux version 6.8.0-generic
+[    1.234567] pci 0000:00:1f.2: AHCI controller
+[Tue Jan 16 11:00:00 2024] device eth0 entered promiscuous mode
+[Tue Jan 16 11:00:01 2024] TCP: request_sock_TCP: Possible SYN flooding
+[Wed Jan 17 12:00:00 2024] floppy0: no floppy controllers found
+[Wed Jan 17 12:00:01 2024] ACPI: Thermal Zone [TZ00] (50 C)

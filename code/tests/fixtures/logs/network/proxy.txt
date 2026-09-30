@@ -1,0 +1,12 @@
+1705312801.123    312 10.0.0.8 TCP_MISS/200 1234 GET http://example.com/ alice HIER_DIRECT/1.2.3.4 text/html
+1705312802.010      5 10.0.0.9 TCP_DENIED/403 0 GET http://blocked.example/ mallory NONE/- text/html
+1705312803.456     88 10.0.0.10 TCP_HIT/200 2048 GET http://cdn.example.com/style.css bob HIER_NONE/- text/css
+1705312804.001     12 10.0.0.11 TCP_MISS/200 512 GET http://api.example.com/v1 alice HIER_DIRECT/10.0.0.20 application/json
+1705312805.200      1 10.0.0.12 TCP_DENIED/407 0 CONNECT example.com:443 - NONE/- -
+1705312806.333    150 10.0.0.13 TCP_MISS/301 256 GET http://old.example.com/ carol HIER_DIRECT/93.184.216.34 text/html
+1705312807.010      9 10.0.0.14 TCP_REFRESH_HIT/200 1024 GET http://example.com/logo.png dave HIER_DIRECT/1.2.3.4 image/png
+1705312808.888      2 10.0.0.15 TCP_DENIED/403 0 GET http://malware.example/ eve NONE/- text/html
+1705312809.050     40 10.0.0.16 TCP_MISS/200 80 GET http://example.net/ alice HIER_DIRECT/1.2.3.4 text/html
+1705312810.100      3 10.0.0.8 TCP_MEM_HIT/200 16 GET http://example.com/favicon.ico alice HIER_NONE/- image/x-icon
+1705312811.222     70 10.0.0.17 TCP_MISS/200 4096 GET http://files.example.com/a.zip bob HIER_DIRECT/10.0.0.30 application/zip
+1705312812.001      0 10.0.0.18 TCP_DENIED/403 0 GET http://blocked.example/secret trent NONE/- text/html

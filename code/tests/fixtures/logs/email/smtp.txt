@@ -1,0 +1,12 @@
+Jan 15 10:00:01 mail postfix/smtpd[1234]: connect from unknown[203.0.113.10]
+Jan 15 10:00:02 mail postfix/smtpd[1234]: 4F8A3: client=unknown[203.0.113.10]
+Jan 15 10:00:03 mail postfix/smtpd[1234]: 4F8A3: client=unknown[203.0.113.10], sasl_method=PLAIN, sasl_username=alice
+Jan 15 10:00:04 mail postfix/smtpd[1234]: warning: unknown[203.0.113.11]: SASL PLAIN authentication failed
+Jan 15 10:00:05 mail postfix/smtpd[1234]: 4F8B1: client=scanner.example.com[198.51.100.20], sasl_method=LOGIN, sasl_username=bob
+Jan 15 10:00:06 mail postfix/smtpd[1235]: disconnect from unknown[203.0.113.10]
+Jan 15 10:00:07 mail postfix/smtp[2345]: 4F8A3: to=<carol@example.com>, relay=mx.example.com[198.51.100.30]:25, delay=0.12, status=sent (250 2.0.0 Ok)
+Jan 15 10:00:08 mail postfix/smtp[2345]: 4F8B1: to=<dave@example.net>, relay=mx.example.net[198.51.100.31]:25, delay=0.20, status=sent (250 Ok)
+Jan 15 10:00:09 mail sendmail[99]: g1A00abc: from=<alice@example.com>, size=1234, class=0, nrcpts=1, msgid=<id@example.com>, proto=ESMTP, relay=unknown [203.0.113.12]
+Jan 15 10:00:10 mail sendmail[100]: g1A00def: to=<eve@example.com>, delay=00:00:01, mailer=esmtp, stat=Sent
+Jan 15 10:00:11 mail postfix/smtpd[1236]: 4F8C2: client=unknown[203.0.113.13], sasl_method=PLAIN, sasl_username=mallory
+Jan 15 10:00:12 mail postfix/smtpd[1236]: lost connection after AUTH from unknown[203.0.113.14]

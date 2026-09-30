@@ -1,0 +1,12 @@
+Jan 15 10:00:01 ntp1 ntpd[99]: synchronized to 10.0.0.1
+Jan 15 10:00:02 ntp1 ntpd[99]: peer 10.0.0.1 now valid
+Jan 15 10:00:03 ntp1 chronyd[100]: Selected source 10.0.0.2
+Jan 15 10:00:04 ntp1 ntpd[99]: synchronized to 10.0.0.1
+Jan 15 10:00:05 ntp1 chronyd[100]: System clock wrong by 0.002 seconds
+Jan 15 10:00:06 ntp1 ntpd[99]: peer 10.0.0.3 unreachable
+Jan 15 10:00:07 ntp1 ntpd[99]: synchronized to 10.0.0.2
+Jan 15 10:00:08 ntp1 chronyd[100]: Selected source 10.0.0.1
+Jan 15 10:00:09 ntp1 ntpd[99]: kernel time sync status 0040
+Jan 15 10:00:10 ntp1 ntpd[99]: synchronized to 10.0.0.1
+Jan 15 10:00:11 ntp1 chronyd[100]: Source 10.0.0.4 offline
+Jan 15 10:00:12 ntp1 ntpd[99]: synchronized to 10.0.0.1

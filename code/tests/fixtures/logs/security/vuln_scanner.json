@@ -1,0 +1,12 @@
+{"timestamp":"2024-01-15T10:00:01.000Z","pluginID":"10335","pluginName":"Nessus TCP scanner","host":"10.0.0.8","severity":"info"}
+{"timestamp":"2024-01-15T10:00:02.000Z","pluginID":"11219","pluginName":"Nessus SYN scanner","host":"10.0.0.9","severity":"info"}
+{"timestamp":"2024-01-15T10:00:03.000Z","pluginID":"19506","pluginName":"Nessus Scan Information","host":"web1.example.com","severity":"info"}
+{"timestamp":"2024-01-15T10:00:04.000Z","pluginID":"10107","pluginName":"HTTP Server Type and Version","host":"10.0.0.10","severity":"low"}
+{"timestamp":"2024-01-15T10:00:05.000Z","pluginID":"10863","pluginName":"SSL Certificate Expiry","host":"10.0.0.11","severity":"medium"}
+{"timestamp":"2024-01-15T10:00:06.000Z","pluginID":"11213","pluginName":"HTTP TRACE / TRACK Methods Allowed","host":"10.0.0.12","severity":"medium"}
+{"timestamp":"2024-01-15T10:00:07.000Z","pluginID":"20007","pluginName":"SSL Version 2 and 3 Protocol Detection","host":"10.0.0.13","severity":"high"}
+{"timestamp":"2024-01-15T10:00:08.000Z","pluginID":"33850","pluginName":"Apache Server ETag Header Information Disclosure","host":"web2.example.com","severity":"low"}
+{"timestamp":"2024-01-15T10:00:09.000Z","pluginID":"51192","pluginName":"SSL Certificate Cannot Be Trusted","host":"10.0.0.14","severity":"medium"}
+{"timestamp":"2024-01-15T10:00:10.000Z","pluginID":"57582","pluginName":"SSL Self-Signed Certificate","host":"10.0.0.15","severity":"medium"}
+{"timestamp":"2024-01-15T10:00:11.000Z","pluginID":"65821","pluginName":"SSL RC4 Cipher Suites Supported","host":"10.0.0.16","severity":"high"}
+{"timestamp":"2024-01-15T10:00:12.000Z","pluginID":"97833","pluginName":"OpenSSL Padding Oracle","host":"10.0.0.17","severity":"critical"}

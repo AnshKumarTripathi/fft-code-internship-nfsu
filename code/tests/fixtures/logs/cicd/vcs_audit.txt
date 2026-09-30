@@ -1,0 +1,12 @@
+Jan 15 10:00:01 gitserver git-shell[99]: user alice received-pack 'app.git' from 10.0.0.8
+Jan 15 10:00:02 gitserver git-shell[99]: user bob received-pack 'api.git' from 10.0.0.9
+Jan 15 10:00:03 gitserver git-shell[100]: user carol git-upload-pack 'lib.git' from 10.0.0.10
+Jan 15 10:00:04 gitserver git-shell[101]: user dave git-receive-pack 'web.git' from 10.0.1.4
+Jan 15 10:00:05 gitserver git-shell[102]: user eve received-pack 'jobs.git' from 10.0.1.5
+{"author":"frank","action":"repository_git_operation","ip":"10.0.2.8","repo":"org/app","created_at":"2024-01-15T10:00:06Z"}
+{"author":"grace","action":"git.push","ip":"10.0.2.9","repo":"org/api","ts":"2024-01-15T10:00:07Z"}
+{"author":"heidi","action":"permission_change","ip":"198.51.100.20","repo":"org/web","entity_type":"Project","ts":"2024-01-15T10:00:08Z"}
+Jan 15 10:00:09 gitserver git-shell[103]: user ivan received-pack 'app.git' from 10.0.0.11
+Jan 15 10:00:10 gitserver git-shell[104]: user judy git-upload-pack 'app.git' from 10.0.0.12
+{"author":"mallory","action":"clone","ip":"203.0.113.10","repo":"org/secret","ts":"2024-01-15T10:00:11Z"}
+Jan 15 10:00:12 gitserver git-shell[105]: user olivia received-pack 'api.git' from 10.0.0.13

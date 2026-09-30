@@ -1,0 +1,12 @@
+Jan 15 10:00:01 backup1 bacula-dir[99]: JobId 45 Job DailyBackup.2024-01-15 finished
+Jan 15 10:00:02 backup1 bacula-dir[99]: JobId 46 Job SQLBackup.2024-01-15 finished
+Jan 15 10:00:03 backup1 bacula-sd[100]: Job DailyBackup.2024-01-15 volume vol-001
+Jan 15 10:00:04 backup1 bacula-dir[99]: JobId 47 Job Files.2024-01-15 started
+Jan 15 10:00:05 backup1 bacula-dir[99]: JobId 47 Job Files.2024-01-15 finished
+Jan 15 10:00:06 backup1 bacula-fd[101]: Job DailyBackup.2024-01-15 client web01
+Jan 15 10:00:07 backup1 bacula-dir[99]: JobId 48 Job Weekly.2024-01-15 finished
+Jan 15 10:00:08 backup1 bacula-dir[99]: JobId 49 Job DailyBackup.2024-01-15 failed
+Jan 15 10:00:09 backup1 bacula-sd[100]: Job SQLBackup.2024-01-15 volume vol-002
+Jan 15 10:00:10 backup1 bacula-dir[99]: JobId 50 Job NAS.2024-01-15 finished
+Jan 15 10:00:11 backup1 bacula-dir[99]: JobId 51 Job DailyBackup.2024-01-15 finished
+Jan 15 10:00:12 backup1 bacula-dir[99]: JobId 52 Job Files.2024-01-15 finished

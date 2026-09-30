@@ -1,0 +1,12 @@
+Jan 15 10:00:01 puppet1 puppet-agent[88]: Applied catalog in 2.10 seconds
+Jan 15 10:00:02 puppet1 puppet-agent[88]: Caching catalog for web01
+Jan 15 10:00:03 puppet1 puppet-agent[88]: Applied catalog for web01
+Jan 15 10:00:04 puppet1 puppet-agent[88]: Notice: Applied catalog in 1.80 seconds
+Jan 15 10:00:05 puppet1 puppet-agent[88]: Caching catalog for db01
+Jan 15 10:00:06 puppet1 puppet-agent[88]: Applied catalog for db01
+Jan 15 10:00:07 puppet1 puppet-agent[88]: Finished catalog run in 3.00 seconds
+Jan 15 10:00:08 puppet1 puppet-agent[88]: Applied catalog for app01
+Jan 15 10:00:09 puppet1 puppet-agent[88]: Caching catalog for app01
+Jan 15 10:00:10 puppet1 puppet-agent[88]: Applied catalog in 2.40 seconds
+Jan 15 10:00:11 puppet1 puppet-agent[88]: Applied catalog for web02
+Jan 15 10:00:12 puppet1 puppet-agent[88]: Notice: Applied catalog in 1.50 seconds

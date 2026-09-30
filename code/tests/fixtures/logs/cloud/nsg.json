@@ -1,0 +1,12 @@
+{"time":"2024-01-15T10:00:01.000Z","macAddress":"000D3A123456","flowTuples":["1705312801,10.0.0.8,10.0.0.9,12345,443,T,I,A,B"],"rule":"DefaultRule"}
+{"time":"2024-01-15T10:00:02.000Z","macAddress":"000D3A123456","flowTuples":["1705312802,10.0.0.10,8.8.8.8,53000,53,U,I,A,B"],"rule":"AllowDNS"}
+{"time":"2024-01-15T10:00:03.000Z","macAddress":"000D3A123457","flowTuples":["1705312803,203.0.113.8,10.0.0.5,4444,22,T,I,D,B"],"rule":"DenySSH"}
+{"time":"2024-01-15T10:00:04.000Z","macAddress":"000D3A123456","flowTuples":["1705312804,10.0.0.11,10.0.0.12,80,80,T,O,A,B"],"rule":"AllowWeb"}
+{"time":"2024-01-15T10:00:05.000Z","macAddress":"000D3A123456","flowTuples":["1705312805,10.0.0.13,1.1.1.1,53100,443,T,O,A,B"],"rule":"AllowHTTPS"}
+{"time":"2024-01-15T10:00:06.000Z","macAddress":"000D3A123458","flowTuples":["1705312806,198.51.100.9,10.0.0.5,5555,3389,T,I,D,B"],"rule":"DenyRDP"}
+{"time":"2024-01-15T10:00:07.000Z","macAddress":"000D3A123456","flowTuples":["1705312807,10.0.0.14,10.0.0.15,40000,5432,T,I,A,B"],"rule":"AllowPG"}
+{"time":"2024-01-15T10:00:08.000Z","macAddress":"000D3A123456","flowTuples":["1705312808,10.0.0.16,10.0.0.17,22,22,T,I,A,B"],"rule":"AllowSSHMgmt"}
+{"time":"2024-01-15T10:00:09.000Z","macAddress":"000D3A123456","flowTuples":["1705312809,10.0.0.18,10.0.0.19,1234,80,T,O,A,B"],"rule":"AllowWeb"}
+{"time":"2024-01-15T10:00:10.000Z","macAddress":"000D3A123456","flowTuples":["1705312810,10.0.0.20,10.0.0.21,443,443,T,I,A,B"],"rule":"AllowHTTPS"}
+{"time":"2024-01-15T10:00:11.000Z","macAddress":"000D3A123456","flowTuples":["1705312811,10.0.0.22,10.0.0.23,8080,8080,T,I,D,B"],"rule":"DenyAltHttp"}
+{"time":"2024-01-15T10:00:12.000Z","macAddress":"000D3A123456","flowTuples":["1705312812,10.0.0.24,10.0.0.25,53,53,U,O,A,B"],"rule":"AllowDNS"}

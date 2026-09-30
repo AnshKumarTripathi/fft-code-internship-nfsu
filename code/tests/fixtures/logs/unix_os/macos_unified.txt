@@ -1,0 +1,12 @@
+2024-01-15 10:00:01.123456-0800  0x7f8a  Default     0x0                  0    0    loginwindow: [com.apple.loginwindow:] user alice logged in
+2024-01-15 10:00:02.123456-0800  0x7f8b  Default     0x0                  0    0    kernel: [com.apple.kernel:] IOKit matching
+2024-01-15 10:00:03.123456-0800  0x7f8c  Error       0x0                  0    0    sandboxd: [com.apple.sandbox:] deny file-read
+2024-01-15 10:00:04.123456-0800  0x7f8d  Default     0x0                  0    0    WindowServer: [com.apple.windowserver:] display online
+2024-01-15 10:00:05.123456-0800  0x7f8e  Default     0x0                  0    0    launchd: [com.apple.xpc:] service started
+2024-01-15 10:00:06.123456-0800  0x7f8f  Default     0x0                  0    0    securityd: [com.apple.securityd:] user bob keychain
+2024-01-15 10:00:07.123456-0800  0x7f90  Default     0x0                  0    0    cloudd: [com.apple.cloudd:] sync complete
+2024-01-15 10:00:08.123456-0800  0x7f91  Info        0x0                  0    0    logd: [com.apple.logd:] persist mode
+2024-01-15 10:00:09.123456-0800  0x7f92  Default     0x0                  0    0    kernel: [com.apple.kernel:] memorypressure
+2024-01-15 10:00:10.123456-0800  0x7f93  Default     0x0                  0    0    loginwindow: [com.apple.loginwindow:] user carol session
+2024-01-15 10:00:11.123456-0800  0x7f94  Default     0x0                  0    0    opendirectoryd: [com.apple.opendirectoryd:] auth ok
+2024-01-15 10:00:12.123456-0800  0x7f95  Default     0x0                  0    0    powerd: [com.apple.powerd:] sleep prevent

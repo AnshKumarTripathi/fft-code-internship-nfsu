@@ -1,0 +1,12 @@
+Jan 15 10:00:01 license1 lmgrd[50]: OUT: "compiler" alice@build01
+Jan 15 10:00:02 license1 lmgrd[50]: IN: "compiler" alice@build01
+Jan 15 10:00:03 license1 lmgrd[50]: OUT: "debugger" bob@build02
+Jan 15 10:00:04 license1 lmgrd[50]: DENIED: "compiler" carol@build03
+Jan 15 10:00:05 license1 lmgrd[50]: OUT: "compiler" dave@build01
+Jan 15 10:00:06 license1 lmgrd[50]: IN: "debugger" bob@build02
+Jan 15 10:00:07 license1 lmgrd[50]: OUT: "matlab" eve@lab01
+Jan 15 10:00:08 license1 lmgrd[50]: DENIED: "matlab" frank@lab02
+Jan 15 10:00:09 license1 lmgrd[50]: IN: "compiler" dave@build01
+Jan 15 10:00:10 license1 lmgrd[50]: OUT: "compiler" alice@build01
+Jan 15 10:00:11 license1 lmgrd[50]: OUT: "debugger" bob@build02
+Jan 15 10:00:12 license1 lmgrd[50]: IN: "matlab" eve@lab01

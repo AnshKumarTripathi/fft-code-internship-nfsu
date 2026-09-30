@@ -1,0 +1,12 @@
+TimeCreated=2024-01-15T12:20:01.000Z EventID=1 LogName=Setup Computer=WIN-IMG01 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:02.000Z EventID=2 LogName=Setup Computer=WIN-IMG01 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:03.000Z EventID=3 LogName=Setup Computer=WIN-IMG01 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:04.000Z EventID=4 LogName=Setup Computer=WIN-IMG01 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:05.000Z EventID=1 LogName=Setup Computer=WIN-IMG02 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:06.000Z EventID=2 LogName=Setup Computer=WIN-IMG02 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:07.000Z EventID=3 LogName=Setup Computer=WIN-IMG02 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:08.000Z EventID=4 LogName=Setup Computer=WIN-IMG02 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:09.000Z EventID=1 LogName=Setup Computer=WIN-IMG03 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:10.000Z EventID=2 LogName=Setup Computer=WIN-IMG03 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:11.000Z EventID=4 LogName=Setup Computer=WIN-IMG03 Provider=Microsoft-Windows-Servicing
+TimeCreated=2024-01-15T12:20:12.000Z EventID=3 LogName=Setup Computer=WIN-IMG01 Provider=Microsoft-Windows-Servicing

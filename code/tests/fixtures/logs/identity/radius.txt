@@ -1,0 +1,12 @@
+Jan 15 10:00:01 radius1 radiusd[100]: Auth: Login OK: [alice] (from client vpn port 0 cli 10.0.0.8)
+Jan 15 10:00:02 radius1 radiusd[100]: Auth: Login incorrect: [mallory] (from client vpn port 0 cli 10.0.0.9)
+Jan 15 10:00:03 radius1 radiusd[100]: Auth: Login OK: [bob] (from client nas1 port 1812 cli 10.0.0.10)
+Tue Jan 15 10:00:04 2024 : Auth: Login OK: [carol] (from client vpn port 0 cli 10.0.0.11)
+Tue Jan 15 10:00:05 2024 : Auth: Login incorrect: [eve] (from client vpn port 0 cli 10.0.0.12)
+Access-Accept for dave from 10.0.0.13
+Access-Reject for frank from 10.0.0.14
+Jan 15 10:00:08 tacacs tac_plus[50]: login query for 'alice' tty0 from 10.0.0.8 accepted
+Jan 15 10:00:09 tacacs tac_plus[50]: login query for 'mallory' tty1 from 10.0.0.9 rejected
+Jan 15 10:00:10 radius1 radiusd[100]: Auth: Login OK: [root] (from client wifi port 0 cli 10.0.0.15)
+Jan 15 10:00:11 radius1 radiusd[100]: Access-Accept: [gina] (from client vpn port 0 cli 10.0.0.16)
+Jan 15 10:00:12 radius1 radiusd[100]: Access-Reject: [harry] (from client vpn port 0 cli 10.0.0.17)

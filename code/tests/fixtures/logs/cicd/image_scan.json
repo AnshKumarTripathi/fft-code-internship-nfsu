@@ -1,0 +1,12 @@
+{"SchemaVersion":2,"ArtifactName":"nginx:1.25","CreatedAt":"2024-01-15T10:00:01Z","Results":[{"Target":"nginx:1.25","Vulnerabilities":[{"VulnerabilityID":"CVE-2024-1","Severity":"HIGH"}]}]}
+{"SchemaVersion":2,"ArtifactName":"redis:7.2","CreatedAt":"2024-01-15T10:00:02Z","Results":[{"Target":"redis:7.2","Vulnerabilities":[{"VulnerabilityID":"CVE-2024-2","Severity":"MEDIUM"}]}]}
+{"SchemaVersion":2,"ArtifactName":"python:3.12","CreatedAt":"2024-01-15T10:00:03Z","Results":[{"Target":"python:3.12","Vulnerabilities":[{"VulnerabilityID":"CVE-2024-3","Severity":"LOW"}]}]}
+{"SchemaVersion":2,"ArtifactName":"alpine:3.19","CreatedAt":"2024-01-15T10:00:04Z","Results":[{"Target":"alpine:3.19","Vulnerabilities":[]}]}
+{"SchemaVersion":2,"ArtifactName":"node:20","CreatedAt":"2024-01-15T10:00:05Z","Results":[{"Target":"node:20","Vulnerabilities":[{"VulnerabilityID":"CVE-2024-4","Severity":"CRITICAL"}]}]}
+{"matches":[{"vulnerability":{"id":"CVE-2024-5","severity":"High"},"artifact":{"name":"openssl"}}],"source":{"target":{"userInput":"debian:12"}},"CreatedAt":"2024-01-15T10:00:06Z"}
+{"SchemaVersion":2,"ArtifactName":"busybox:1.36","CreatedAt":"2024-01-15T10:00:07Z","Results":[{"Target":"busybox:1.36","Vulnerabilities":[{"VulnerabilityID":"CVE-2024-6","Severity":"MEDIUM"}]}]}
+{"SchemaVersion":2,"ArtifactName":"postgres:16","CreatedAt":"2024-01-15T10:00:08Z","Results":[{"Target":"postgres:16","Vulnerabilities":[{"VulnerabilityID":"CVE-2024-7","Severity":"HIGH"}]}]}
+{"matches":[{"vulnerability":{"id":"CVE-2024-8","severity":"Low"},"artifact":{"name":"libc"}}],"source":{"target":{"userInput":"ubuntu:22.04"}},"CreatedAt":"2024-01-15T10:00:09Z"}
+{"SchemaVersion":2,"ArtifactName":"golang:1.22","CreatedAt":"2024-01-15T10:00:10Z","Results":[{"Target":"golang:1.22","Vulnerabilities":[{"VulnerabilityID":"CVE-2024-9","Severity":"MEDIUM"}]}]}
+{"SchemaVersion":2,"ArtifactName":"nginx:1.25","CreatedAt":"2024-01-15T10:00:11Z","Results":[{"Target":"nginx:1.25","Vulnerabilities":[{"VulnerabilityID":"CVE-2024-10","Severity":"HIGH"}]}]}
+{"SchemaVersion":2,"ArtifactName":"app:1.0","CreatedAt":"2024-01-15T10:00:12Z","Results":[{"Target":"app:1.0","Vulnerabilities":[{"VulnerabilityID":"CVE-2024-11","Severity":"CRITICAL"}]}]}

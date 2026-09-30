@@ -1,0 +1,12 @@
+{"latencies":{"request":12,"proxy":8,"kong":4},"started_at":1705312801000,"client_ip":"10.0.0.8","request":{"method":"GET","uri":"/api/v1/users"},"response":{"status":200},"service":{"name":"user-service"},"consumer":{"username":"alice"}}
+{"latencies":{"request":40},"started_at":1705312802000,"client_ip":"10.0.0.9","request":{"method":"POST","uri":"/api/v1/login"},"response":{"status":401},"service":{"name":"auth-service"}}
+{"latencies":{"request":8},"started_at":1705312803000,"client_ip":"10.0.0.10","request":{"method":"GET","uri":"/api/v1/items"},"response":{"status":200},"service":{"name":"catalog"}}
+{"latencies":{"request":22},"started_at":1705312804000,"client_ip":"10.0.0.11","request":{"method":"PUT","uri":"/api/v1/items/1"},"response":{"status":204},"service":{"name":"catalog"},"consumer":{"username":"bob"}}
+{"latencies":{"request":5},"started_at":1705312805000,"client_ip":"10.0.0.12","request":{"method":"GET","uri":"/health"},"response":{"status":200},"service":{"name":"gateway"}}
+{"latencies":{"request":90},"started_at":1705312806000,"client_ip":"10.0.0.13","request":{"method":"DELETE","uri":"/api/v1/items/9"},"response":{"status":403},"service":{"name":"catalog"},"consumer":{"username":"carol"}}
+{"latencies":{"request":15},"started_at":1705312807000,"client_ip":"10.0.0.14","request":{"method":"GET","uri":"/api/v1/orders"},"response":{"status":200},"service":{"name":"orders"}}
+{"latencies":{"request":3},"started_at":1705312808000,"client_ip":"10.0.0.15","request":{"method":"HEAD","uri":"/"},"response":{"status":200},"service":{"name":"gateway"}}
+{"latencies":{"request":110},"started_at":1705312809000,"client_ip":"10.0.0.16","request":{"method":"POST","uri":"/api/v1/pay"},"response":{"status":502},"service":{"name":"billing"},"consumer":{"username":"dave"}}
+{"latencies":{"request":7},"started_at":1705312810000,"client_ip":"10.0.0.17","request":{"method":"GET","uri":"/api/v1/users/me"},"response":{"status":200},"service":{"name":"user-service"},"consumer":{"username":"eve"}}
+{"latencies":{"request":18},"started_at":1705312811000,"client_ip":"10.0.0.18","request":{"method":"PATCH","uri":"/api/v1/users/me"},"response":{"status":200},"service":{"name":"user-service"}}
+{"latencies":{"request":6},"started_at":1705312812000,"client_ip":"10.0.0.19","request":{"method":"GET","uri":"/metrics"},"response":{"status":200},"service":{"name":"gateway"}}

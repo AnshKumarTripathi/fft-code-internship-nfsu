@@ -1,0 +1,12 @@
+{"cn":"web.example.com","action":"issued","user":"alice","ts":"2024-01-15T10:00:01Z"}
+{"cn":"api.example.com","action":"revoked","ts":"2024-01-15T10:00:02Z"}
+{"subject":"CN=mail.example.com","action":"issued","user":"bob","ts":"2024-01-15T10:00:03Z"}
+{"cn":"vpn.example.com","action":"issued","ts":"2024-01-15T10:00:04Z"}
+{"cn":"web.example.com","action":"revoked","user":"alice","ts":"2024-01-15T10:00:05Z"}
+{"cn":"cdn.example.com","action":"issued","user":"carol","ts":"2024-01-15T10:00:06Z"}
+{"cn":"db.example.com","action":"issued","ts":"2024-01-15T10:00:07Z"}
+{"cn":"api.example.com","action":"issued","user":"dave","ts":"2024-01-15T10:00:08Z"}
+{"cn":"old.example.com","action":"revoked","ts":"2024-01-15T10:00:09Z"}
+{"cn":"app.example.com","action":"issued","user":"eve","ts":"2024-01-15T10:00:10Z"}
+{"cn":"sso.example.com","action":"issued","ts":"2024-01-15T10:00:11Z"}
+{"cn":"legacy.example.com","action":"revoked","user":"frank","ts":"2024-01-15T10:00:12Z"}

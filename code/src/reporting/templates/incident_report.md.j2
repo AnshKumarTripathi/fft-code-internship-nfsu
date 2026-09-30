@@ -1,0 +1,185 @@
+# Incident Report
+
+**Incident ID:** `{{ incident.incident_id }}`  
+**Severity:** {{ incident.severity }}
+
+## Entity
+
+| Field | Value |
+|---|---|
+| Entity ID | `{{ entity.entity_id }}` |
+| Type | {{ entity.entity_type or "unknown" }} |
+| First seen | {{ entity.first_seen or "n/a" }} |
+| Last seen | {{ entity.last_seen or "n/a" }} |
+{% if entity.label %}
+| Label | {{ entity.label }} |
+{% endif %}
+
+## Time range
+
+{{ incident.start_time }} — {{ incident.end_time }}
+
+## Summary
+
+{{ incident.summary_text or "(no summary)" }}
+
+{% if llm_narrative %}
+### LLM narrative
+
+{{ llm_narrative }}
+
+{% endif %}
+## Why flagged
+
+Deterministic explanation from stored flag metadata (LLM off). Showing {{ anomalies_shown }} of {{ anomalies_total }} anomalies (highest |score|).
+
+{% if anomalies %}
+{% for a in anomalies %}
+### {{ a.source_detector }} — {{ a.explanation.headline }}
+
+| Field | Value |
+|---|---|
+| Entity | `{{ a.entity_id }}` |
+| Window (UTC) | {{ a.window_start }} — {{ a.window_end }} |
+{% if a.explanation.bucket_seconds %}
+| Bucket seconds | {{ a.explanation.bucket_seconds }} |
+{% endif %}
+{% if a.explanation.statistical %}
+| rate_z | {{ a.explanation.statistical.rate_z }} |
+| Rule | {{ a.explanation.statistical.rule }} |
+| Threshold | {{ a.explanation.statistical.z_threshold }} |
+{% endif %}
+{% if a.explanation.spectral %}
+| energy_z | {{ a.explanation.spectral.energy_z }} |
+| shape_js_z | {{ a.explanation.spectral.shape_js_z }} |
+| Crossing legs | {{ a.explanation.spectral.crossing_legs | join(", ") or "—" }} |
+| Window dominant period (h) | {{ a.explanation.spectral.dominant_period_hours if a.explanation.spectral.dominant_period_hours is not none else "n/a" }} |
+| Rule | {{ a.explanation.spectral.rule }} |
+{% endif %}
+{% if a.explanation.ml %}
+| model_score | {{ a.explanation.ml.model_score }} |
+| mad_z | {{ a.explanation.ml.mad_z }} |
+| Flagging | {{ a.explanation.ml.flagging }} |
+| Snapshot | {{ a.explanation.ml.model_snapshot_id or "n/a" }} |
+{% endif %}
+{% if a.explanation.cluster %}
+| Cluster run | `{{ a.explanation.cluster.cluster_run_id }}` |
+| Outliers / entities | {{ a.explanation.cluster.n_outliers }} / {{ a.explanation.cluster.n_entities }} |
+| Nearest distance | {{ a.explanation.cluster.nearest_distance if a.explanation.cluster.nearest_distance is not none else "n/a" }} |
+| Window policy | {{ a.explanation.cluster.window_policy }} (lookback {{ a.explanation.cluster.lookback_days }} d) |
+{% endif %}
+{% if a.explanation.log_sources %}
+| Log sources | {% for s in a.explanation.log_sources %}{{ s.log_source }} ({{ s.event_count }}){% if not loop.last %}, {% endif %}{% endfor %} |
+{% endif %}
+{% if a.explanation.gap %}
+| Zero buckets | {{ a.explanation.gap.zero_bucket_count }} / {{ a.explanation.gap.bucket_count }}{% if a.explanation.gap.possible_gap %} (possible gap){% endif %} |
+{% endif %}
+
+{% if a.explanation.playbook %}
+**{{ a.explanation.playbook.title }}** — {{ a.explanation.playbook.hint }}
+
+{% for step in a.explanation.playbook.actions %}
+- {{ step }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% else %}
+_No contributing anomalies found._
+{% endif %}
+
+## Detector agreement
+
+{% if detector_set %}
+| Detector | Role |
+|---|---|
+{% for det in detector_set -%}
+| {{ det }} | {{ detector_roles.get(det, det) }} |
+{% endfor %}
+IP link: {{ "yes" if has_ip_link else "no" }} · Host link: {{ "yes" if has_host_link else "no" }}{% if top_score is not none %} · Top score: {{ "%.2f"|format(top_score) }}{% endif %}
+{% else %}
+_No contributing detectors._
+{% endif %}
+
+## Activity
+
+Activity and overlay charts are in the HTML report.
+
+## Spectral fingerprint
+
+{% if spectral_features %}
+| Field | Value |
+|---|---|
+| Dominant period (h) | {{ spectral_features.dominant_period_hours if spectral_features.dominant_period_hours is not none else "n/a" }} |
+| Dominant power frac | {{ spectral_features.dominant_power_frac if spectral_features.dominant_power_frac is not none else "n/a" }} |
+| Spectral entropy | {{ spectral_features.spectral_entropy if spectral_features.spectral_entropy is not none else "n/a" }} |
+| Total power | {{ spectral_features.total_power if spectral_features.total_power is not none else "n/a" }} |
+{% else %}
+_No entity_spectral_features for this entity._
+{% endif %}
+
+PSD chart is in the HTML report.
+
+## Top anomalies by detector
+
+Showing {{ anomalies_shown }} of {{ anomalies_total }} anomalies (highest \|score\|).
+
+{% if anomalies_by_detector %}
+{% for det, rows in anomalies_by_detector.items() %}
+### {{ det }} ({{ detector_roles.get(det, det) }})
+
+| Score | Window start | Window end | Metadata |
+|---|---|---|---|
+{% for a in rows -%}
+| {{ a.score }} | {{ a.window_start }} | {{ a.window_end }} | {{ a.metadata_text }} |
+{% endfor %}
+{% endfor %}
+{% else %}
+_No contributing anomalies found._
+{% endif %}
+
+## Correlation edges (counts)
+
+| Relation | Count |
+|---|---|
+{% for rel, n in edge_counts.items() -%}
+| {{ rel }} | {{ n }} |
+{% endfor %}
+
+## Event timeline
+
+Showing {{ timeline|length }} of {{ timeline_total }} linked events.
+
+{% if timeline %}
+| Timestamp | Relation | Source | Template / fields |
+|---|---|---|---|
+{% for row in timeline -%}
+| {{ row.event_timestamp }} | {{ row.relation_type }} | {{ row.log_source or "—" }} | {{ row.snippet }} |
+{% endfor %}
+{% else %}
+_No linked events (no correlation edges or parsed_events)._
+{% endif %}
+
+## Analyst actions
+
+Append-only warehouse log (dismiss / note / reopen). Undo is a compensating reopen row.
+
+{% if analyst_actions %}
+| Created (UTC) | Operator | Action | Anomaly | Note |
+|---|---|---|---|---|
+{% for row in analyst_actions -%}
+| {{ row.created_at }} | {{ row.operator_label }} | {{ row.action }} | {{ row.anomaly_id or "—" }} | {{ row.note or "—" }} |
+{% endfor %}
+{% else %}
+_No analyst actions recorded._
+{% endif %}
+
+## Notes
+
+- Statistical detector flags high event *rates* only.
+- Showing {{ anomalies_shown }} of {{ anomalies_total }} anomalies.
+- Thresholds (`z_threshold` / `mad_k` default **4.0**) are heuristics, not p-values. Dual spectral flagging is `energy_z OR shape_js_z`. Operator catalogue: repository file `KNOWN_LIMITATIONS.md`.
+
+---
+
+_Generated at {{ generated_at }} — deterministic report (Jinja2)._

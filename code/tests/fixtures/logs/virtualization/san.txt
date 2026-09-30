@@ -1,0 +1,12 @@
+Jan 15 10:00:01 san1 storaged[12]: LUN 10 volume vol01 mapped host=esxi01
+Jan 15 10:00:02 san1 storaged[12]: LUN 11 volume vol02 mapped host=esxi02
+Jan 15 10:00:03 san1 storaged[12]: LUN 10 volume vol01 snapshot created
+Jan 15 10:00:04 san1 sand[12]: LUN 12 volume logs01 allocated 500G
+Jan 15 10:00:05 san1 storaged[12]: LUN 10 volume vol01 path failed host=esxi01
+Jan 15 10:00:06 san1 storaged[12]: LUN 13 volume backup01 mapped host=backup1
+Jan 15 10:00:07 san1 storaged[12]: LUN 11 volume vol02 resized
+Jan 15 10:00:08 san1 sand[12]: LUN 14 volume data01 created
+Jan 15 10:00:09 san1 storaged[12]: LUN 10 volume vol01 path restored host=esxi01
+Jan 15 10:00:10 san1 storaged[12]: LUN 15 volume vmfs01 mapped host=esxi03
+Jan 15 10:00:11 san1 storaged[12]: LUN 12 volume logs01 unmapped
+Jan 15 10:00:12 san1 storaged[12]: LUN 10 volume vol01 scrub started

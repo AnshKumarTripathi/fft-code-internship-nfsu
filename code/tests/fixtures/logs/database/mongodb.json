@@ -1,0 +1,12 @@
+{"t":{"$date":"2024-01-15T10:00:01.000Z"},"s":"I","c":"NETWORK","id":22943,"ctx":"listener","msg":"Connection accepted","attr":{"remote":"10.0.0.8:54321","connectionId":1}}
+{"t":{"$date":"2024-01-15T10:00:02.000Z"},"s":"I","c":"COMMAND","id":51803,"ctx":"conn1","msg":"Slow query","attr":{"type":"command","ns":"appdb.t","durationMillis":5123,"user":"alice","db":"appdb"}}
+{"t":{"$date":"2024-01-15T10:00:03.000Z"},"s":"I","c":"COMMAND","id":51803,"ctx":"conn1","msg":"CMD eval","attr":{"command":"eval","db":"appdb","user":"alice"}}
+{"t":{"$date":"2024-01-15T10:00:04.000Z"},"s":"I","c":"COMMAND","id":51803,"ctx":"conn1","msg":"CMD createIndexes","attr":{"command":"createIndexes","ns":"appdb.t","db":"appdb","user":"alice"}}
+{"t":{"$date":"2024-01-15T10:00:05.000Z"},"s":"I","c":"ACCESS","id":20429,"ctx":"conn1","msg":"Successfully authenticated","attr":{"user":"alice","db":"appdb"}}
+{"t":{"$date":"2024-01-15T10:00:06.000Z"},"s":"I","c":"STORAGE","id":22237,"ctx":"WTCheckpoint","msg":"WiredTiger checkpoint complete","attr":{}}
+{"t":{"$date":"2024-01-15T10:00:07.000Z"},"s":"I","c":"REPL","id":21100,"ctx":"ReplCoord","msg":"Replica set member state PRIMARY","attr":{}}
+{"t":{"$date":"2024-01-15T10:00:08.000Z"},"s":"I","c":"CONTROL","id":20536,"ctx":"SignalHandler","msg":"Backup dump started","attr":{"db":"appdb"}}
+{"t":{"$date":"2024-01-15T10:00:09.000Z"},"s":"I","c":"COMMAND","id":51803,"ctx":"conn1","msg":"CMD find","attr":{"ns":"appdb.t","db":"appdb","user":"alice"}}
+{"t":{"$date":"2024-01-15T10:00:10.000Z"},"s":"I","c":"NETWORK","id":22944,"ctx":"conn1","msg":"Connection ended","attr":{"remote":"10.0.0.8:54321"}}
+{"t":{"$date":"2024-01-15T10:00:11.000Z"},"s":"I","c":"ACCESS","id":20249,"ctx":"conn2","msg":"Authentication failed","attr":{"user":"mallory","db":"appdb"}}
+{"t":{"$date":"2024-01-15T10:00:12.000Z"},"s":"I","c":"COMMAND","id":51803,"ctx":"conn1","msg":"CMD insert","attr":{"ns":"appdb.t","db":"appdb","user":"bob"}}

@@ -1,0 +1,12 @@
+TimeCreated=2024-01-15T12:00:01.000Z EventID=6005 LogName=System Computer=WIN-SRV01 Provider=EventLog
+TimeCreated=2024-01-15T12:00:02.000Z EventID=6006 LogName=System Computer=WIN-SRV01 Provider=EventLog
+TimeCreated=2024-01-15T12:00:03.000Z EventID=7036 LogName=System Computer=WIN-SRV01 Provider=Service Control Manager ServiceName=Spooler
+TimeCreated=2024-01-15T12:00:04.000Z EventID=7045 LogName=System Computer=WIN-SRV01 Provider=Service Control Manager ServiceName=EvilSvc
+TimeCreated=2024-01-15T12:00:05.000Z EventID=6005 LogName=System Computer=WIN-SRV02 Provider=EventLog
+TimeCreated=2024-01-15T12:00:06.000Z EventID=6006 LogName=System Computer=WIN-SRV02 Provider=EventLog
+TimeCreated=2024-01-15T12:00:07.000Z EventID=7036 LogName=System Computer=WIN-SRV01 Provider=Service Control Manager ServiceName=WinDefend
+TimeCreated=2024-01-15T12:00:08.000Z EventID=7045 LogName=System Computer=WIN-SRV01 Provider=Service Control Manager ServiceName=BackupSvc
+TimeCreated=2024-01-15T12:00:09.000Z EventID=7036 LogName=System Computer=WIN-DC01 Provider=Service Control Manager ServiceName=Netlogon
+TimeCreated=2024-01-15T12:00:10.000Z EventID=6005 LogName=System Computer=WIN-DC01 Provider=EventLog
+TimeCreated=2024-01-15T12:00:11.000Z EventID=6006 LogName=System Computer=WIN-DC01 Provider=EventLog
+TimeCreated=2024-01-15T12:00:12.000Z EventID=7036 LogName=System Computer=WIN-SRV02 Provider=Service Control Manager ServiceName=W32Time

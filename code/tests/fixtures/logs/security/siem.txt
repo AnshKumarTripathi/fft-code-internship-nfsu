@@ -1,0 +1,12 @@
+{"timestamp":"2024-01-15T10:00:01.000Z","rule_name":"brute_force_ssh","siem":"splunk","user":"alice","src_ip":"10.0.0.8","severity":"high","action":"correlated","correlation_id":"c1"}
+{"timestamp":"2024-01-15T10:00:02.000Z","rule_name":"impossible_travel","siem":"splunk","user":"bob","src_ip":"10.0.0.9","severity":"high","correlated":true}
+{"timestamp":"2024-01-15T10:00:03.000Z","rule_name":"malware_beacon","siem":"qradar","host":"WIN-WS01","src_ip":"10.0.0.10","severity":"critical","action":"correlated"}
+{"timestamp":"2024-01-15T10:00:04.000Z","rule_name":"priv_esc","siem":"splunk","user":"carol","host":"WIN-WS02","severity":"medium","correlation_id":"c4"}
+{"timestamp":"2024-01-15T10:00:05.000Z","rule_name":"dns_tunnel","siem":"sentinel","src_ip":"10.0.0.12","severity":"high","correlated":true}
+{"timestamp":"2024-01-15T10:00:06.000Z","rule_name":"brute_force_ssh","siem":"splunk","user":"dave","src_ip":"10.0.0.13","severity":"high","action":"correlated"}
+{"timestamp":"2024-01-15T10:00:07.000Z","rule_name":"exfil_dlp","siem":"qradar","user":"eve","host":"LAPTOP-05","severity":"high","correlation_id":"c7"}
+{"timestamp":"2024-01-15T10:00:08.000Z","rule_name":"new_admin","siem":"splunk","user":"frank","host":"WIN-DC01","severity":"medium","correlated":true}
+{"timestamp":"2024-01-15T10:00:09.000Z","rule_name":"port_scan","siem":"sentinel","src_ip":"10.0.0.16","severity":"low","action":"correlated"}
+{"timestamp":"2024-01-15T10:00:10.000Z","rule_name":"brute_force_ssh","siem":"splunk","user":"gina","src_ip":"10.0.0.17","severity":"high","correlation_id":"c10"}
+{"timestamp":"2024-01-15T10:00:11.000Z","rule_name":"ransomware_canary","siem":"qradar","host":"WIN-FS01","severity":"critical","correlated":true}
+{"timestamp":"2024-01-15T10:00:12.000Z","rule_name":"vpn_anomaly","siem":"splunk","user":"harry","src_ip":"10.0.0.19","severity":"medium","action":"correlated"}

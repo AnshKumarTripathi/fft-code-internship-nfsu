@@ -1,0 +1,12 @@
+2024-01-15T10:00:01.123Z Hostd: [info] vm=web01 powered on host=esxi01
+2024-01-15T10:00:02.200Z Hostd: [info] vm=web02 powered off host=esxi01
+2024-01-15T10:00:03.010Z Hostd: [info] vm=db01 migrated host=esxi02
+2024-01-15T10:00:04.111Z vpxd: [info] vm=web01 reconfigured host=vcenter01
+2024-01-15T10:00:05.222Z Hostd: [warning] vm=web03 snapshot failed host=esxi01
+2024-01-15T10:00:06.333Z esx.audit: vm=jump01 console opened host=esxi03
+2024-01-15T10:00:07.444Z Hostd: [info] vm=web01 tools running host=esxi01
+2024-01-15T10:00:08.555Z Hostd: [info] vm=app01 registered host=esxi02
+2024-01-15T10:00:09.666Z vpxd: [info] vm=app01 cloned host=vcenter01
+2024-01-15T10:00:10.777Z Hostd: [info] vm=web01 vmx started host=esxi01
+2024-01-15T10:00:11.888Z Hostd: [error] vm=web04 power on failed host=esxi02
+2024-01-15T10:00:12.999Z esx.audit: vm=web01 suspended host=esxi01

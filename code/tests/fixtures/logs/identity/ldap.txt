@@ -1,0 +1,12 @@
+Jan 15 10:00:01 ldap1 slapd[123]: conn=1001 fd=12 ACCEPT from IP=10.0.0.8:54321 (IP=10.0.0.8:54321)
+Jan 15 10:00:01 ldap1 slapd[123]: conn=1001 op=0 BIND dn="uid=alice,ou=people,dc=example,dc=com" method=128
+Jan 15 10:00:01 ldap1 slapd[123]: conn=1001 op=0 RESULT tag=97 err=0 text=
+Jan 15 10:00:02 ldap1 slapd[123]: conn=1002 op=0 BIND dn="uid=mallory,ou=people,dc=example,dc=com" method=128
+Jan 15 10:00:02 ldap1 slapd[123]: conn=1002 op=0 RESULT tag=97 err=49 text=Invalid credentials
+Jan 15 10:00:03 ldap1 slapd[123]: conn=1003 fd=14 ACCEPT from IP=10.0.0.9:40000
+Jan 15 10:00:03 ldap1 slapd[123]: conn=1003 op=0 BIND dn="uid=bob,ou=people,dc=example,dc=com" method=128
+Jan 15 10:00:03 ldap1 slapd[123]: conn=1003 op=0 RESULT tag=97 err=0 text=
+Jan 15 10:00:04 ldap1 slapd[123]: conn=1004 op=0 BIND dn="" method=128
+Jan 15 10:00:04 ldap1 slapd[123]: conn=1004 op=0 RESULT tag=97 err=48 text=Anonymous not allowed
+Jan 15 10:00:05 ldap1 slapd[123]: conn=1001 op=1 SRCH base="ou=people,dc=example,dc=com" scope=2
+{"time":"2024-01-15T10:00:06Z","bindDN":"uid=carol,ou=people,dc=example,dc=com","result":0,"client":"10.0.0.10"}

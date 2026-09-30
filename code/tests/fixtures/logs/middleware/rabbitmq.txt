@@ -1,0 +1,12 @@
+2024-01-15 10:00:01.123 [info] <0.123.0> connection <0.456.0> (10.0.0.8:54321 -> 10.0.0.1:5672): user 'alice' authenticated and granted access to vhost '/'
+2024-01-15 10:00:02.200 [info] <0.124.0> connection <0.457.0> (10.0.0.9:40001 -> 10.0.0.1:5672): accepted
+2024-01-15 10:00:03.010 [info] <0.125.0> connection <0.458.0> (10.0.0.8:54322 -> 10.0.0.1:5672): user 'bob' authenticated and granted access to vhost '/'
+2024-01-15 10:00:04.111 [info] <0.126.0> channel <0.459.0> (10.0.0.8:54321 -> 10.0.0.1:5672): user 'alice' created channel
+2024-01-15 10:00:05.222 [warning] <0.127.0> connection <0.460.0> (10.0.0.10:51000 -> 10.0.0.1:5672): handshake timeout
+2024-01-15 10:00:06.333 [info] <0.128.0> connection <0.461.0> (10.0.0.11:51001 -> 10.0.0.1:5672): user 'carol' authenticated and granted access to vhost 'orders'
+2024-01-15 10:00:07.444 [error] <0.129.0> connection <0.462.0> (10.0.0.12:51002 -> 10.0.0.1:5672): user 'mallory' authentication failed
+2024-01-15 10:00:08.555 [info] <0.130.0> channel <0.463.0>: user 'bob' closing channel
+2024-01-15 10:00:09.666 [info] <0.131.0> connection <0.464.0> (10.0.0.8:54323 -> 10.0.0.1:5672): closed
+2024-01-15 10:00:10.777 [info] <0.132.0> rabbitmq connection <0.465.0> (10.0.0.13:51003 -> 10.0.0.1:5672): starting
+2024-01-15 10:00:11.888 [info] <0.133.0> connection <0.466.0> (10.0.0.14:51004 -> 10.0.0.1:5672): user 'dave' authenticated and granted access to vhost '/'
+2024-01-15 10:00:12.999 [info] <0.134.0> channel <0.467.0> (10.0.0.14:51004 -> 10.0.0.1:5672): qos prefetch=50

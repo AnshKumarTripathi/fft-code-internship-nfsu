@@ -1,0 +1,12 @@
+[  OK  ] Started Network Manager.
+[  OK  ] Started OpenSSH server daemon.
+[  OK  ] Reached target Multi-User System.
+[FAILED] Failed to start foo.service
+[  OK  ] Started cron.service
+[  OK  ] Started rsyslog.service
+[  OK  ] Started D-Bus System Message Bus.
+[FAILED] Failed to start apparmor.service
+[  OK  ] Started Login Service.
+[  OK  ] Started User Manager for UID 1000.
+[  OK  ] Started Getty on tty1.
+[  OK  ] Started Permit User Sessions.
